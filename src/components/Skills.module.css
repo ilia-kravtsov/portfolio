@@ -16,7 +16,7 @@
     box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.2);
     border-radius: 5px;
     width: 100%;
-    height: 18%;
+    height: 12%;
 }
 
 .title {
@@ -26,7 +26,7 @@
 }
 
 .skillsContainer {
-    height: 80%;
+    height: 87%;
     width: 100%;
     box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.2);
     border-radius: 5px;
@@ -35,6 +35,7 @@
     align-items: center;
     flex-wrap: wrap;
     box-sizing: border-box;
+
 }
 
 .skill{
@@ -42,15 +43,49 @@
     border-radius: 5px;
     width: 30%;
     height: 30%;
-    margin: 15px;
+    margin: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    padding: 20px;
+    text-align: center;
+    color: rgba(23,23,39,0.82);
+    background-image: linear-gradient(to top, lightgrey, darkgray);
+}
+
+.skill span {
+    font-weight: bold;
+}
+
+.skillJS {
+    box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    width: 30%;
+    height: 30%;
+    margin: 0 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    text-align: center;
+    color: rgba(23,23,39,0.82);
+    background-image: linear-gradient(to top, lightgrey, darkgray);
+}
+
+.skillJS span {
+    font-weight: bold;
 }
 
 .skillImg {
     width: 100px;
     height: 100px;
     box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+.skillImgHTML {
+    width: 100px;
+    height: 100px;
 }
