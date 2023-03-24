@@ -1,0 +1,10 @@
+.container {
+    display: flex;
+    justify-content: space-evenly;
+    width: 70%;
+    box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.3);
+    box-sizing: border-box;
+    align-items: center;
+    border-radius: 5px;
+    margin: 15px 0;
+}
