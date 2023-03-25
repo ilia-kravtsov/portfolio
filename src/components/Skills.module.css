@@ -39,6 +39,7 @@
 }
 
 .skill{
+    flex-wrap: wrap;
     box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.2);
     border-radius: 5px;
     width: 30%;
@@ -59,11 +60,11 @@
 }
 
 .skillJS {
+    flex-wrap: wrap;
     box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.2);
     border-radius: 5px;
     width: 30%;
     height: 30%;
-    margin: 0 30%;
     display: flex;
     flex-direction: column;
     align-items: center;
