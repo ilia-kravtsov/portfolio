@@ -9,17 +9,23 @@ export const Projects = () => {
             </div>
             <div className={s.projectsContainer}>
                 <div className={s.contentContainer}>
-                    <div className={s.socialNetworkBack}></div>
+                    <div className={s.socialNetworkBack}>
+                        <a href='https://ilia-kravtsov.github.io/samurai_way/' target='_blank' className={s.projectLink}>check</a>
+                    </div>
                     <h3>Social network</h3>
                     <span className={s.status}>Status: in progress</span>
                 </div>
                 <div className={s.contentContainer}>
-                    <div className={s.todolistBack}></div>
+                    <div className={s.todolistBack}>
+                        <a href='https://ilia-kravtsov.github.io/samurai_way/' target='_blank' className={s.projectLink}>check</a>
+                    </div>
                     <h3>Todolist</h3>
                     <span className={s.status}>Status: in progress</span>
                 </div>
                 <div className={s.contentContainer}>
-                    <div className={s.counter}></div>
+                    <div className={s.counter}>
+                        <a href='https://ilia-kravtsov.github.io/samurai_way/' target='_blank' className={s.projectLink}>check</a>
+                    </div>
                     <h3>Counter</h3>
                     <span className={s.status}>Status: my first project</span>
                 </div>

@@ -7,7 +7,6 @@
     align-items: center;
     border-radius: 4px;
     margin: 15px 0;
-    border: 1px solid red;
 }
 
 .titleContainer {
@@ -36,7 +35,6 @@
     justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
-    border: 1px solid red;
 }
 
 input {
@@ -44,7 +42,7 @@ input {
 }
 
 textarea {
-    height: 40%;
+    min-height: 30vh;
     width: 80%;
     resize: none;
     outline: none;

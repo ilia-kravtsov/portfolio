@@ -7,7 +7,6 @@
     align-items: center;
     justify-content: space-evenly;
     margin: 5px 0;
-    border: 1px solid blue;
 }
 
 .textGreeting {
@@ -23,6 +22,7 @@
 }
 
 .greeting{
+    font-family: 'Cormorant Garamond', serif;
     font-size: 20px;
     font-weight: bold;
     box-sizing: border-box;
@@ -57,4 +57,25 @@
     background-image: url(../ava.jpg);
     background-size: cover;
     background-position: 65% 50%;
+}
+
+@media screen and (min-width: 2550px) {
+    .photo {
+        width: 1000px;
+        height: 1000px;
+    }
+    .textGreeting {
+        min-height: 400px;
+        width: 600px;
+    }
+    .greeting{
+        font-size: 30px;
+    }
+    .name {
+        font-size: 62px;
+    }
+    .profession {
+        font-size: 34px;
+    }
+
 }
