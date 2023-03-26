@@ -132,7 +132,8 @@
 }
 
 .footerHeader {
-    font-family: 'Sorts Mill Goudy', serif;
+    font-family: 'Lora', serif;
+    font-size: 20px;
 }
 
 .footerIconsContainer {

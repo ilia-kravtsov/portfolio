@@ -67,12 +67,20 @@ function App() {
                 <Contacts/>
             </main>
             <footer className={s.footer}>
-                <h3 className={s.footerHeader}>From Stavropol' with love</h3>
+                <h3 className={s.footerHeader}>add to friends</h3>
                 <div className={s.footerIconsContainer}>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Facebook_F_icon.svg/512px-Facebook_F_icon.svg.png" alt="facebook logo" className={s.footerLogo}/>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/120px-Instagram_logo_2016.svg.png" alt="facebook logo" className={s.footerLogo}/>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/VK.com-logo.svg/600px-VK.com-logo.svg.png" alt="facebook logo" className={s.footerLogo}/>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Linkedin.svg/200px-Linkedin.svg.png" alt="facebook logo" className={s.footerLogo}/>
+                    <a href='https://www.linkedin.com/in/-ilia-kravtsov' target='_blank' rel="noreferrer">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Facebook_F_icon.svg/512px-Facebook_F_icon.svg.png" alt="facebook logo" className={s.footerLogo}/>
+                    </a>
+                    <a href='https://www.linkedin.com/in/-ilia-kravtsov' target='_blank' rel="noreferrer">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/120px-Instagram_logo_2016.svg.png" alt="facebook logo" className={s.footerLogo}/>
+                    </a>
+                    <a href='https://www.linkedin.com/in/-ilia-kravtsov' target='_blank' rel="noreferrer">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/VK.com-logo.svg/600px-VK.com-logo.svg.png" alt="facebook logo" className={s.footerLogo}/>
+                    </a>
+                    <a href='https://www.linkedin.com/in/-ilia-kravtsov' target='_blank' rel="noreferrer">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Linkedin.svg/200px-Linkedin.svg.png" alt="linkedin logo" className={s.footerLogo} />
+                    </a>
                 </div>
                 <span>2023</span>
             </footer>
