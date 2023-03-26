@@ -53,21 +53,21 @@ function App() {
                 </div>
             </div>
             <main className={s.main}>
-                <section id='home' className={s.homeAnchor}></section>
+                <div id='home' className={s.homeAnchor}></div>
                 <Home/>
-                <section id='skills' className={s.skillsAnchor}></section>
+                <div id='skills' className={s.skillsAnchor}></div>
                 <Skills/>
                 <div className={s.contactMe}>
                     <h2 className={s.titleContact}>I consider options for remote work</h2>
                     <NavHashLink smooth to='#contacts' className={s.linkContacts}>Contact me</NavHashLink>
                 </div>
-                <section id='projects' className={s.skillsAnchor}></section>
+                <div id='projects' className={s.skillsAnchor}></div>
                 <Projects/>
-                <section id='contacts' className={s.skillsAnchor}></section>
+                <div id='contacts' className={s.skillsAnchor}></div>
                 <Contacts/>
             </main>
             <footer className={s.footer}>
-                <h3 className={s.footerHeader}>add to friends</h3>
+                <h3 className={s.footerHeader}>add me to your friends</h3>
                 <div className={s.footerIconsContainer}>
                     <a href='https://www.linkedin.com/in/-ilia-kravtsov' target='_blank' rel="noreferrer">
                         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Facebook_F_icon.svg/512px-Facebook_F_icon.svg.png" alt="facebook logo" className={s.footerLogo}/>
@@ -82,7 +82,7 @@ function App() {
                         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Linkedin.svg/200px-Linkedin.svg.png" alt="linkedin logo" className={s.footerLogo} />
                     </a>
                 </div>
-                <span>2023</span>
+                <span>© All rights reserved</span>
             </footer>
         </div>
     );

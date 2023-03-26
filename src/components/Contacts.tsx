@@ -7,7 +7,7 @@ export const Contacts = () => {
     let inputStyle = {width: '80%', height: "30px"}
 
     return (
-        <div className={s.container}>
+        <div className={s.container} >
             <div className={s.titleContainer}>
                 <h1 className={s.title}>Сontact me</h1>
             </div>
