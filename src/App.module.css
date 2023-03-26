@@ -25,7 +25,8 @@
     width: 80vh;
     display: flex;
     justify-content: space-between;
-    margin-right: 2.5%;
+    margin-right: 3%;
+    margin-left: 3%;
 }
 
 .main {
