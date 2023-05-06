@@ -6,49 +6,67 @@ import {Contacts} from "./components/Contacts";
 import {Projects} from "./components/Projects";
 import { NavHashLink } from 'react-router-hash-link';
 
+type NavLinkBorderType = {
+    home: number
+    skills: number
+    projects: number
+    contacts: number
+}
+
 function App() {
 
-    let [homeLink, setHomeLink] = useState<boolean>(false)
-    let [skillLink, setSkillLink] = useState<boolean>(false)
-    let [proLink, setProLink] = useState<boolean>(false)
-    let [contactLink, setContactLink] = useState<boolean>(false)
+    let [navLinkBorder, setNavLinkBorder] = useState<NavLinkBorderType>({
+        home: 0,
+        skills: 0,
+        projects: 0,
+        contacts: 0
+    })
 
     const onHomeClick = () => {
-        setHomeLink(true)
-        setSkillLink(false)
-        setProLink(false)
-        setContactLink(false)
+        setNavLinkBorder({
+            home: 1,
+            skills: 0,
+            projects: 0,
+            contacts: 0
+        })
     }
     const onSkillClick = () => {
-        setHomeLink(false)
-        setSkillLink(true)
-        setProLink(false)
-        setContactLink(false)
+        setNavLinkBorder({
+            home: 0,
+            skills: 1,
+            projects: 0,
+            contacts: 0
+        })
     }
     const onProjectClick = () => {
-        setHomeLink(false)
-        setSkillLink(false)
-        setProLink(true)
-        setContactLink(false)
+        setNavLinkBorder({
+            home: 0,
+            skills: 0,
+            projects: 1,
+            contacts: 0
+        })
     }
     const onContactClick = () => {
-        setHomeLink(false)
-        setSkillLink(false)
-        setProLink(false)
-        setContactLink(true)
+        setNavLinkBorder({
+            home: 0,
+            skills: 0,
+            projects: 0,
+            contacts: 1
+        })
     }
+
 
     return (
         <div className={s.App}>
             <div className={s.header}>
                 <div className={s.nav}>
-                    <NavHashLink smooth to='#home' className={homeLink ? `${s.linkNav} ${s.active}` : s.linkNav} onClick={onHomeClick}
+                    <NavHashLink smooth to='#home' className={navLinkBorder.home === 1 ? `${s.linkNav} ${s.active}` : s.linkNav} onClick={onHomeClick}
                     >Home</NavHashLink>
-                    <NavHashLink smooth to='#skills' className={skillLink ? `${s.linkNav} ${s.active}` : s.linkNav} onClick={onSkillClick}
+                    <NavHashLink smooth to='#skills' className={navLinkBorder.skills === 1 ? `${s.linkNav} ${s.active}` : s.linkNav} onClick={onSkillClick}
                     >Skills</NavHashLink>
-                    <NavHashLink smooth to='#projects' className={proLink ? `${s.linkNav} ${s.active}` : s.linkNav} onClick={onProjectClick}
+                    <NavHashLink smooth to='#projects' className={navLinkBorder.projects === 1 ? `${s.linkNav} ${s.active}` : s.linkNav} onClick={onProjectClick}
                     >Projects</NavHashLink>
-                    <NavHashLink smooth to='#contacts' className={contactLink ? `${s.linkNav} ${s.active}` : s.linkNav} onClick={onContactClick}
+                    <NavHashLink smooth to='#contacts' className={navLinkBorder.contacts === 1 ? `${s.linkNav} ${s.active}` : s.linkNav} onClick={onContactClick}
                     >Contacts</NavHashLink>
                 </div>
             </div>

@@ -6,7 +6,6 @@ export const Contacts = () => {
 
     let inputStyle = {width: '80%'}
 
-
     return (
         <div className={s.container} >
             <div className={s.titleContainer}>
