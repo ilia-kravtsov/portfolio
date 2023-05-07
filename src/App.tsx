@@ -16,7 +16,7 @@ type NavLinkBorderType = {
 function App() {
 
     let [navLinkBorder, setNavLinkBorder] = useState<NavLinkBorderType>({
-        home: 0,
+        home: 1,
         skills: 0,
         projects: 0,
         contacts: 0
@@ -54,7 +54,6 @@ function App() {
             contacts: 1
         })
     }
-
 
     return (
         <div className={s.App}>
