@@ -5,6 +5,7 @@ import {Skills} from "./components/Skills";
 import {Contacts} from "./components/Contacts";
 import {Projects} from "./components/Projects";
 import { NavHashLink } from 'react-router-hash-link';
+import {NavLink, Route, Routes} from "react-router-dom";
 
 type NavLinkBorderType = {
     home: number
@@ -57,31 +58,26 @@ function App() {
 
     return (
         <div className={s.App}>
-            <div className={s.header}>
+            <header className={s.header}>
                 <div className={s.nav}>
-                    <NavHashLink smooth to='#home' className={navLinkBorder.home === 1 ? `${s.linkNav} ${s.active}` : s.linkNav} onClick={onHomeClick}
-                    >Home</NavHashLink>
-                    <NavHashLink smooth to='#skills' className={navLinkBorder.skills === 1 ? `${s.linkNav} ${s.active}` : s.linkNav} onClick={onSkillClick}
-                    >Skills</NavHashLink>
-                    <NavHashLink smooth to='#projects' className={navLinkBorder.projects === 1 ? `${s.linkNav} ${s.active}` : s.linkNav} onClick={onProjectClick}
-                    >Projects</NavHashLink>
-                    <NavHashLink smooth to='#contacts' className={navLinkBorder.contacts === 1 ? `${s.linkNav} ${s.active}` : s.linkNav} onClick={onContactClick}
-                    >Contacts</NavHashLink>
+                    <NavLink to='/home' className={navLinkBorder.home === 1 ? `${s.linkNav} ${s.active}` : s.linkNav} onClick={onHomeClick}
+                    >Home</NavLink>
+                    <NavLink to='/skills' className={navLinkBorder.skills === 1 ? `${s.linkNav} ${s.active}` : s.linkNav} onClick={onSkillClick}
+                    >Skills</NavLink>
+                    <NavLink to='/projects' className={navLinkBorder.projects === 1 ? `${s.linkNav} ${s.active}` : s.linkNav} onClick={onProjectClick}
+                    >Projects</NavLink>
+                    <NavLink to='/contacts' className={navLinkBorder.contacts === 1 ? `${s.linkNav} ${s.active}` : s.linkNav} onClick={onContactClick}
+                    >Contacts</NavLink>
                 </div>
-            </div>
+            </header>
             <main className={s.main}>
-                <div id='home' className={s.homeAnchor}></div>
-                <Home/>
-                <div id='skills' className={s.skillsAnchor}></div>
-                <Skills/>
-                <div className={s.contactMe}>
-                    <h2 className={s.titleContact}>I consider options for remote work</h2>
-                    <NavHashLink smooth to='#contacts' className={s.linkContacts}>Contact me</NavHashLink>
-                </div>
-                <div id='projects' className={s.skillsAnchor}></div>
-                <Projects/>
-                <div id='contacts' className={s.skillsAnchor}></div>
-                <Contacts/>
+                <Routes>
+                    <Route path='/' element={<Home/>}/>
+                    <Route path='/home' element={<Home/>}/>
+                    <Route path='/skills' element={<Skills/>}/>
+                    <Route path='/projects' element={<Projects/>}/>
+                    <Route path='/contacts' element={<Contacts/>}/>
+                </Routes>
             </main>
             <footer className={s.footer}>
                 <h3 className={s.footerHeader}>add me to your friends</h3>
@@ -106,3 +102,11 @@ function App() {
 }
 
 export default App;
+
+
+/*
+   <div className={s.contactMe}>
+                    <h2 className={s.titleContact}>I consider options for remote work</h2>
+                    <NavHashLink smooth to='#contacts' className={s.linkContacts}>Contact me</NavHashLink>
+                </div>
+ */
