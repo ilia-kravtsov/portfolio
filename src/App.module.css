@@ -22,7 +22,6 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
-    border: 1px solid red;
 }
 
 .main {
@@ -41,20 +40,18 @@
     text-decoration: none;
     font-size: 20px;
     text-align: center;
-    box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.3);
     border-radius: 10px;
     display: flex;
     justify-content: flex-end;
     align-items: center;
     transition-duration: 1s;
     transition-property: all;
-    border: 1px solid blue;
 }
 
 .navLink:hover {
     box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.5);
     color: whitesmoke;
-    /*transform: scale(1.1);*/
+    transform: scale(1.2);
 }
 
 .navLink:hover .navIconContainer {
@@ -64,13 +61,11 @@
 
 .navLink:active {
     color: lightgrey;
-    box-shadow: none;
     border-radius: 10px;
 }
 
 .active {
     color: whitesmoke;
-    box-shadow: none;
     border-radius: 10px;
 }
 
@@ -84,11 +79,9 @@
     align-items: center;
     transition-duration: 1s;
     transition-property: all;
-    border: 1px solid yellowgreen;
 }
 
 .navIconContainer:hover .linkTitle {
-    transition-delay: 0.1s;
     margin-right: auto;
     opacity: 1;
     width: 80px;
