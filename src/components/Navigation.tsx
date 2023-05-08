@@ -61,7 +61,10 @@ export const Navigation = () => {
                 <NavLink to='/home'
                          className={s.navLink}
                          onClick={onHomeClick}>
-                    <div className={s.navIconContainer}>
+                    <div className={navLinkBorder.home === 1
+                        ? `${s.navIconContainer} ${s.active}`
+                        :  s.navIconContainer
+                        }>
                         <span className={s.linkTitle}>Home</span>
                         <img src={homeIcon}
                              className={s.navIcon}
@@ -71,7 +74,10 @@ export const Navigation = () => {
                 <NavLink to='/skills'
                          className={s.navLink}
                          onClick={onSkillClick}>
-                    <div className={s.navIconContainer}>
+                    <div className={navLinkBorder.skills === 1
+                        ? `${s.navIconContainer} ${s.active}`
+                        :  s.navIconContainer
+                    }>
                         <span className={s.linkTitle}>Skills</span>
                         <img src={skillsIcon}
                              className={s.navIcon}
@@ -81,7 +87,9 @@ export const Navigation = () => {
                 <NavLink to='/projects'
                          className={s.navLink}
                          onClick={onProjectClick}>
-                    <div className={s.navIconContainer}>
+                    <div className={navLinkBorder.projects === 1
+                        ? `${s.navIconContainer} ${s.active}`
+                        :  s.navIconContainer}>
                         <span className={s.linkTitle}>Projects</span>
                         <img src={projectsIcon}
                              className={s.navIcon}
@@ -92,7 +100,9 @@ export const Navigation = () => {
                 <NavLink to='/contacts'
                          className={s.navLink}
                          onClick={onContactClick}>
-                    <div className={s.navIconContainer}>
+                    <div className={navLinkBorder.contacts === 1
+                        ? `${s.navIconContainer} ${s.active}`
+                        :  s.navIconContainer}>
                         <span className={s.linkTitle}>Let's Talk</span>
                         <img src={contactsIcon}
                              className={s.navIcon}

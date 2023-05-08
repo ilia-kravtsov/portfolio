@@ -31,7 +31,9 @@ export const Home = () => {
                              className={s.navLink}
                              onClick={onAboutClick}>
                         <div className={s.navIconContainer}>
-                            <div className={s.linkTitle}>About_me</div>
+                            <div className={s.linkTitle}>
+                                <span>find out more about me</span>
+                            </div>
                             <img src={aboutIcon}
                                  className={s.navIcon}
                                  alt={'aboutIcon'}/>

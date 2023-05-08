@@ -109,49 +109,44 @@
 }
 
 .navLink:hover {
-    color: whitesmoke;
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 
 .navLink:hover .navIconContainer {
-    width: 50%;
     border-radius: 40px;
+    background-color: #3a5ace;
 }
 
 .navIconContainer {
     border-radius: 5px;
-    width: 80px;
-    background-color: #3a5ace;
+    width: 350px;
+    border: 1px solid #3a5ace;
     overflow: hidden;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    transition-duration: 1s;
+    transition-duration: 0.5s;
     transition-property: all;
-}
-
-.navIconContainer:hover .linkTitle {
-    margin-right: auto;
-    opacity: 1;
-    width: 80px;
 }
 
 .linkTitle {
     font-size: 20px;
-    margin-left: auto;
-    width: 0;
-    opacity: 0;
     transition-duration: 1s;
     transition-property: all;
+    white-space: nowrap;
+    animation: marquee 3s infinite linear;
+    overflow: hidden;
+    width: 100%;
 }
 
 .navIcon {
     width: 80px;
     height: 80px;
-    background-color: #3a5ace;
     padding: 10px;
     border-radius: 5px;
     margin-left: auto;
+    background-color: #3a5ace;
+    z-index: 1;
 }
 
 
@@ -171,4 +166,13 @@
 @keyframes typing {
     from { width: 0 }
     to { width: 100% }
+}
+
+@keyframes marquee{
+    0% {
+        transform: translateX(100%)
+    }
+    100% {
+        transform: translateX(-100%)
+    }
 }
