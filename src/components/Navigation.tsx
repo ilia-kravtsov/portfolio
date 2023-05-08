@@ -59,9 +59,7 @@ export const Navigation = () => {
         <nav className={s.navContainer}>
             <div className={s.navLinksContainer}>
                 <NavLink to='/home'
-                         className={navLinkBorder.home === 1
-                             ? `${s.navLink} ${s.active}`
-                             : s.navLink}
+                         className={s.navLink}
                          onClick={onHomeClick}>
                     <div className={s.navIconContainer}>
                         <span className={s.linkTitle}>Home</span>
@@ -71,9 +69,7 @@ export const Navigation = () => {
                     </div>
                 </NavLink>
                 <NavLink to='/skills'
-                         className={navLinkBorder.skills === 1
-                             ? `${s.navLink} ${s.active}`
-                             : s.navLink}
+                         className={s.navLink}
                          onClick={onSkillClick}>
                     <div className={s.navIconContainer}>
                         <span className={s.linkTitle}>Skills</span>
@@ -83,9 +79,7 @@ export const Navigation = () => {
                     </div>
                 </NavLink>
                 <NavLink to='/projects'
-                         className={navLinkBorder.projects === 1
-                             ? `${s.navLink} ${s.active}`
-                             : s.navLink}
+                         className={s.navLink}
                          onClick={onProjectClick}>
                     <div className={s.navIconContainer}>
                         <span className={s.linkTitle}>Projects</span>
@@ -96,9 +90,7 @@ export const Navigation = () => {
                     </div>
                 </NavLink>
                 <NavLink to='/contacts'
-                         className={navLinkBorder.contacts === 1
-                             ? `${s.navLink} ${s.active}`
-                             : s.navLink}
+                         className={s.navLink}
                          onClick={onContactClick}>
                     <div className={s.navIconContainer}>
                         <span className={s.linkTitle}>Let's Talk</span>

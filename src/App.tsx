@@ -5,6 +5,7 @@ import {Contacts} from "./components/Contacts";
 import {Projects} from "./components/Projects";
 import {Navigate, Route, Routes} from "react-router-dom";
 import {Layout} from "./components/Layout";
+import {About} from "./components/About";
 
 function App() {
     return (
@@ -13,6 +14,7 @@ function App() {
                     <Route path='/' element={<Layout/>}>
                         <Route path='/portfolio' element={<Navigate to="/home" />} />
                         <Route path='home' element={<Home/>}/>
+                        <Route path='about' element={<About/>}/>
                         <Route path='skills' element={<Skills/>}/>
                         <Route path='projects' element={<Projects/>}/>
                         <Route path='contacts' element={<Contacts/>}/>

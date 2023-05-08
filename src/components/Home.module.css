@@ -1,7 +1,7 @@
 .container {
     display: flex;
     flex-wrap: wrap;
-    width: 80%;
+    width: 90%;
     min-height: 90vh;
     box-sizing: border-box;
     align-items: center;
@@ -66,7 +66,7 @@
 }
 
 .photo {
-    width: 800px;
+    width: 30vw;
     height: calc(100vh - 80px);
     background-image: url(../ava.jpg);
     background-size: cover;
@@ -87,6 +87,73 @@
     left: -83%;
     top: -50%;
 }
+
+.aboutMeText {
+    margin-top: 20px;
+    font-size: 28px;
+    color: white;
+}
+
+.navLink {
+    width: 80%;
+    color: whitesmoke;
+    text-decoration: none;
+    font-size: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    transition-duration: 1s;
+    transition-property: all;
+    margin-top: 50px;
+}
+
+.navLink:hover {
+    color: whitesmoke;
+    transform: scale(1.2);
+}
+
+.navLink:hover .navIconContainer {
+    width: 50%;
+    border-radius: 40px;
+}
+
+.navIconContainer {
+    border-radius: 5px;
+    width: 80px;
+    background-color: #3a5ace;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition-duration: 1s;
+    transition-property: all;
+}
+
+.navIconContainer:hover .linkTitle {
+    margin-right: auto;
+    opacity: 1;
+    width: 80px;
+}
+
+.linkTitle {
+    font-size: 20px;
+    margin-left: auto;
+    width: 0;
+    opacity: 0;
+    transition-duration: 1s;
+    transition-property: all;
+}
+
+.navIcon {
+    width: 80px;
+    height: 80px;
+    background-color: #3a5ace;
+    padding: 10px;
+    border-radius: 5px;
+    margin-left: auto;
+}
+
 
 @media screen and (min-width: 2550px) {
     .photo {
