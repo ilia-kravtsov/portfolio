@@ -24,8 +24,9 @@ export const Home = () => {
                         <span className={s.profession}>A FRONTEND DEVELOPER</span>
                     </div>
                     <div className={s.aboutMeText}>
-                        <p>I'm passionate about building excellent software</p>
-                        <p>that improves the lives of those around me.</p>
+                        <p>Writing the application Code - is an art.</p>
+                        <p className={s.letsBuild}>Programmers - are modern sculptors,</p>
+                        <p>Who create intellectual masterpieces.</p>
                     </div>
                     <NavLink to='/about'
                              className={s.navLink}
