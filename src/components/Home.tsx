@@ -9,8 +9,13 @@ export const Home = () => {
                     <div className={s.photo}></div>
                 </div>
                 <div className={s.textGreeting}>
-                    <span className={s.name}>I'M ILIA KRAVTSOV</span>
-                    <span className={s.profession}>FRONTEND DEVELOPER</span>
+                    <span className={s.name}>
+                        <span className={s.preName}>I'M ILIA </span>
+                         KRAVTSOV
+                    </span>
+                    <div className={s.professionConatiner}>
+                        <span className={s.profession}>A FRONTEND DEVELOPER</span>
+                    </div>
                 </div>
             </div>
     );

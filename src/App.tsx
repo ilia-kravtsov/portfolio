@@ -1,23 +1,22 @@
-import React, {useState} from 'react';
-import s from './App.module.css';
+import React from 'react';
 import {Home} from "./components/Home";
 import {Skills} from "./components/Skills";
 import {Contacts} from "./components/Contacts";
 import {Projects} from "./components/Projects";
-import {NavHashLink} from 'react-router-hash-link';
-import {NavLink, Route, Routes} from "react-router-dom";
+import {Navigate, Route, Routes} from "react-router-dom";
 import {Layout} from "./components/Layout";
 
 function App() {
     return (
         <>
             <Routes>
-                <Route path={'/'} element={<Layout/>}>
-                    <Route path='home' element={<Home/>}/>
-                    <Route path='skills' element={<Skills/>}/>
-                    <Route path='projects' element={<Projects/>}/>
-                    <Route path='contacts' element={<Contacts/>}/>
-                </Route>
+                    <Route path='/' element={<Layout/>}>
+                        <Route path='/portfolio' element={<Navigate to="/home" />} />
+                        <Route path='home' element={<Home/>}/>
+                        <Route path='skills' element={<Skills/>}/>
+                        <Route path='projects' element={<Projects/>}/>
+                        <Route path='contacts' element={<Contacts/>}/>
+                    </Route>
             </Routes>
         </>
     );

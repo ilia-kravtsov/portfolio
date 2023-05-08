@@ -33,11 +33,29 @@
     color: #3a5ace;
 }
 
+.preName {
+    font-size: 52px;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+.professionConatiner {
+    display: grid;
+    place-items: center;
+    width: 100%;
+}
+
 .profession {
     font-size: 52px;
     font-family: 'Poppins', sans-serif;
     font-weight: bold;
     box-sizing: border-box;
+    width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid; /* рисуем курсор */
+    animation: typing 2s steps(30, end) forwards, blinking 1s infinite;
 }
 
 .photoWrapper {
@@ -57,7 +75,7 @@
 }
 
 .photo:hover {
-    transform: scale(1.1) rotate(4deg);
+    transform: scale(1.1) rotate(3deg);
 }
 
 .colorBlock {
@@ -74,17 +92,16 @@
     .photo {
         width: 1000px;
     }
-    .textGreeting {
+}
 
-    }
-    .greeting{
+@keyframes blinking {
+    0% {border-right-color: transparent}
+    50% {border-right-color: white}
+    100% {border-right-color: transparent}
 
-    }
-    .name {
+}
 
-    }
-    .profession {
-
-    }
-
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
 }

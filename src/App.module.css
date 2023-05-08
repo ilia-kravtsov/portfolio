@@ -15,21 +15,14 @@
     align-items: center;
 }
 
-.nav {
+.navLinksContainer {
     width: 100%;
     display: flex;
     height: 35vh;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center;
-}
-
-.navIcon {
-    width: 80px;
-    height: 80px;
-    background-color: #3a5ace;
-    padding: 10px;
-    border-radius: 10px;
+    align-items: flex-start;
+    border: 1px solid red;
 }
 
 .main {
@@ -42,42 +35,34 @@
     justify-content: center;
 }
 
-.linkNav {
+.navLink {
     width: 70%;
     color: whitesmoke;
     text-decoration: none;
     font-size: 20px;
     text-align: center;
-    margin: 0 5px;
     box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.3);
     border-radius: 10px;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
     transition-duration: 1s;
     transition-property: all;
-    transition-timing-function: ease;
+    border: 1px solid blue;
 }
 
-.linkNav:hover {
+.navLink:hover {
     box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.5);
     color: whitesmoke;
+    /*transform: scale(1.1);*/
+}
+
+.navLink:hover .navIconContainer {
+    width: 100%;
     border-radius: 10px;
-    background-color: #3a5ace;
-    transform: scale(1.1);
 }
 
-.linkNav:hover .linkTitle {
-    opacity: 1;
-}
-
-.linkTitle {
-    margin-left: 40px;
-    opacity: 0;
-    transition: all 0.5s ease;
-}
-
-.linkNav:active {
+.navLink:active {
     color: lightgrey;
     box-shadow: none;
     border-radius: 10px;
@@ -87,6 +72,44 @@
     color: whitesmoke;
     box-shadow: none;
     border-radius: 10px;
+}
+
+.navIconContainer {
+    border-radius: 10px;
+    width: 80px;
+    background-color: #3a5ace;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition-duration: 1s;
+    transition-property: all;
+    border: 1px solid yellowgreen;
+}
+
+.navIconContainer:hover .linkTitle {
+    transition-delay: 0.15s;
+    margin-right: auto;
+    opacity: 1;
+    width: 80px;
+}
+
+.linkTitle {
+    font-size: 24px;
+    margin-left: auto;
+    width: 0;
+    opacity: 0;
+    transition-duration: 1s;
+    transition-property: all;
+}
+
+.navIcon {
+    width: 80px;
+    height: 80px;
+    background-color: #3a5ace;
+    padding: 10px;
+    border-radius: 10px;
+    margin-left: auto;
 }
 
 .linkContacts {
