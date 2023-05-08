@@ -65,7 +65,9 @@ export const Navigation = () => {
                          onClick={onHomeClick}>
                     <div className={s.navIconContainer}>
                         <span className={s.linkTitle}>Home</span>
-                        <img src={homeIcon} className={s.navIcon}/>
+                        <img src={homeIcon}
+                             className={s.navIcon}
+                             alt={'homeIcon'}/>
                     </div>
                 </NavLink>
                 <NavLink to='/skills'
@@ -73,24 +75,38 @@ export const Navigation = () => {
                              ? `${s.navLink} ${s.active}`
                              : s.navLink}
                          onClick={onSkillClick}>
-                    <span className={s.linkTitle}>Skills</span>
-                    <img src={skillsIcon} className={s.navIcon}/>
+                    <div className={s.navIconContainer}>
+                        <span className={s.linkTitle}>Skills</span>
+                        <img src={skillsIcon}
+                             className={s.navIcon}
+                             alt={'skillsIcon'}/>
+                    </div>
                 </NavLink>
                 <NavLink to='/projects'
                          className={navLinkBorder.projects === 1
                              ? `${s.navLink} ${s.active}`
                              : s.navLink}
                          onClick={onProjectClick}>
-                    <span className={s.linkTitle}>Projects</span>
-                    <img src={projectsIcon} className={s.navIcon}/>
+                    <div className={s.navIconContainer}>
+                        <span className={s.linkTitle}>Projects</span>
+                        <img src={projectsIcon}
+                             className={s.navIcon}
+                             alt={'projectsIcon'}
+                        />
+                    </div>
                 </NavLink>
                 <NavLink to='/contacts'
                          className={navLinkBorder.contacts === 1
                              ? `${s.navLink} ${s.active}`
                              : s.navLink}
                          onClick={onContactClick}>
-                    <span className={s.linkTitle}>Let's Talk</span>
-                    <img src={contactsIcon} className={s.navIcon}/>
+                    <div className={s.navIconContainer}>
+                        <span className={s.linkTitle}>Let's Talk</span>
+                        <img src={contactsIcon}
+                             className={s.navIcon}
+                             alt={'contactsIcon'}
+                        />
+                    </div>
                 </NavLink>
             </div>
         </nav>
