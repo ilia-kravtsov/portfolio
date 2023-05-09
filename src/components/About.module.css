@@ -51,11 +51,19 @@ h3 {
     letter-spacing: 8px;
     line-height: 1.7;
     text-transform: uppercase;
-    border: 1px solid pink;
 }
 
-section > p {
+section p {
     font-family: Poppins, sans-serif;
+    margin-top: 7px;
+    display: flex;
+    justify-content: space-between;
+    letter-spacing: 2px;
+
+}
+
+section p span {
+
 }
 
 .content {
@@ -89,7 +97,7 @@ section > p {
 }
 
 .experience_education {
-
+    border: 1px solid red;
 }
 
 .programming_training {
@@ -101,67 +109,20 @@ section > p {
     height: 40%;
 }
 
-.circularContainer {
-    border: 1px solid darkred;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    row-gap: 30px;
-}
-
-.circularProgress {
-    position: relative;
-    height: 200px;
-    width: 200px;
-    background: conic-gradient(#3a5ace 10deg, #111111 0deg);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    animation: progress 2s ease-in-out forwards;
-    transition: all;
-}
-
-.circularProgress::before {
-    content: '';
-    position: absolute;
-    height: 197px;
-    width: 197px;
-    border-radius: 50%;
-    background-color: #111111;
-}
-
-.progressValue {
-    position: relative;
-    font-size: 40px;
-    font-weight: bold;
-    font-family: 'Poppins', sans-serif;
-}
-
-@keyframes progress {
-    0% {
-        background: conic-gradient(#3a5ace 10deg, #111111 0deg);
-        opacity: 0;
-    }
-    100% {
-        background: conic-gradient(#3a5ace 180deg, #111111 0deg);
-        opacity: 1;
-    }
-}
-
 .circleContainer {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 20px;
+    border: 1px solid red;
+    height: 90%;
 }
 
 .card {
     position: relative;
-    width: 220px;
-    height: 250px;
-    background-color: #2a2a2a;
+    width: 150px;
+    height: 180px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -187,7 +148,7 @@ section > p {
     height: 100%;
     fill: transparent;
     stroke-width: 2;
-    stroke: lightgrey;
+    stroke: gray;
     transform: translate(5px, 5px);
 }
 
@@ -198,7 +159,7 @@ section > p {
     stroke-dashoffset: calc(440 - (440 * var(--num))/100);
     opacity: 0;
     animation: fadeIn 1s linear forwards;
-    animation-delay: 2.5s;
+    animation-delay: 1.5s;
 }
 
 @keyframes fadeIn {
@@ -265,4 +226,11 @@ section > p {
     letter-spacing: 2px;
     text-transform: uppercase;
     color: rgba(255,255,255, 0.75);
+    font-family: 'Lora', serif;
+}
+
+@media screen and (min-width: 2550px) {
+    section p {
+        font-size: 20px;
+    }
 }

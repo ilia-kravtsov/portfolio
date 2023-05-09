@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {Home} from "./components/Home";
 import {Skills} from "./components/Skills";
 import {Contacts} from "./components/Contacts";
@@ -7,14 +7,43 @@ import {Navigate, Route, Routes} from "react-router-dom";
 import {Layout} from "./components/Layout";
 import {About} from "./components/About";
 
+export type NavLinkBorderType = {
+    home: number
+    about: number
+    skills: number
+    projects: number
+    contacts: number
+}
+
 function App() {
+
+    let [navLinkBorder, setNavLinkBorder] = useState<NavLinkBorderType>({
+        home: 1,
+        skills: 0,
+        about: 0,
+        projects: 0,
+        contacts: 0
+    })
+
+    const linkColorAbout = (toggle: boolean) => {
+        if (toggle) {
+            setNavLinkBorder({
+                home: 0,
+                skills: 0,
+                about: 1,
+                projects: 0,
+                contacts: 0
+            })
+        }
+    }
+
     return (
         <>
             <Routes>
-                    <Route path='/' element={<Layout/>}>
+                    <Route path='/' element={<Layout aboutBorder={navLinkBorder}/>}>
                         <Route path='/portfolio' element={<Navigate to="/home" />} />
                         <Route path='home' element={<Home/>}/>
-                        <Route path='about' element={<About/>}/>
+                        <Route path='about' element={<About linkColorAbout={linkColorAbout}/>}/>
                         <Route path='skills' element={<Skills/>}/>
                         <Route path='projects' element={<Projects/>}/>
                         <Route path='contacts' element={<Contacts/>}/>
