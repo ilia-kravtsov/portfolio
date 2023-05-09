@@ -32,6 +32,7 @@ export default App;
                     <h2 className={s.titleContact}>I consider options for remote work</h2>
                     <NavHashLink smooth to='#contacts' className={s.linkContacts}>Contact me</NavHashLink>
                 </div>
+                456
  */
 
 /*
