@@ -4,8 +4,9 @@ import {Skills} from "./components/Skills";
 import {Contacts} from "./components/Contacts";
 import {Projects} from "./components/Projects";
 import {Navigate, Route, Routes} from "react-router-dom";
-import {Layout} from "./components/Layout";
 import {About} from "./components/About";
+import s from "./App.module.css";
+import {Navigation} from "./components/Navigation";
 
 export type NavLinkBorderType = {
     home: number
@@ -17,7 +18,7 @@ export type NavLinkBorderType = {
 
 function App() {
 
-    let [navLinkBorder, setNavLinkBorder] = useState<NavLinkBorderType>({
+    let [navState, setNavState] = useState<NavLinkBorderType>({
         home: 1,
         skills: 0,
         about: 0,
@@ -27,7 +28,7 @@ function App() {
 
     const linkColorAbout = (toggle: boolean) => {
         if (toggle) {
-            setNavLinkBorder({
+            setNavState({
                 home: 0,
                 skills: 0,
                 about: 1,
@@ -38,18 +39,19 @@ function App() {
     }
 
     return (
-        <>
-            <Routes>
-                    <Route path='/' element={<Layout aboutBorder={navLinkBorder}/>}>
-                        <Route path='/portfolio' element={<Navigate to="/home" />} />
+        <div className={s.App}>
+            <main className={s.main}>
+                <Routes>
+                        <Route path='/portfolio' element={<Navigate to="/home"/>}/>
                         <Route path='home' element={<Home/>}/>
                         <Route path='about' element={<About linkColorAbout={linkColorAbout}/>}/>
                         <Route path='skills' element={<Skills/>}/>
                         <Route path='projects' element={<Projects/>}/>
                         <Route path='contacts' element={<Contacts/>}/>
-                    </Route>
-            </Routes>
-        </>
+                </Routes>
+            </main>
+            <Navigation navState={navState} setNavState={setNavState}/>
+        </div>
     );
 }
 

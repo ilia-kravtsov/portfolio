@@ -1,4 +1,4 @@
-import React, {FC, useState} from 'react';
+import React, {FC} from 'react';
 import s from "../App.module.css";
 import {NavLink} from "react-router-dom";
 import homeIcon from "../images/home-button.png";
@@ -16,21 +16,14 @@ type NavLinkBorderType = {
 }
 
 type NaviType = {
-    aboutBorder: NavLinkBorderType
+    navState: NavLinkBorderType
+    setNavState: (navState: NavLinkBorderType) => void
 }
 
-export const Navigation: FC<NaviType> = ({aboutBorder}) => {
-
-    let [navLinkBorder, setNavLinkBorder] = useState<NavLinkBorderType>({
-        home: 1,
-        skills: 0,
-        about: 0,
-        projects: 0,
-        contacts: 0
-    })
+export const Navigation: FC<NaviType> = ({navState, setNavState}) => {
 
     const onHomeClick = () => {
-        setNavLinkBorder({
+        setNavState({
             home: 1,
             about: 0,
             skills: 0,
@@ -39,7 +32,7 @@ export const Navigation: FC<NaviType> = ({aboutBorder}) => {
         })
     }
     const onAboutClick = () => {
-        setNavLinkBorder({
+        setNavState({
             home: 0,
             about: 1,
             skills: 0,
@@ -48,7 +41,7 @@ export const Navigation: FC<NaviType> = ({aboutBorder}) => {
         })
     }
     const onSkillClick = () => {
-        setNavLinkBorder({
+        setNavState({
             home: 0,
             about: 0,
             skills: 1,
@@ -57,7 +50,7 @@ export const Navigation: FC<NaviType> = ({aboutBorder}) => {
         })
     }
     const onProjectClick = () => {
-        setNavLinkBorder({
+        setNavState({
             home: 0,
             about: 0,
             skills: 0,
@@ -66,7 +59,7 @@ export const Navigation: FC<NaviType> = ({aboutBorder}) => {
         })
     }
     const onContactClick = () => {
-        setNavLinkBorder({
+        setNavState({
             home: 0,
             about: 0,
             skills: 0,
@@ -81,7 +74,7 @@ export const Navigation: FC<NaviType> = ({aboutBorder}) => {
                 <NavLink to='/home'
                          className={s.navLink}
                          onClick={onHomeClick}>
-                    <div className={navLinkBorder.home === 1
+                    <div className={navState.home === 1
                         ? `${s.navIconContainer} ${s.active}`
                         :  s.navIconContainer
                         }>
@@ -94,7 +87,7 @@ export const Navigation: FC<NaviType> = ({aboutBorder}) => {
                 <NavLink to='/about'
                          className={s.navLink}
                          onClick={onAboutClick}>
-                    <div className={navLinkBorder.about === 1
+                    <div className={navState.about === 1
                         ? `${s.navIconContainer} ${s.active}`
                         :  s.navIconContainer
                     }>
@@ -109,7 +102,7 @@ export const Navigation: FC<NaviType> = ({aboutBorder}) => {
                 <NavLink to='/skills'
                          className={s.navLink}
                          onClick={onSkillClick}>
-                    <div className={navLinkBorder.skills === 1
+                    <div className={navState.skills === 1
                         ? `${s.navIconContainer} ${s.active}`
                         :  s.navIconContainer
                     }>
@@ -122,7 +115,7 @@ export const Navigation: FC<NaviType> = ({aboutBorder}) => {
                 <NavLink to='/projects'
                          className={s.navLink}
                          onClick={onProjectClick}>
-                    <div className={navLinkBorder.projects === 1
+                    <div className={navState.projects === 1
                         ? `${s.navIconContainer} ${s.active}`
                         :  s.navIconContainer}>
                         <span className={s.linkTitle}>Projects</span>
@@ -135,7 +128,7 @@ export const Navigation: FC<NaviType> = ({aboutBorder}) => {
                 <NavLink to='/contacts'
                          className={s.navLink}
                          onClick={onContactClick}>
-                    <div className={navLinkBorder.contacts === 1
+                    <div className={navState.contacts === 1
                         ? `${s.navIconContainer} ${s.active}`
                         :  s.navIconContainer}>
                         <span className={s.linkTitle}>Let's Talk</span>
