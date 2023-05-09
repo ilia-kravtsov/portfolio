@@ -3,7 +3,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
     width: 90%;
     min-height: 90vh;
     box-sizing: border-box;
@@ -38,33 +37,14 @@ h2 {
     font-size: 110px;
     z-index: 0;
     opacity: 1;
-    color: hsla(0,0%,100%,.07);
+    color: hsla(0, 0%, 100%, .07);
     font-weight: 900;
 }
 
-.content {
-    display: flex;
-    flex-direction: column;
-    width: 90%;
-    justify-content: space-between;
-}
-
-.contentUp {
-    display: flex;
-}
-
-.contentDown {
-    display: flex;
-}
-
-.personalContainer {
-    font-family: inherit;
-}
-
-h3  {
+h3 {
     color: lightgrey;
     display: flex;
-    font-family: Poppins,sans-serif;
+    font-family: Poppins, sans-serif;
     font-size: 16px;
     font-weight: 700;
     gap: 25px;
@@ -74,10 +54,215 @@ h3  {
     border: 1px solid pink;
 }
 
-.educationContainer {
+section > p {
+    font-family: Poppins, sans-serif;
+}
+
+.content {
+    display: flex;
+    width: 80%;
+    height: 80%;
+    justify-content: space-evenly;
+    border: 1px solid pink;
+}
+
+.contentLeft {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid yellowgreen;
+}
+
+.personalInfo {
+    font-family: inherit;
+}
+
+.personalStrengths {
+    height: 40%;
+}
+
+.contentRight {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid yellow;
+}
+
+.experience_education {
 
 }
 
-section > p {
-    font-family: Poppins,sans-serif;
+.programming_training {
+    margin-top: 10%;
+}
+
+.languages {
+    border: 1px solid indigo;
+    height: 40%;
+}
+
+.circularContainer {
+    border: 1px solid darkred;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 30px;
+}
+
+.circularProgress {
+    position: relative;
+    height: 200px;
+    width: 200px;
+    background: conic-gradient(#3a5ace 10deg, #111111 0deg);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: progress 2s ease-in-out forwards;
+    transition: all;
+}
+
+.circularProgress::before {
+    content: '';
+    position: absolute;
+    height: 197px;
+    width: 197px;
+    border-radius: 50%;
+    background-color: #111111;
+}
+
+.progressValue {
+    position: relative;
+    font-size: 40px;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+}
+
+@keyframes progress {
+    0% {
+        background: conic-gradient(#3a5ace 10deg, #111111 0deg);
+        opacity: 0;
+    }
+    100% {
+        background: conic-gradient(#3a5ace 180deg, #111111 0deg);
+        opacity: 1;
+    }
+}
+
+.circleContainer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.card {
+    position: relative;
+    width: 220px;
+    height: 250px;
+    background-color: #2a2a2a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circleContainer .card .percentCircle {
+    position: relative;
+    height: 150px;
+    width: 150px;
+}
+
+.circleContainer .card .percentCircle .svg {
+    position: relative;
+    height: 150px;
+    width: 150px;
+    --clr: #3a5ace;
+    --num: 85;
+    transform: rotate(270deg);
+}
+
+.circleContainer .card .percentCircle .svg circle {
+    width: 100%;
+    height: 100%;
+    fill: transparent;
+    stroke-width: 2;
+    stroke: lightgrey;
+    transform: translate(5px, 5px);
+}
+
+.circleContainer .card .percentCircle .svg circle:nth-child(2)
+{
+    stroke: var(--clr);
+    stroke-dasharray: 440;
+    stroke-dashoffset: calc(440 - (440 * var(--num))/100);
+    opacity: 0;
+    animation: fadeIn 1s linear forwards;
+    animation-delay: 2.5s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.dot {
+    position: absolute;
+    inset: 5px;
+    z-index: 10;
+    animation: animateDot 2s linear forwards;
+}
+
+@keyframes animateDot {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(calc(3.6deg * 85));
+    }
+}
+
+.dot::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background: #3a5ace;
+    box-shadow: 0 0 10px #3a5ace, 0 0 30px #3a5ace;
+}
+
+.amount {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+    animation: fadeIn 1s linear forwards;
+    animation-delay: 2.5s;
+}
+
+.amount h3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    font-size: 1.5em;
+}
+
+.amount p {
+    font-weight: 300;
+    font-size: 0.75em;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(255,255,255, 0.75);
 }
