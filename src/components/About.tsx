@@ -1,5 +1,5 @@
 import React, {FC, useEffect} from 'react';
-import s from './About.module.css'
+import s from './About.module.scss'
 import disciplineIcon from '../images/martial-arts.png'
 import punctualityIcon from '../images/time-manager.png'
 import teamPlayerIcon from '../images/together.png'
@@ -46,11 +46,11 @@ export const About: FC<AboutType> = ({linkColorAbout}) => {
                             <div className={s.circle}></div>
                             <div className={s.headerLine}></div>
                         </h3>
-                        <p className={s.strengthContainer}><img src={disciplineIcon} alt="disciplineIcon" className={s.Icon}/>Discipline</p>
-                        <p className={s.strengthContainer}><img src={punctualityIcon} alt="punctualityIcon" className={s.Icon}/>Punctuality</p>
-                        <p className={s.teamPlayerIcon}><img src={teamPlayerIcon} alt="Team play Icon" className={s.Icon}/>Team play</p>
-                        <p className={s.teamPlayerIcon}><img src={flowIcon} alt="flowIcon" className={s.Icon}/>Feeling of the Code flow</p>
-                        <p className={s.teamPlayerIcon}><img src={worker} alt="Hard worker" className={s.Icon}/>Hard worker</p>
+                        <p className={s.strengthContainer}><img src={disciplineIcon} alt="disciplineIcon" className={s.icon}/>Discipline</p>
+                        <p className={s.strengthContainer}><img src={punctualityIcon} alt="punctualityIcon" className={s.icon}/>Punctuality</p>
+                        <p className={s.teamPlayerIcon}><img src={teamPlayerIcon} alt="Team play Icon" className={s.icon}/>Team play</p>
+                        <p className={s.teamPlayerIcon}><img src={flowIcon} alt="flowIcon" className={s.icon}/>Feeling of the Code flow</p>
+                        <p className={s.teamPlayerIcon}><img src={worker} alt="Hard worker" className={s.icon}/>Hard worker</p>
                     </section>
                 </div>
                <div className={s.contentRight}>
