@@ -5,6 +5,7 @@ import punctualityIcon from '../images/time-manager.png'
 import teamPlayerIcon from '../images/together.png'
 import flowIcon from '../images/data-flow.png'
 import worker from '../images/working.png'
+import {Circle} from "./Circle";
 
 type AboutType = {
     linkColorAbout: (toggle: boolean) => void
@@ -69,45 +70,9 @@ export const About: FC<AboutType> = ({linkColorAbout}) => {
                    <section className={s.languages}>
                        <h3>Languages:<div className={s.circle}></div><div className={s.headerLine}></div></h3>
                        <div className={s.circleContainer}>
-                           <div className={s.card}>
-                               <div className={s.percentCircle}>
-                                   <div className={s.dot}></div>
-                                    <svg className={s.svg}>
-                                        <circle cx={'70'} cy={'70'} r={'70'}></circle>
-                                        <circle cx={'70'} cy={'70'} r={'70'}></circle>
-                                    </svg>
-                                   <div className={s.amount}>
-                                        <h3>85%</h3>
-                                       <p>English B2</p>
-                                   </div>
-                               </div>
-                           </div>
-                           <div className={s.card}>
-                               <div className={s.percentCircle}>
-                                   <div className={s.dot}></div>
-                                   <svg className={s.svg}>
-                                       <circle cx={'70'} cy={'70'} r={'70'}></circle>
-                                       <circle cx={'70'} cy={'70'} r={'70'}></circle>
-                                   </svg>
-                                   <div className={s.amount}>
-                                       <h3>100%</h3>
-                                       <p>Russian</p>
-                                   </div>
-                               </div>
-                           </div>
-                           <div className={s.card}>
-                               <div className={s.percentCircle}>
-                                   <div className={s.dot}></div>
-                                   <svg className={s.svg}>
-                                       <circle cx={'70'} cy={'70'} r={'70'}></circle>
-                                       <circle cx={'70'} cy={'70'} r={'70'}></circle>
-                                   </svg>
-                                   <div className={s.amount}>
-                                       <h3>10%</h3>
-                                       <p>Norsk A2</p>
-                                   </div>
-                               </div>
-                           </div>
+                           <Circle percents={'85%'} title={'English'}/>
+                           <Circle percents={'100%'} title={'Russian'}/>
+                           <Circle percents={'10%'} title={'Norsk'}/>
                        </div>
                    </section>
                </div>
