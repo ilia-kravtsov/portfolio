@@ -23,7 +23,7 @@ export const About: FC<AboutType> = ({linkColorAbout}) => {
                 <h2>ABOUT
                     <span className={s.me}> ME</span>
                 </h2>
-                <span className={s.resume}>RESUME</span>
+                <span className={s.titleBack}>RESUME</span>
             </section>
             <section className={s.content}>
                 <div className={s.contentLeft}>
@@ -32,7 +32,7 @@ export const About: FC<AboutType> = ({linkColorAbout}) => {
                         <p><span>First name:</span><span>ilia</span></p>
                         <p><span>Last name:</span><span>kravtsov</span></p>
                         <p><span>Age:</span> <span>29</span></p>
-                        <p><span>Address:</span> <span>Stavropol', Russia</span></p>
+                        <p><span>Address:</span> <span>Stavropol, Russia</span></p>
                         <p><span>Drinking:</span> <span>not for me</span></p>
                         <p><span>Smoking:</span> <span>non smoker</span></p>
                         <p><span>Snowboarding:</span> <span>is my hobby</span></p>

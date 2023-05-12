@@ -1,5 +1,5 @@
 import React from 'react';
-import s from './Home.module.css'
+import s from './Home.module.scss'
 import aboutIcon from "../images/boy.png";
 import {NavLink} from "react-router-dom";
 

@@ -1,20 +1,17 @@
+@import '../sass/variables.scss';
+@import '../sass/mixin.scss';
+
 .container {
-    display: flex;
+    @include flex(row, space-evenly, center);
     flex-wrap: wrap;
     width: 90%;
     min-height: 90vh;
     box-sizing: border-box;
-    align-items: center;
-    justify-content: space-evenly;
-    margin: 5px 0;
 }
 
 .textGreeting {
-    display: flex;
-    flex-direction: column;
+    @include flex(column, space-evenly, center);
     box-sizing: border-box;
-    align-items: center;
-    justify-content: space-evenly;
     border-radius: 4px;
 }
 
@@ -99,14 +96,12 @@
 }
 
 .navLink {
+    @include flex(column, flex-end, center);
     width: 80%;
     color: whitesmoke;
     text-decoration: none;
     font-size: 20px;
     text-align: center;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
     transition-duration: 1s;
     transition-property: all;
     margin-top: 50px;
@@ -122,13 +117,11 @@
 }
 
 .navIconContainer {
+    @include flex(row, space-between, center);
     border-radius: 5px;
     width: 350px;
     border: 1px solid #3a5ace;
     overflow: hidden;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     transition-duration: 0.5s;
     transition-property: all;
 }

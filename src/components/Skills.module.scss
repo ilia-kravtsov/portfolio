@@ -1,0 +1,74 @@
+@import '../sass/variables.scss';
+@import '../sass/mixin.scss';
+
+.container {
+    @include flex(column, space-between, normal);
+    width: 80%;
+    min-height: 90vh;
+    border: 1px solid red;
+    .titleContainer {
+        @include flex(row, center, center);
+        @include size(100%, 12%);
+        border-radius: 4px;
+        border: 1px solid blue;
+        .title {
+            text-transform: uppercase;
+            box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.3);
+            padding: 10px;
+            border-radius: 4px;
+            width: 100%;
+            text-align: center;
+            font-family: 'Poppins', serif;
+            font-size: 52px;
+            .titleRight {
+                color: $accentColor;
+                font-family: 'Poppins', serif;
+            }
+        }
+        .titleBack {
+            text-transform: uppercase;
+            position: absolute;
+            font-size: 110px;
+            z-index: 0;
+            opacity: 1;
+            color: hsla(0, 0%, 100%, .07);
+            font-weight: 900;
+            font-family: 'Poppins', serif;
+        }
+    }
+    .skillsContainer {
+        @include flex(row, center, center);
+        min-height: 88%;
+        width: 100%;
+        border-radius: 4px;
+        flex-wrap: wrap;
+        box-sizing: border-box;
+        padding: 20px;
+        border: 1px solid pink;
+        .skill{
+            @include flex(column, center, center);
+            box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.2);
+            border-radius: 4px;
+            width: 15%;
+            height: 30%;
+            color: rgba(23,23,39,0.82);
+            border: 1px solid red;
+            @media screen and (min-width: 2550px) {
+                width: 40%;
+                height: 18vh;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
