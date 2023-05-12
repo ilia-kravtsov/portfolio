@@ -1,10 +1,8 @@
 @import '../sass/variables';
+@import '../sass/mixin';
 
 .container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
+  @include flex(column, space-between, center);
   width: 90%;
   min-height: 90vh;
   box-sizing: border-box;
@@ -12,10 +10,7 @@
   font-family: 'Poppins', serif;
 
   .titleSection {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
+    @include flex(column, space-between, center);
     font-family: inherit;
 
     h2 {
@@ -41,15 +36,11 @@
   }
 
   .content {
-    display: flex;
-    width: 80%;
-    height: 80%;
-    justify-content: space-evenly;
+    @include flex(row, space-evenly, normal);
+    @include size(80%, 80%);
 
     .contentLeft {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
+      @include flex(column, space-between, normal);
       overflow: hidden;
       width: 30%;
 
@@ -58,28 +49,22 @@
       }
 
       .personalStrengths {
+        @include flex(column, normal, flex-start);
         height: 40%;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
 
         .icon {
-          width: 30px;
-          height: 30px;
+          @include size(30px, 30px);
           margin-right: 10px;
         }
 
         .strengthContainer {
-          display: flex;
-          align-items: center;
+          @include flex(row, normal, center);
         }
       }
     }
 
     .contentRight {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
+      @include flex(column, space-between, normal);
       overflow: hidden;
       width: 45%;
 
@@ -93,41 +78,31 @@
         height: 40%;
 
         .circleContainer {
+          @include flex(row, space-evenly, center);
           position: relative;
-          display: flex;
-          justify-content: space-evenly;
-          align-items: center;
           gap: 20px;
           height: 90%;
 
           .card {
+            @include flex(row, center, center);
+            @include size(150px, 180px);
             position: relative;
-            width: 150px;
-            height: 180px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
 
             .percentCircle {
+              @include size(150px, 150px);
               position: relative;
-              height: 150px;
-              width: 150px;
 
               .svg {
+                @include size(150px, 150px);
                 position: relative;
-                height: 150px;
-                width: 150px;
-                --clr: #3a5ace;
-                --num: 85;
                 transform: rotate(270deg);
               }
 
               .svg circle {
-                width: 100%;
-                height: 100%;
+                @include size(100%, 100%);
                 fill: transparent;
                 stroke-width: 2;
-                stroke: gray;
+                stroke: rgba(200,200,200,0.5);
                 transform: translate(5px, 5px);
               }
 
@@ -153,6 +128,7 @@
                 position: absolute;
                 inset: 5px;
                 z-index: 10;
+                transform: rotate(calc(3.6deg * var(--num)));
                 animation: animateDot 2s linear forwards;
                 &::before {
                   content: '';
@@ -163,8 +139,8 @@
                   height: 10px;
                   width: 10px;
                   border-radius: 50%;
-                  background:  $accentColor;
-                  box-shadow: 0 0 10px  $accentColor, 0 0 30px  $accentColor;
+                  background: var(--clr);
+                  box-shadow: 0 0 10px var(--clr), 0 0 30px var(--clr);
                 }
               }
 
@@ -173,28 +149,21 @@
                   transform: rotate(0deg);
                 }
                 100% {
-                  transform: rotate(calc(3.6deg * 85));
+                  transform: rotate(calc(3.6deg * var(--num)));
                 }
               }
 
-
-
               .amount {
+                @include flex(column, center, center);
                 position: absolute;
                 inset: 0;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                flex-direction: column;
                 opacity: 0;
                 animation: fadeIn 1s linear forwards;
                 animation-delay: 2.5s;
               }
 
               .amount h3 {
-                display: flex;
-                justify-content: center;
-                align-items: center;
+                @include flex(row, center, center);
                 font-weight: 700;
                 font-size: 1.5em;
               }
@@ -214,8 +183,8 @@
     }
 
     h3 {
+      @include flex(row, normal, center);
       color: lightgrey;
-      display: flex;
       font-family: Poppins, sans-serif;
       font-size: 16px;
       font-weight: 700;
@@ -223,13 +192,11 @@
       letter-spacing: 8px;
       line-height: 1.7;
       text-transform: uppercase;
-      align-items: center;
       width: 100%;
     }
 
     .circle {
-      height: 10px;
-      width: 10px;
+      @include size(10px, 10px);
       border-radius: 50%;
       background:  $accentColor;
       box-shadow: 0 0 10px  $accentColor, 0 0 30px  $accentColor;
@@ -255,9 +222,8 @@
     }
 
     section p {
+      @include flex(row, space-between, normal);
       margin-top: 10px;
-      display: flex;
-      justify-content: space-between;
       letter-spacing: 2px;
       @media screen and (min-width: 2550px) {
         font-size: 20px;

@@ -70,9 +70,9 @@ export const About: FC<AboutType> = ({linkColorAbout}) => {
                    <section className={s.languages}>
                        <h3>Languages:<div className={s.circle}></div><div className={s.headerLine}></div></h3>
                        <div className={s.circleContainer}>
-                           <Circle percents={'85%'} title={'English'}/>
-                           <Circle percents={'100%'} title={'Russian'}/>
-                           <Circle percents={'10%'} title={'Norsk'}/>
+                           <Circle percents={100} title={'Russian'}/>
+                           <Circle percents={70} title={'English'}/>
+                           <Circle percents={20} title={'Norsk'}/>
                        </div>
                    </section>
                </div>
