@@ -24,7 +24,7 @@ export const Circle: FC<CircleType> = ({percents, title}) => {
                     <circle cx={'70'} cy={'70'} r={'70'}></circle>
                 </svg>
                 <div className={s.amount}>
-                    <h3>{percents}%</h3>
+                    <h3 className={s.percents}>{percents}%</h3>
                     <p>{title}</p>
                 </div>
             </div>

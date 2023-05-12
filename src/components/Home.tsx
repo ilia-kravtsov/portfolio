@@ -26,7 +26,7 @@ export const Home = () => {
                     <div className={s.aboutMeText}>
                         <p>Writing the application Code - is an art.</p>
                         <p className={s.letsBuild}>Programmers - are modern sculptors,</p>
-                        <p>Who create intellectual masterpieces.</p>
+                        <p>who create intellectual masterpieces.</p>
                     </div>
                     <NavLink to='/about'
                              className={s.navLink}
