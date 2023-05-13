@@ -1,11 +1,11 @@
 import React from 'react';
-import s from './Projects.module.css'
+import s from './Projects.module.scss'
 
 export const Projects = () => {
     return (
         <div className={s.container}>
             <div className={s.titleContainer}>
-                <h1 className={s.title}>Projects</h1>
+                <h1 className={s.title}>Project<span className={s.me}>$</span></h1>
             </div>
             <div className={s.projectsContainer}>
                 <div className={s.contentContainer}>

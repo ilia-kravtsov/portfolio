@@ -12,7 +12,19 @@
   .titleSection {
     @include flex(column, space-between, center);
     font-family: inherit;
-
+    .titleAboutPage {
+      animation: titleAppear 1s forwards;
+      @keyframes titleAppear {
+        from {
+          margin-top: 100%;
+          transform: rotate(20deg)
+        }
+        to {
+          margin-top: 45px;
+          transform: rotate(0deg)
+        }
+      }
+    }
     h2 {
       font-family: inherit;
       font-size: 52px;

@@ -16,7 +16,7 @@ export const Circle: FC<CircleType> = ({percents, title}) => {
     } as React.CSSProperties;
 
     return (
-        <div className={s.card}>
+        <div className={s.skillCircle}>
             <div className={s.percentCircle} style={styles}>
                 <div className={s.dot}></div>
                 <svg className={s.svg}>

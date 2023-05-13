@@ -1,0 +1,107 @@
+@import '../sass/variables';
+@import '../sass/mixin';
+
+.container {
+    @include flex(column, space-between, normal);
+    width: 80%;
+    min-height: 85vh;
+    box-sizing: border-box;
+    align-items: center;
+    border-radius: 4px;
+    margin: 15px 0;
+    .titleContainer {
+        @include flex(row, center, center);
+        border-radius: 4px;
+        width: 100%;
+        height: 12%;
+        .title {
+            padding: 10px;
+            border-radius: 4px;
+            width: 100%;
+            text-align: center;
+            font-family: 'Poppins', sans-serif;
+            text-transform: uppercase;
+            font-size: 52px;
+            .me {
+                position: absolute;
+                color: $accentColor;
+                font-family: inherit;
+                animation: titleAppear 1s forwards;
+                @keyframes titleAppear {
+                    from {
+                        transform: scale(0);
+                    }
+                    to {
+                        transform: scale(1);
+                    }
+                }
+            }
+
+        }
+    }
+    .projectsContainer {
+        @include flex(row, space-evenly, center);
+        width: 100%;
+        min-height: 70vh;
+        border-radius: 5px;
+        flex-wrap: wrap;
+        .contentContainer {
+            @include flex(column, space-evenly, center);
+            height: 330px;
+            width: 300px;
+            border-radius: 4px;
+            margin-top: 20px;
+            padding-top: 20px;
+            @media screen and (min-width: 2550px) {
+                height: 630px;
+                width: 600px;
+            }
+            .socialNetworkBack {
+                @include flex(row, center, center);
+                height: 80%;
+                width: 80%;
+                box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5);
+                background-image: url(https://images.all-free-download.com/images/graphicwebp/social_networking_design_people_and_symbols_in_circle_6826491.webp);
+                background-size: cover;
+                background-position: 50% 50%;
+                border-radius: 4px;
+                margin-bottom: 15px;
+            }
+            .todolistBack {
+                @include flex(row, center, center);
+                height: 80%;
+                width: 80%;
+                box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5);
+                border-radius: 4px;
+                background-image: url(https://cdn.worldvectorlogo.com/logos/todo-1.svg);
+                background-size: cover;
+                background-position: 50% 50%;
+                margin-bottom: 15px;
+            }
+            .counter {
+                @include flex(row, center, center);
+                height: 80%;
+                width: 80%;
+                box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5);
+                border-radius: 4px;
+                background-image: url(../counter.jpg);
+                background-size: cover;
+                background-position: 50% 50%;
+                margin-bottom: 15px;
+            }
+
+        }
+        .projectLink {
+            @include flex(row, center, center);
+            width: 40%;
+            height: 20%;
+            background-color: rgba(23,23,39,0.6);
+            text-decoration: none;
+            color: ghostwhite;
+            border-radius: 1px;
+        }
+        .status {
+            margin: 5px 0 10px 0;
+        }
+    }
+}

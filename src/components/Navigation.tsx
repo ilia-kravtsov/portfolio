@@ -92,7 +92,10 @@ export const Navigation: FC<NaviType> = ({navState, setNavState}) => {
                         :  s.navIconContainer
                     }>
                         <div className={s.linkTitle}>
-                            <span>about me</span>
+                            <span className={s.inline}>
+                                <span>About</span>
+                                <span className={s.ml}>me</span>
+                            </span>
                         </div>
                         <img src={aboutIcon}
                              className={s.navIcon}
@@ -131,7 +134,11 @@ export const Navigation: FC<NaviType> = ({navState, setNavState}) => {
                     <div className={navState.contacts === 1
                         ? `${s.navIconContainer} ${s.active}`
                         :  s.navIconContainer}>
-                        <span className={s.linkTitle}>Let's Talk</span>
+                        <span className={s.linkTitle}>
+                            <span className={s.inline}>Let's
+                                <span className={s.ml}>Talk</span>
+                            </span>
+                        </span>
                         <img src={contactsIcon}
                              className={s.navIcon}
                              alt={'contactsIcon'}

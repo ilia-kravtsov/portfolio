@@ -87,6 +87,14 @@
     transition-property: all;
 }
 
+.inline {
+    display: flex;
+}
+
+.ml {
+    margin-left: 6px;
+}
+
 .navIcon {
     width: 80px;
     height: 80px;
