@@ -118,6 +118,33 @@ input[type="number"]:focus {
         min-height: 80vh;
         border-radius: 4px;
         flex-wrap: wrap;
+        .errorContainer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .errorActive {
+            color: red;
+            font-size: 24px;
+            opacity: 1;
+            position: absolute;
+            animation: errorAppear 3s ease-in-out forwards;
+            @keyframes errorAppear {
+                0% {
+                    opacity: 0;
+                }
+                50% {
+                    opacity: 1;
+                }
+                100% {
+                    opacity: 0;
+                }
+            }
+        }
+        .errorDisabled {
+            font-size: 24px;
+            opacity: 0;
+        }
         .inputBox {
             position: relative;
             width: 80%;

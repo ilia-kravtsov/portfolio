@@ -66,13 +66,14 @@
             text-align: center;
             font-family: $textStyle;
             font-size: 72px;
-            animation: titleAppear 1s ease-in-out forwards;
+            animation: titleAppear 0.7s ease-in-out forwards;
             @keyframes titleAppear {
                 0% {
-                    margin-right: 100%;
-                    transform: rotate(360deg);
+                    margin-right: 20%;
+                    transform: rotate(-270deg);
                 }
                 100% {
+                    margin-right: 0;
                     transform: rotate(0deg);
                 }
             }
