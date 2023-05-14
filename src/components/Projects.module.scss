@@ -128,8 +128,8 @@
             transition: all;
             transition-duration: 1s;
             @media screen and (min-width: 2565px) {
-                height: 630px;
-                width: 600px;
+                height: 730px;
+                width: 700px;
             }
             &:hover {
                 transform: scale(1.1);
@@ -181,6 +181,10 @@
             h3 {
                 color: lightgrey;
                 font-weight: normal;
+                font-size: 24px;
+                @media screen and (min-width: 2565px) {
+                    font-size: 28px;
+                }
             }
 
         }
@@ -197,6 +201,10 @@
         .status {
             margin: 5px 0 10px 0;
             color: lightgrey;
+            font-size: 24px;
+            @media screen and (min-width: 2565px) {
+                font-size: 28px;
+            }
         }
     }
 }

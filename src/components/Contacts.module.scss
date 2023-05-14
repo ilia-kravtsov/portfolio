@@ -87,6 +87,19 @@ input[type="number"]:focus {
                 color: $accentColor;
                 font-family: inherit;
             }
+            animation: titleAppear 1s forwards;
+            @media screen and (min-width: 2565px) {
+                font-size: 80px;
+            }
+            @keyframes titleAppear {
+                from {
+                    margin-top: 100%;
+                    transform: rotate(0deg)
+                }
+                to {
+                    transform: rotate(360deg)
+                }
+            }
         }
         .titleBack {
             position: absolute;
