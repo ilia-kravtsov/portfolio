@@ -7,168 +7,159 @@
     width: 90%;
     min-height: 90vh;
     box-sizing: border-box;
-}
-
-.textGreeting {
-    @include flex(column, space-evenly, center);
-    box-sizing: border-box;
-    border-radius: 4px;
-}
-
-.greeting{
-    font-family: 'Poppins', sans-serif;
-    font-size: 52px;
-    font-weight: bold;
-    box-sizing: border-box;
-}
-
-.name {
-    font-size: 52px;
-    font-weight: bold;
-    font-family: 'Poppins', sans-serif;
-    box-sizing: border-box;
-    color: #3a5ace;
-}
-
-.preName {
-    font-size: 52px;
-    font-weight: bold;
-    font-family: 'Poppins', sans-serif;
-    color: white;
-}
-
-.professionConatiner {
-    display: grid;
-    place-items: center;
-    width: 100%;
-}
-
-.profession {
-    font-size: 52px;
-    font-family: 'Poppins', sans-serif;
-    font-weight: bold;
-    box-sizing: border-box;
-    width: 0;
-    white-space: nowrap;
-    overflow: hidden;
-    border-right: 3px solid; /* рисуем курсор */
-    animation: typing 2s steps(30, end) forwards, blinking 1s infinite;
-}
-
-.photoWrapper {
-    overflow: hidden;
-    z-index: 1;
-    border-radius: 20px;
-    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.6);
-}
-
-.photo {
-    width: 30vw;
-    height: calc(100vh - 80px);
-    background-image: url(../ava.jpg);
-    background-size: cover;
-    background-position: 80% 50%;
-    transition: all 1s ease;
-}
-
-.photo:hover {
-    transform: scale(1.1) rotate(3deg);
-}
-
-.colorBlock {
-    background-color: #3a5ace;
-    position: fixed;
-    height: 200%;
-    width: 100%;
-    transform: rotate(-15deg);
-    left: -83%;
-    top: -50%;
-}
-
-.aboutMeText {
-    margin-top: 20px;
-    font-size: 28px;
-    color: white;
-}
-
-.letsBuild {
-    margin-top: 20px;
-}
-
-.navLink {
-    @include flex(column, flex-end, center);
-    width: 80%;
-    color: whitesmoke;
-    text-decoration: none;
-    font-size: 20px;
-    text-align: center;
-    transition-duration: 1s;
-    transition-property: all;
-    margin-top: 50px;
-}
-
-.navLink:hover {
-    transform: scale(1.1);
-}
-
-.navLink:hover .navIconContainer {
-    border-radius: 40px;
-    background-color: #3a5ace;
-}
-
-.navIconContainer {
-    @include flex(row, space-between, center);
-    border-radius: 5px;
-    width: 350px;
-    border: 1px solid #3a5ace;
-    overflow: hidden;
-    transition-duration: 0.5s;
-    transition-property: all;
-}
-
-.linkTitle {
-    font-size: 20px;
-    transition-duration: 1s;
-    transition-property: all;
-    white-space: nowrap;
-    animation: marquee 3s infinite linear;
-    overflow: hidden;
-    width: 100%;
-}
-
-.navIcon {
-    width: 80px;
-    height: 80px;
-    padding: 10px;
-    border-radius: 5px;
-    margin-left: auto;
-    background-color: #3a5ace;
-    z-index: 1;
-}
-
-
-@media screen and (min-width: 2550px) {
-    .photo {
-        width: 1000px;
+    .colorBlock {
+        background-color: #3a5ace;
+        position: fixed;
+        height: 200%;
+        width: 100%;
+        transform: rotate(-15deg);
+        left: -83%;
+        top: -50%;
+    }
+    .photoWrapper {
+        overflow: hidden;
+        z-index: 1;
+        border-radius: 20px;
+        box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.6);
+        .photo {
+            width: 30vw;
+            height: calc(100vh - 80px);
+            background-image: url(../images/ava.jpg);
+            background-size: cover;
+            background-position: 80% 50%;
+            transition: all 1s ease;
+            &:hover {
+                transform: scale(1.1) rotate(3deg);
+            }
+        }
+    }
+    .textGreeting {
+        @include flex(column, space-evenly, center);
+        box-sizing: border-box;
+        border-radius: 4px;
+        .name {
+            font-size: 52px;
+            font-weight: bold;
+            font-family: $textStyle;
+            box-sizing: border-box;
+            color: #3a5ace;
+            @media screen and (min-width: 2565px) {
+                    font-size: 82px;
+            }
+            .preName {
+                font-size: inherit;
+                font-weight: bold;
+                font-family: $textStyle;
+                color: white;
+            }
+        }
+        .professionConatiner {
+            display: grid;
+            place-items: center;
+            width: 100%;
+            .profession {
+                font-size: 52px;
+                font-family: $textStyle;
+                font-weight: bold;
+                box-sizing: border-box;
+                width: 0;
+                white-space: nowrap;
+                overflow: hidden;
+                border-right: 3px solid; /* рисуем курсор */
+                animation: typing 2s steps(30, end) forwards, blinking 1s infinite;
+                @keyframes blinking {
+                    0% {border-right-color: transparent}
+                    50% {border-right-color: white}
+                    100% {border-right-color: transparent}
+                }
+                @keyframes typing {
+                    from { width: 0 }
+                    to { width: 100% }
+                }
+                @media screen and (min-width: 2565px) {
+                    font-size: 82px;
+                }
+            }
+        }
+        .aboutMeText {
+            margin-top: 20px;
+            font-size: 28px;
+            color: white;
+            .letsBuild {
+                margin-top: 20px;
+            }
+            @media screen and (min-width: 2565px) {
+                font-size: 52px;
+            }
+        }
+        .navLink {
+            @include flex(column, flex-end, center);
+            width: 80%;
+            color: whitesmoke;
+            text-decoration: none;
+            transition-duration: 1s;
+            transition-property: all;
+            margin-top: 50px;
+            &:hover {
+                transform: scale(1.1);
+            }
+            &:hover .navIconContainer {
+                border-radius: 40px;
+                background-color: #3a5ace;
+            }
+            .navIconContainer {
+                @include flex(row, space-between, center);
+                border-radius: 5px;
+                width: 400px;
+                border: 1px solid #3a5ace;
+                overflow: hidden;
+                transition-duration: 0.5s;
+                transition-property: all;
+                @media screen and (min-width: 2565px) {
+                    width: 600px;
+                    height: 100px;
+                }
+                .linkTitle {
+                    font-size: 20px;
+                    transition-duration: 1s;
+                    transition-property: all;
+                    white-space: nowrap;
+                    animation: marquee 3s infinite linear;
+                    overflow: hidden;
+                    width: 100%;
+                    @keyframes marquee{
+                        0% {
+                            transform: translateX(100%)
+                        }
+                        100% {
+                            transform: translateX(-100%)
+                        }
+                    }
+                    @media screen and (min-width: 2565px) {
+                        font-size: 28px;
+                    }
+                }
+                .navIcon {
+                    width: 80px;
+                    height: 80px;
+                    padding: 10px;
+                    border-radius: 5px;
+                    margin-left: auto;
+                    background-color: #3a5ace;
+                    z-index: 1;
+                    @media screen and (min-width: 2565px) {
+                        width: 100px;
+                        height: 100px;
+                    }
+                }
+            }
+        }
     }
 }
 
-@keyframes blinking {
-    0% {border-right-color: transparent}
-    50% {border-right-color: white}
-    100% {border-right-color: transparent}
-}
 
-@keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
-}
 
-@keyframes marquee{
-    0% {
-        transform: translateX(100%)
-    }
-    100% {
-        transform: translateX(-100%)
-    }
-}
+
+
+
+

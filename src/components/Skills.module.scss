@@ -64,12 +64,12 @@
             border-radius: 4px;
             width: 100%;
             text-align: center;
-            font-family: 'Poppins', serif;
-            font-size: 52px;
+            font-family: $textStyle;
+            font-size: 72px;
             animation: titleAppear 1s ease-in-out forwards;
             @keyframes titleAppear {
                 0% {
-                    margin-right: 20%;
+                    margin-right: 50%;
                 }
                 100% {
                 }
@@ -77,9 +77,10 @@
             .titleRight {
                 position: absolute;
                 color: $accentColor;
-                font-family: 'Poppins', serif;
+                font-family: $textStyle;
                 animation: setDisappear 1s ease-in-out forwards;
-                animation-delay: 5s;
+                animation-delay: 4s;
+                margin-left: 8px;
                 @keyframes setDisappear {
                     0% {
                         opacity: 0.5;
@@ -116,7 +117,7 @@
             opacity: 1;
             color: hsla(0, 0%, 100%, .07);
             font-weight: 900;
-            font-family: 'Poppins', serif;
+            font-family: $textStyle;
         }
     }
     .skillsContainer {
@@ -148,10 +149,6 @@
             width: 15%;
             height: 25%;
             transition: all 1s ease-in-out;
-            @media screen and (min-width: 2550px) {
-                width: 15%;
-                height: 25%;
-            }
             &:hover {
                 transform: scale(1.2);
             }

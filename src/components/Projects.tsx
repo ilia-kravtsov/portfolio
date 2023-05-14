@@ -5,7 +5,13 @@ export const Projects = () => {
     return (
         <div className={s.container}>
             <div className={s.titleContainer}>
+                <div className={s.dotContainer}>
+                    <div className={s.leftDot}></div>
+                </div>
                 <h1 className={s.title}>Project<span className={s.me}>$</span></h1>
+                <div className={s.dotContainer}>
+                    <div className={s.rightDot}></div>
+                </div>
             </div>
             <div className={s.projectsContainer}>
                 <div className={s.contentContainer}>
@@ -20,6 +26,13 @@ export const Projects = () => {
                         <a href='https://ilia-kravtsov.github.io/todolist/' target='_blank' className={s.projectLink} rel="noreferrer">check</a>
                     </div>
                     <h3>Todolist</h3>
+                    <span className={s.status}>Status: in progress</span>
+                </div>
+                <div className={s.contentContainer}>
+                    <div className={s.telegram}>
+                        <a href='https://ilia-kravtsov.github.io/telegram_clone_2' target='_blank' className={s.projectLink} rel="noreferrer">check</a>
+                    </div>
+                    <h3>Telegram clone</h3>
                     <span className={s.status}>Status: in progress</span>
                 </div>
                 <div className={s.contentContainer}>

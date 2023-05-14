@@ -5,10 +5,6 @@ import {NavLink} from "react-router-dom";
 
 export const Home = () => {
 
-    const onAboutClick = () => {
-
-    }
-
     return (
             <div className={s.container}>
                 <div className={s.colorBlock}></div>
@@ -17,8 +13,7 @@ export const Home = () => {
                 </div>
                 <div className={s.textGreeting}>
                     <span className={s.name}>
-                        <span className={s.preName}>I'M ILIA </span>
-                         KRAVTSOV
+                        <span className={s.preName}>I'M ILIA </span>KRAVTSOV
                     </span>
                     <div className={s.professionConatiner}>
                         <span className={s.profession}>A FRONTEND DEVELOPER</span>
@@ -28,9 +23,7 @@ export const Home = () => {
                         <p className={s.letsBuild}>Programmers - are modern sculptors,</p>
                         <p>who create intellectual masterpieces.</p>
                     </div>
-                    <NavLink to='/about'
-                             className={s.navLink}
-                             onClick={onAboutClick}>
+                    <NavLink to='/about' className={s.navLink}>
                         <div className={s.navIconContainer}>
                             <div className={s.linkTitle}>
                                 <span>find out more about me</span>

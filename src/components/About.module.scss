@@ -6,30 +6,35 @@
   width: 90%;
   min-height: 90vh;
   box-sizing: border-box;
-  margin: 5px 0;
-  font-family: 'Poppins', serif;
+  font-family: $textStyle;
+  font-size: 20px;
+  @media screen and (min-width: 2565px) {
+    font-size: 30px;
+  }
 
   .titleSection {
     @include flex(column, space-between, center);
     font-family: inherit;
     .titleAboutPage {
       animation: titleAppear 1s forwards;
+      font-size: 80px;
+      @media screen and (min-width: 2565px) {
+        font-size: 80px;
+      }
       @keyframes titleAppear {
         from {
           margin-top: 100%;
           transform: rotate(20deg)
         }
         to {
-          margin-top: 45px;
+          margin-top: 20px;
           transform: rotate(0deg)
         }
       }
     }
     h2 {
       font-family: inherit;
-      font-size: 52px;
-      margin-top: 45px;
-
+      font-size: inherit;
       .me {
         color: $accentColor;
         font-family: inherit;
@@ -44,6 +49,7 @@
       opacity: 1;
       color: hsla(0, 0%, 100%, .07);
       font-weight: 900;
+      text-transform: uppercase;
     }
   }
 
@@ -101,8 +107,8 @@
     h3 {
       @include flex(row, normal, center);
       color: lightgrey;
-      font-family: Poppins, sans-serif;
-      font-size: 16px;
+      font-family: $textStyle;
+      font-size: inherit;
       font-weight: 700;
       gap: 25px;
       letter-spacing: 8px;
@@ -129,7 +135,7 @@
     @keyframes circleAppearance {
       0% {
         opacity: 0;
-        margin-left: 50px;
+        margin-left: 200px;
       }
       100% {
         opacity: 1;
@@ -141,9 +147,7 @@
       @include flex(row, space-between, normal);
       margin-top: 10px;
       letter-spacing: 2px;
-      @media screen and (min-width: 2550px) {
-        font-size: 20px;
-      }
+      font-size: inherit;
     }
   }
 }

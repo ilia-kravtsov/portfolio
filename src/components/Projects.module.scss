@@ -14,30 +14,93 @@
         border-radius: 4px;
         width: 100%;
         height: 12%;
-        .title {
-            padding: 10px;
-            border-radius: 4px;
-            width: 100%;
-            text-align: center;
-            font-family: 'Poppins', sans-serif;
-            text-transform: uppercase;
-            font-size: 52px;
-            .me {
-                position: absolute;
-                color: $accentColor;
-                font-family: inherit;
-                animation: titleAppear 1s forwards;
-                @keyframes titleAppear {
-                    from {
-                        transform: scale(0);
+        .dotContainer {
+            width: 40%;
+            display: flex;
+            justify-content: center;
+            .leftDot {
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background-color: $accentColor;
+                box-shadow: 0 0 10px $accentColor, 0 0 30px $accentColor;
+                animation: dotAnimation 2s linear infinite;
+                @keyframes dotAnimation {
+                    0% {
+                        margin-right: 200px;
+                        opacity: 1;
                     }
-                    to {
-                        transform: scale(1);
+                    50% {
+                        margin-right: 0;
+                        opacity: 0;
+                    }
+                    100% {
+                        margin-right: 200px;
+                        opacity: 1;
+                    }
+                }
+            }
+            .rightDot {
+                width: 10px;
+                height: 10px;
+                border-radius: 50%;
+                background-color: $accentColor;
+                box-shadow: 0 0 10px $accentColor, 0 0 30px $accentColor;
+                animation: dotAnimation2 2s linear infinite;
+                @keyframes dotAnimation2 {
+                    0% {
+                        margin-left: 200px;
+                        opacity: 1;
+                    }
+                    50% {
+                        margin-left: 0;
+                        opacity: 0;
+                    }
+                    100% {
+                        margin-left: 200px;
+                        opacity: 1;
                     }
                 }
             }
 
         }
+        .title {
+            padding: 10px;
+            border-radius: 4px;
+            width: 100%;
+            text-align: center;
+            font-family: $textStyle;
+            text-transform: uppercase;
+            font-size: 72px;
+            animation: projectsAppear 0.7s forwards;
+            @keyframes projectsAppear {
+                0% {
+                    margin-bottom: 30%;
+                }
+                100% {
+
+                }
+            }
+            @media screen and (min-width: 2565px) {
+                font-size: 90px;
+            }
+            .me {
+                position: absolute;
+                color: $accentColor;
+                font-family: inherit;
+                animation: Sappear 4s forwards;
+                @keyframes Sappear {
+                    0% {
+                        transform: scale(0) rotate(0);
+                    }
+                    100% {
+                        transform: scale(1) rotate(720deg);
+                    }
+                }
+            }
+
+        }
+
     }
     .projectsContainer {
         @include flex(row, space-evenly, center);
@@ -45,25 +108,40 @@
         min-height: 70vh;
         border-radius: 5px;
         flex-wrap: wrap;
+        animation: projectAppear 1s forwards;
+        @keyframes projectAppear {
+            from {
+                transform: scale(0.5);
+            }
+            to {
+                transform: scale(1);
+            }
+        }
         .contentContainer {
             @include flex(column, space-evenly, center);
-            height: 330px;
-            width: 300px;
+            height: 430px;
+            width: 400px;
             border-radius: 4px;
             margin-top: 20px;
             padding-top: 20px;
-            @media screen and (min-width: 2550px) {
+            background-color: rgba(50, 50, 50, 0.7);
+            transition: all;
+            transition-duration: 1s;
+            @media screen and (min-width: 2565px) {
                 height: 630px;
                 width: 600px;
+            }
+            &:hover {
+                transform: scale(1.1);
             }
             .socialNetworkBack {
                 @include flex(row, center, center);
                 height: 80%;
                 width: 80%;
                 box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5);
-                background-image: url(https://images.all-free-download.com/images/graphicwebp/social_networking_design_people_and_symbols_in_circle_6826491.webp);
+                background-image: url('../images/social.png');
                 background-size: cover;
-                background-position: 50% 50%;
+                background-position: 0 50%;
                 border-radius: 4px;
                 margin-bottom: 15px;
             }
@@ -73,9 +151,9 @@
                 width: 80%;
                 box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5);
                 border-radius: 4px;
-                background-image: url(https://cdn.worldvectorlogo.com/logos/todo-1.svg);
+                background-image: url(../images/todo.png);
                 background-size: cover;
-                background-position: 50% 50%;
+                background-position: -120% 50%;
                 margin-bottom: 15px;
             }
             .counter {
@@ -84,10 +162,25 @@
                 width: 80%;
                 box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5);
                 border-radius: 4px;
-                background-image: url(../counter.jpg);
+                background-image: url(../images/counter.jpg);
                 background-size: cover;
                 background-position: 50% 50%;
                 margin-bottom: 15px;
+            }
+            .telegram {
+                @include flex(row, center, center);
+                height: 80%;
+                width: 80%;
+                box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5);
+                border-radius: 4px;
+                background-image: url(../images/1234.png);
+                background-size: cover;
+                background-position: 50% 50%;
+                margin-bottom: 15px;
+            }
+            h3 {
+                color: lightgrey;
+                font-weight: normal;
             }
 
         }
@@ -97,11 +190,14 @@
             height: 20%;
             background-color: rgba(23,23,39,0.6);
             text-decoration: none;
-            color: ghostwhite;
+            color: whitesmoke;
             border-radius: 1px;
+            font-size: 20px;
         }
         .status {
             margin: 5px 0 10px 0;
+            color: lightgrey;
         }
     }
 }
+

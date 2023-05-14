@@ -11,7 +11,7 @@ export const Skills = () => {
                 </div>
                 <h1 className={s.title}>
                     Skills
-                    <span className={s.titleRight}> set</span>
+                    <span className={s.titleRight}>set</span>
                 </h1>
                 <div className={s.dotContainer}>
                     <div className={s.rightDot}></div>
@@ -33,7 +33,7 @@ export const Skills = () => {
                     <Circle percents={60} title={'TypeScript'}/>
                 </div>
                 <div className={s.skill}>
-                    <Circle percents={30} title={'StoryBook'}/>
+                    <Circle percents={30} title={'Storybook'}/>
                 </div>
                 <div className={s.skill}>
                     <Circle percents={40} title={'Unit Testing'}/>
@@ -48,7 +48,7 @@ export const Skills = () => {
                     <Circle percents={70} title={'SASS'}/>
                 </div>
                 <div className={s.skill}>
-                    <Circle percents={70} title={'REST API'}/>
+                    <Circle percents={70} title={'Rest API'}/>
                 </div>
                 <div className={s.skill}>
                     <Circle percents={70} title={'MUI'}/>

@@ -23,7 +23,7 @@ export const About: FC<AboutType> = ({linkColorAbout}) => {
                 <h2 className={s.titleAboutPage}>ABOUT
                     <span className={s.me}> ME</span>
                 </h2>
-                <span className={s.titleBack}>RESUME</span>
+                <span className={s.titleBack}>Information</span>
             </section>
             <section className={s.content}>
                 <div className={s.contentLeft}>
