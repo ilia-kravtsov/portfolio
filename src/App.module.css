@@ -13,6 +13,7 @@
     width: 17%;
     display: flex;
     align-items: center;
+    border: 1px solid blue;
 }
 
 .navLinksContainer {
@@ -21,7 +22,8 @@
     height: 60vh;
     flex-direction: column;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
+    border: 1px solid red;
 }
 
 .main {
@@ -45,6 +47,7 @@
     align-items: center;
     transition-duration: 1s;
     transition-property: all;
+    border: 1px solid red;
 }
 
 .navLink:hover {
@@ -179,7 +182,8 @@
     background-color: #3a5ace;
 }
 
-@media screen and (min-width: 2565px) {
+
+@media screen and (min-width: 2801px) {
     .navIconContainer {
         width: 100px;
     }
@@ -191,7 +195,42 @@
         font-size: 28px;
     }
 }
-
+@media screen and (max-width: 2800px) {
+    .navIconContainer {
+        width: 90px;
+    }
+    .navIcon {
+        width: 90px;
+        height: 90px;
+    }
+    .linkTitle {
+        font-size: 26px;
+    }
+}
+@media screen and (max-width: 2000px) {
+    .navIconContainer {
+        width: 80px;
+    }
+    .navIcon {
+        width: 80px;
+        height: 80px;
+    }
+    .linkTitle {
+        font-size: 24px;
+    }
+}
+@media screen and (max-width: 1500px) {
+    .navIconContainer {
+        width: 70px;
+    }
+    .navIcon {
+        width: 70px;
+        height: 70px;
+    }
+    .linkTitle {
+        font-size: 22px;
+    }
+}
 
 
 

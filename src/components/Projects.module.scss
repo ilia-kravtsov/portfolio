@@ -81,9 +81,9 @@
 
                 }
             }
-            @media screen and (min-width: 2565px) {
-                font-size: 90px;
-            }
+            //@media screen and (min-width: 2565px) {
+            //    font-size: 90px;
+            //}
             .me {
                 position: absolute;
                 color: $accentColor;
@@ -127,10 +127,10 @@
             background-color: rgba(50, 50, 50, 0.7);
             transition: all;
             transition-duration: 1s;
-            @media screen and (min-width: 2565px) {
-                height: 730px;
-                width: 700px;
-            }
+            //@media screen and (min-width: 2565px) {
+            //    height: 730px;
+            //    width: 700px;
+            //}
             &:hover {
                 transform: scale(1.1);
             }
@@ -182,9 +182,9 @@
                 color: lightgrey;
                 font-weight: normal;
                 font-size: 24px;
-                @media screen and (min-width: 2565px) {
-                    font-size: 28px;
-                }
+                //@media screen and (min-width: 2565px) {
+                //    font-size: 28px;
+                //}
             }
 
         }
@@ -202,9 +202,9 @@
             margin: 5px 0 10px 0;
             color: lightgrey;
             font-size: 24px;
-            @media screen and (min-width: 2565px) {
-                font-size: 28px;
-            }
+            //@media screen and (min-width: 2565px) {
+            //    font-size: 28px;
+            //}
         }
     }
 }

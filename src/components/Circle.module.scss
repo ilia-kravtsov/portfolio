@@ -8,9 +8,9 @@
   transition-duration: 0.5s;
   transition-property: all;
   transform: scale(1.5);
-  @media screen and (min-width: 2565px) {
-    transform: scale(2);
-  }
+  //@media screen and (min-width: 2565px) {
+  //  transform: scale(2);
+  //}
   &:hover {
     transform: scale(1.55);
   }
@@ -108,9 +108,9 @@
         letter-spacing: 8px;
         line-height: 1.7;
         text-transform: uppercase;
-        @media screen and (min-width: 2565px) {
-          font-size: 20px;
-        }
+        //@media screen and (min-width: 2565px) {
+        //  font-size: 20px;
+        //}
       }
     }
 
@@ -126,9 +126,9 @@
       letter-spacing: 2px;
       color: rgba(255, 255, 255, 0.75);
       font-family: 'Lora', serif;
-      @media screen and (min-width: 2565px) {
-        font-size: 16px;
-      }
+      //@media screen and (min-width: 2565px) {
+      //  font-size: 16px;
+      //}
     }
   }
 }

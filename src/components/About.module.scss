@@ -8,9 +8,9 @@
   box-sizing: border-box;
   font-family: $textStyle;
   font-size: 20px;
-  @media screen and (min-width: 2565px) {
-    font-size: 30px;
-  }
+  //@media screen and (min-width: 2565px) {
+  //  font-size: 30px;
+  //}
 
   .titleSection {
     @include flex(column, space-between, center);
@@ -18,9 +18,9 @@
     .titleAboutPage {
       animation: titleAppear 1s forwards;
       font-size: 80px;
-      @media screen and (min-width: 2565px) {
-        font-size: 80px;
-      }
+      //@media screen and (min-width: 2565px) {
+      //  font-size: 80px;
+      //}
       @keyframes titleAppear {
         from {
           margin-top: 100%;

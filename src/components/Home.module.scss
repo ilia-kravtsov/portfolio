@@ -2,164 +2,298 @@
 @import '../sass/mixin.scss';
 
 .container {
-    @include flex(row, space-evenly, center);
-    flex-wrap: wrap;
-    width: 90%;
-    min-height: 90vh;
-    box-sizing: border-box;
-    .colorBlock {
-        background-color: #3a5ace;
-        position: fixed;
-        height: 200%;
-        width: 100%;
-        transform: rotate(-15deg);
-        left: -83%;
-        top: -50%;
-    }
-    .photoWrapper {
-        overflow: hidden;
-        z-index: 1;
-        border-radius: 20px;
-        box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.6);
-        .photo {
-            width: 30vw;
-            height: calc(100vh - 80px);
-            background-image: url(../images/ava.jpg);
-            background-size: cover;
-            background-position: 80% 50%;
-            transition: all 1s ease;
-            &:hover {
-                transform: scale(1.1) rotate(3deg);
-            }
-        }
-    }
-    .textGreeting {
-        @include flex(column, space-evenly, center);
-        box-sizing: border-box;
-        border-radius: 4px;
-        .name {
-            font-size: 52px;
-            font-weight: bold;
-            font-family: $textStyle;
-            box-sizing: border-box;
-            color: #3a5ace;
-            @media screen and (min-width: 2565px) {
-                    font-size: 82px;
-            }
-            .preName {
-                font-size: inherit;
-                font-weight: bold;
-                font-family: $textStyle;
-                color: white;
-            }
-        }
-        .professionConatiner {
-            display: grid;
-            place-items: center;
-            width: 100%;
-            .profession {
-                font-size: 52px;
-                font-family: $textStyle;
-                font-weight: bold;
-                box-sizing: border-box;
-                width: 0;
-                white-space: nowrap;
-                overflow: hidden;
-                border-right: 3px solid; /* рисуем курсор */
-                animation: typing 2s steps(30, end) forwards, blinking 1s infinite;
-                @keyframes blinking {
-                    0% {border-right-color: transparent}
-                    50% {border-right-color: white}
-                    100% {border-right-color: transparent}
-                }
-                @keyframes typing {
-                    from { width: 0 }
-                    to { width: 100% }
-                }
-                @media screen and (min-width: 2565px) {
-                    font-size: 82px;
-                }
-            }
-        }
-        .aboutMeText {
-            margin-top: 20px;
-            font-size: 28px;
-            color: white;
-            .letsBuild {
-                margin-top: 20px;
-            }
-            @media screen and (min-width: 2565px) {
-                font-size: 52px;
-            }
-        }
-        .navLink {
-            @include flex(column, flex-end, center);
-            width: 80%;
-            color: whitesmoke;
-            text-decoration: none;
-            transition-duration: 1s;
-            transition-property: all;
-            margin-top: 50px;
-            &:hover {
-                transform: scale(1.1);
-            }
-            &:hover .navIconContainer {
-                border-radius: 50px;
-                background-color: #3a5ace;
-            }
-            .navIconContainer {
-                @include flex(row, space-between, center);
-                border-radius: 5px;
-                width: 400px;
-                border: 1px solid #3a5ace;
-                overflow: hidden;
-                transition-duration: 0.5s;
-                transition-property: all;
-                @media screen and (min-width: 2565px) {
-                    width: 600px;
-                    height: 100px;
-                }
-                .linkTitle {
-                    font-size: 24px;
-                    transition-duration: 1s;
-                    transition-property: all;
-                    white-space: nowrap;
-                    animation: marquee 3s infinite linear;
-                    overflow: hidden;
-                    width: 100%;
-                    @keyframes marquee{
-                        0% {
-                            transform: translateX(100%)
-                        }
-                        100% {
-                            transform: translateX(-100%)
-                        }
-                    }
-                    @media screen and (min-width: 2565px) {
-                        font-size: 28px;
-                    }
-                }
-                .navIcon {
-                    width: 80px;
-                    height: 80px;
-                    padding: 10px;
-                    border-radius: 5px;
-                    margin-left: auto;
-                    background-color: #3a5ace;
-                    z-index: 1;
-                    @media screen and (min-width: 2565px) {
-                        width: 100px;
-                        height: 100px;
-                    }
-                }
-            }
-        }
-    }
+  @include flex(row, space-between, center);
+  flex-wrap: wrap;
+  width: 80%;
+  min-height: 90vh;
+  box-sizing: border-box;
 }
 
+.colorBlock {
+  background-color: #3a5ace;
+  position: fixed;
+  height: 200%;
+  width: 100%;
+  transform: rotate(-15deg);
+  left: -83%;
+  top: -50%;
+}
 
+.photoWrapper {
+  overflow: hidden;
+  z-index: 1;
+  border-radius: 20px;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.6);
+}
 
+.photo {
+  width: 30vw;
+  height: calc(100vh - 80px);
+  background-image: url(../images/ava.jpg);
+  background-size: cover;
+  background-position: 75% 50%;
+  transition: all 1s ease;
+  &:hover {
+    transform: scale(1.1) rotate(3deg);
+  }
+}
 
+.textGreeting {
+  @include flex(column, space-evenly, center);
+  box-sizing: border-box;
+  border-radius: 4px;
+}
 
+.name {
+  font-size: 52px;
+  font-weight: bold;
+  font-family: $textStyle;
+  box-sizing: border-box;
+  color: #3a5ace;
+}
 
+.preName {
+  font-size: inherit;
+  font-weight: bold;
+  font-family: $textStyle;
+  color: white;
+}
 
+.professionConatiner {
+  display: grid;
+  place-items: center;
+  width: 100%;
+}
+
+.profession {
+  font-size: 52px;
+  font-family: $textStyle;
+  font-weight: bold;
+  box-sizing: border-box;
+  width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid; /* рисуем курсор */
+  animation: typing 2s steps(30, end) forwards, blinking 1s infinite;
+  @keyframes blinking {
+    0% {
+      border-right-color: transparent
+    }
+    50% {
+      border-right-color: white
+    }
+    100% {
+      border-right-color: transparent
+    }
+  }
+  @keyframes typing {
+    from {
+      width: 0
+    }
+    to {
+      width: 100%
+    }
+  }
+}
+
+.aboutMeText {
+  margin-top: 20px;
+  font-size: 28px;
+  color: white;
+
+  .letsBuild {
+    margin-top: 20px;
+  }
+}
+
+.navLink {
+  @include flex(column, flex-end, center);
+  width: 80%;
+  color: whitesmoke;
+  text-decoration: none;
+  transition-duration: 1s;
+  transition-property: all;
+  margin-top: 50px;
+  &:hover {
+    transform: scale(1.1);
+  }
+  &:hover .navIconContainer {
+    border-radius: 50px;
+    background-color: #3a5ace;
+  }
+}
+
+.navIconContainer {
+  @include flex(row, space-between, center);
+  border-radius: 5px;
+  width: 400px;
+  border: 1px solid #3a5ace;
+  overflow: hidden;
+  transition-duration: 0.5s;
+  transition-property: all;
+}
+
+.linkTitle {
+  font-size: 24px;
+  transition-duration: 1s;
+  transition-property: all;
+  white-space: nowrap;
+  animation: marquee 3s infinite linear;
+  overflow: hidden;
+  width: 100%;
+  @keyframes marquee {
+    0% {
+      transform: translateX(100%)
+    }
+    100% {
+      transform: translateX(-100%)
+    }
+  }
+}
+
+.navIcon {
+  width: 80px;
+  height: 80px;
+  padding: 10px;
+  border-radius: 5px;
+  margin-left: auto;
+  background-color: #3a5ace;
+  z-index: 1;
+}
+
+@media screen and (min-width: 3001px) {
+  .photo {
+    width: 35vw;
+  }
+  .linkTitle {
+    font-size: 28px;
+  }
+  .navIconContainer {
+    width: 600px;
+    height: 100px;
+  }
+  .aboutMeText {
+    font-size: 45px;
+  }
+  .profession {
+    font-size: 70px;
+  }
+  .preName {
+    font-size: 70px;
+  }
+  .name {
+    font-size: 70px;
+  }
+  .navIcon {
+    width: 100px;
+    height: 100px;
+  }
+}
+@media screen and (max-width: 3000px) {
+  .photo {
+    background-position: 75% 50%;
+    width: 35vw;
+  }
+  .aboutMeText {
+    font-size: 30px;
+  }
+  .profession {
+    font-size: 52px;
+  }
+  .preName {
+    font-size: 52px;
+  }
+  .name {
+    font-size: 52px;
+  }
+}
+@media screen and (max-width: 2500px) {
+  .photo {
+    background-position: 75% 50%;
+    width: 30vw;
+  }
+  .aboutMeText {
+    font-size: 30px;
+  }
+  .profession {
+    font-size: 52px;
+  }
+  .preName {
+    font-size: 52px;
+  }
+  .name {
+    font-size: 52px;
+  }
+}
+@media screen and (max-width: 2000px) {
+  .photo {
+    background-position: 75% 50%;
+    width: 30vw;
+  }
+  .aboutMeText {
+    font-size: 24px;
+  }
+  .profession {
+    font-size: 40px;
+  }
+  .preName {
+    font-size: 40px;
+  }
+  .name {
+    font-size: 40px;
+  }
+}
+@media screen and (max-width: 1500px) {
+  .photo {
+    background-position: 75% 50%;
+    width: 30vw;
+  }
+  .aboutMeText {
+    font-size: 22px;
+  }
+  .profession {
+    font-size: 35px;
+  }
+  .preName {
+    font-size: 35px;
+  }
+  .name {
+    font-size: 35px;
+  }
+}
+@media screen and (max-width: 1300px) {
+  .photo {
+    background-position: 74% 50%;
+    width: 30vw;
+  }
+  .aboutMeText {
+    font-size: 20px;
+  }
+  .profession {
+    font-size: 30px;
+  }
+  .preName {
+    font-size: 30px;
+  }
+  .name {
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .photo {
+    background-position: 73% 50%;
+    width: 30vw;
+  }
+  .aboutMeText {
+    font-size: 20px;
+  }
+  .profession {
+    font-size: 30px;
+  }
+  .preName {
+    font-size: 30px;
+  }
+  .name {
+    font-size: 30px;
+  }
+}
