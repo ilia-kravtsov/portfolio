@@ -13,7 +13,8 @@
     width: 17%;
     display: flex;
     align-items: center;
-    border: 1px solid blue;
+    z-index: 5;
+    box-sizing: border-box;
 }
 
 .navLinksContainer {
@@ -23,7 +24,6 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    border: 1px solid red;
 }
 
 .main {
@@ -47,7 +47,6 @@
     align-items: center;
     transition-duration: 1s;
     transition-property: all;
-    border: 1px solid red;
 }
 
 .navLink:hover {
@@ -208,6 +207,9 @@
     }
 }
 @media screen and (max-width: 2000px) {
+    .navContainer {
+        width: 25%;
+    }
     .navIconContainer {
         width: 80px;
     }
@@ -218,8 +220,18 @@
     .linkTitle {
         font-size: 24px;
     }
+    .navLink {
+        width: 80%;
+    }
+    .navLink:hover {
+        color: whitesmoke;
+        transform: scale(1.1);
+    }
 }
 @media screen and (max-width: 1500px) {
+    .navContainer {
+        width: 25%;
+    }
     .navIconContainer {
         width: 70px;
     }
@@ -230,12 +242,106 @@
     .linkTitle {
         font-size: 22px;
     }
+    .navLink:hover {
+        color: whitesmoke;
+        transform: scale(1.1);
+    }
 }
-
-
-
-
-
+@media screen and (max-width: 1200px) {
+    .App {
+        flex-direction: column;
+    }
+    .navContainer {
+        width: 100vw;
+    }
+    .navLinksContainer {
+        flex-direction: row-reverse;
+        height: 11vh;
+    }
+    .navLink:hover {
+        transform: scale(1);
+    }
+}
+@media screen and (max-width: 1000px) {
+    .navLink {
+        justify-content: center;
+    }
+    .navLink:hover .navIconContainer {
+        width: 70px;
+        border-radius: 15px;
+    }
+    .linkTitle {
+        display: none;
+        width: 0;
+    }
+    .navIconContainer:hover .linkTitle {
+        display: none;
+        width: 0;
+    }
+    .main {
+        min-height: 90vh;
+    }
+}
+@media screen and (max-width: 500px) {
+    .navLink {
+        justify-content: center;
+    }
+    .navLink:hover .navIconContainer {
+        width: 50px;
+        border-radius: 15px;
+    }
+    .linkTitle {
+        display: none;
+        width: 0;
+    }
+    .navIconContainer:hover .linkTitle {
+        display: none;
+        width: 0;
+    }
+    .main {
+        min-height: 90vh;
+    }
+    .navIconContainer {
+        width: 50px;
+    }
+    .navIcon {
+        width: 50px;
+        height: 50px;
+    }
+}
+@media screen and (max-width: 350px) {
+    .navLink:hover .navIconContainer {
+        width: 50px;
+        border-radius: 15px;
+    }
+    .navIcon {
+        width: 50px;
+        height: 50px;
+    }
+}
+@media screen and (max-width: 300px) {
+    .navLink:hover .navIconContainer {
+        width: 40px;
+        border-radius: 15px;
+    }
+    .navIcon {
+        width: 40px;
+        height: 40px;
+    }
+}
+@media screen and (max-width: 230px) {
+    .navLink {
+        width: 40px;
+    }
+    .navLink:hover .navIconContainer {
+        width: 40px;
+        border-radius: 15px;
+    }
+    .navIcon {
+        width: 40px;
+        height: 40px;
+    }
+}
 
 
 

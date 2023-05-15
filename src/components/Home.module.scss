@@ -226,6 +226,9 @@
   }
 }
 @media screen and (max-width: 2000px) {
+  .container {
+    width: 85%;
+  }
   .photo {
     background-position: 75% 50%;
     width: 30vw;
@@ -244,9 +247,12 @@
   }
 }
 @media screen and (max-width: 1500px) {
+  .container {
+    width: 90%;
+  }
   .photo {
-    background-position: 75% 50%;
-    width: 30vw;
+    background-position: 73% 50%;
+    width: 35vw;
   }
   .aboutMeText {
     font-size: 22px;
@@ -260,11 +266,21 @@
   .name {
     font-size: 35px;
   }
+  .navIconContainer {
+    width: 350px;
+  }
+  .navIcon {
+    width: 70px;
+    height: 70px;
+  }
+  .linkTitle {
+    font-size: 20px;
+  }
 }
 @media screen and (max-width: 1300px) {
   .photo {
-    background-position: 74% 50%;
-    width: 30vw;
+    background-position: 73% 50%;
+    width: 35vw;
   }
   .aboutMeText {
     font-size: 20px;
@@ -277,12 +293,22 @@
   }
   .name {
     font-size: 30px;
+  }
+  .navIconContainer {
+    width: 350px;
+  }
+  .navIcon {
+    width: 70px;
+    height: 70px;
+  }
+  .linkTitle {
+    font-size: 20px;
   }
 }
 @media screen and (max-width: 1200px) {
   .photo {
     background-position: 73% 50%;
-    width: 30vw;
+    width: 45vw;
   }
   .aboutMeText {
     font-size: 20px;
@@ -295,5 +321,275 @@
   }
   .name {
     font-size: 30px;
+  }
+  .navIconContainer {
+    width: 350px;
+  }
+  .navIcon {
+    width: 70px;
+    height: 70px;
+  }
+  .linkTitle {
+    font-size: 20px;
+  }
+  .container {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .container {
+    @include flex(column, center, center);
+    min-height: 70vh;
+    width: 100%;
+  }
+  .colorBlock {
+    display: none;
+  }
+  .photoWrapper {
+    border-radius: 50%;
+    width: 272px;
+    height: 272px;
+    border: 2px solid $accentColor;
+  }
+  .photo {
+    width: 270px;
+    height: 270px;
+    border-radius: 50%;
+    background-position: 100% 50%;
+  }
+  .aboutMeText {
+    font-size: 20px;
+  }
+  .linkTitle {
+    font-size: 18px;
+  }
+  .profession {
+    font-size: 36px;
+  }
+  .preName {
+    font-size: 36px;
+  }
+  .name {
+    font-size: 36px;
+    margin-top: 20px;
+  }
+  .navIconContainer {
+    width: 330px;
+  }
+  .navIcon {
+    width: 60px;
+    height: 60px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .container {
+    @include flex(column, center, center);
+    min-height: 70vh;
+    width: 100%;
+  }
+  .photoWrapper {
+    border-radius: 50%;
+    width: 272px;
+    height: 272px;
+    border: 2px solid $accentColor;
+  }
+  .photo {
+    width: 270px;
+    height: 270px;
+    border-radius: 50%;
+    background-position: 100% 50%;
+  }
+  .aboutMeText {
+    font-size: 18px;
+  }
+  .linkTitle {
+    font-size: 16px;
+  }
+  .profession {
+    font-size: 30px;
+  }
+  .preName {
+    font-size: 30px;
+  }
+  .name {
+    font-size: 30px;
+    margin-top: 20px;
+  }
+  .navIconContainer {
+    width: 330px;
+  }
+  .navIcon {
+    width: 65px;
+    height: 65px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .container {
+    @include flex(column, center, center);
+    min-height: 70vh;
+    width: 100%;
+  }
+  .photoWrapper {
+    border-radius: 50%;
+    width: 272px;
+    height: 272px;
+    border: 2px solid $accentColor;
+  }
+  .photo {
+    width: 270px;
+    height: 270px;
+    border-radius: 50%;
+    background-position: 100% 50%;
+  }
+  .aboutMeText {
+    font-size: 16px;
+  }
+  .linkTitle {
+    font-size: 14px;
+  }
+  .profession {
+    font-size: 24px;
+  }
+  .preName {
+    font-size: 24px;
+  }
+  .name {
+    font-size: 24px;
+    margin-top: 20px;
+  }
+  .navIconContainer {
+    width: 300px;
+  }
+  .navIcon {
+    width: 65px;
+    height: 65px;
+  }
+}
+@media screen and (max-width: 350px) {
+  .container {
+    @include flex(column, center, center);
+    min-height: 70vh;
+    width: 100%;
+  }
+  .colorBlock {
+    display: none;
+  }
+  .photoWrapper {
+    border-radius: 50%;
+    width: 272px;
+    height: 272px;
+    border: 2px solid $accentColor;
+  }
+  .photo {
+    width: 270px;
+    height: 270px;
+    border-radius: 50%;
+    background-position: 100% 50%;
+  }
+  .aboutMeText {
+    font-size: 14px;
+  }
+  .linkTitle {
+    font-size: 12px;
+  }
+  .profession {
+    font-size: 20px;
+  }
+  .preName {
+    font-size: 20px;
+  }
+  .name {
+    font-size: 20px;
+    margin-top: 20px;
+  }
+  .navIconContainer {
+    width: 280px;
+  }
+  .navIcon {
+    width: 55px;
+    height: 55px;
+  }
+  .professionConatiner {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 300px) {
+  .container {
+    @include flex(column, center, center);
+    min-height: 70vh;
+    width: 100%;
+  }
+  .photoWrapper {
+    border-radius: 50%;
+    width: 202px;
+    height: 202px;
+    border: 2px solid $accentColor;
+  }
+  .photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-position: 100% 50%;
+  }
+  .aboutMeText {
+    font-size: 10px;
+  }
+  .linkTitle {
+    font-size: 8px;
+  }
+  .profession {
+    font-size: 14px;
+  }
+  .preName {
+    font-size: 14px;
+  }
+  .name {
+    font-size: 14px;
+    margin-top: 20px;
+  }
+  .navIconContainer {
+    width: 220px;
+  }
+  .navIcon {
+    width: 45px;
+    height: 45px;
+  }
+  .professionConatiner {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 300px) {
+
+  .photoWrapper {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    border: 2px solid $accentColor;
+  }
+  .photo {
+    height: 100%;
+    width: 100%;
+  }
+  .navIconContainer {
+    width: 220px;
+  }
+}
+
+@media screen and (max-width: 230px) {
+  .photoWrapper {
+    display: none;
+  }
+  .navIconContainer {
+    display: none;
+  }
+  .profession {
+    font-size: 11px;
+  }
+}
+
+@media screen and (max-width: 82px) {
+  .container {
+    display: none;
   }
 }
