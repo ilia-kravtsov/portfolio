@@ -75,7 +75,6 @@
     opacity: 1;
     width: 90px;
 }
-
 .navIconContainer:hover {
     border: 1px solid #3a5ace;
 }
@@ -256,10 +255,17 @@
     }
     .navLinksContainer {
         flex-direction: row-reverse;
-        height: 11vh;
+        height: 13vh;
     }
     .navLink:hover {
         transform: scale(1);
+    }
+    .navLink:hover .navIconContainer {
+        width: 70px;
+        border-radius: 15px;
+    }
+    .linkTitle {
+        display: none;
     }
 }
 @media screen and (max-width: 1000px) {
