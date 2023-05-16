@@ -8,19 +8,23 @@
   box-sizing: border-box;
   font-family: $textStyle;
   font-size: 20px;
-  //@media screen and (min-width: 2565px) {
-  //  font-size: 30px;
-  //}
-
+  @media screen and (max-width: 700px) {
+    width: 100%;
+  }
   .titleSection {
     @include flex(column, space-between, center);
     font-family: inherit;
     .titleAboutPage {
       animation: titleAppear 1s forwards;
       font-size: 80px;
-      //@media screen and (min-width: 2565px) {
-      //  font-size: 80px;
-      //}
+      @media screen and (max-width: 2000px) {
+        font-size: 52px;
+        padding-top: 25px;
+      }
+      @media screen and (max-width: 500px) {
+        font-size: 36px;
+        padding-top: 25px;
+      }
       @keyframes titleAppear {
         from {
           margin-top: 100%;
@@ -50,18 +54,34 @@
       color: hsla(0, 0%, 100%, .07);
       font-weight: 900;
       text-transform: uppercase;
+      @media screen and (max-width: 750px) {
+        display: none;
+      }
     }
   }
 
   .content {
     @include flex(row, space-evenly, normal);
-    @include size(80%, 80%);
+    width: 80%;
+    min-height: 80%;
+    flex-wrap: wrap;
+    @media screen and (max-width: 700px) {
+      width: 96%;
+    }
 
     .contentLeft {
       @include flex(column, space-between, normal);
       overflow: hidden;
       width: 30%;
-
+      @media screen and (max-width: 2000px) {
+        width: 46%;
+      }
+      @media screen and (max-width: 1800px) {
+        width: 90%;
+      }
+      @media screen and (max-width: 1500px) {
+        width: 100%;
+      }
       .personalInfo {
         font-family: inherit;
       }
@@ -69,14 +89,12 @@
       .personalStrengths {
         @include flex(column, normal, flex-start);
         height: 40%;
-
+        @media screen and (max-width: 500px) {
+          align-items: center;
+        }
         .icon {
           @include size(30px, 30px);
           margin-right: 10px;
-        }
-
-        .strengthContainer {
-          @include flex(row, normal, center);
         }
       }
     }
@@ -85,21 +103,38 @@
       @include flex(column, space-between, normal);
       overflow: hidden;
       width: 45%;
-
+      @media screen and (max-width: 2000px) {
+        width: 50%;
+      }
+      @media screen and (max-width: 1800px) {
+        width: 90%;
+      }
+      @media screen and (max-width: 1500px) {
+        width: 100%;
+      }
       .experience_education {
+        .electrification {
+          @media screen and (max-width: 450px) {
+            display: block;
+          }
+        }
         .programming_training {
           margin-top: 10%;
         }
       }
 
       .languages {
-        height: 40%;
-
+        min-height: 40%;
+        margin-bottom: 15px;
         .circleContainer {
           @include flex(row, space-evenly, center);
           position: relative;
           gap: 20px;
           height: 90%;
+          margin-top: 15px;
+          @media screen and (max-width: 750px) {
+            flex-direction: column;
+          }
         }
       }
     }
@@ -115,6 +150,16 @@
       line-height: 1.7;
       text-transform: uppercase;
       width: 100%;
+      margin-top: 10px;
+      @media screen and (max-width: 2000px) {
+        font-size: 18px;
+      }
+      @media screen and (max-width: 750px) {
+        font-size: 16px;
+      }
+      @media screen and (max-width: 650px) {
+        font-size: 14px;
+      }
     }
 
     .circle {
@@ -148,6 +193,20 @@
       margin-top: 10px;
       letter-spacing: 2px;
       font-size: inherit;
+      @media screen and (max-width: 2000px) {
+        font-size: 18px;
+      }
+      @media screen and (max-width: 750px) {
+        font-size: 16px;
+      }
+      @media screen and (max-width: 650px) {
+        font-size: 14px;
+      }
+      @media screen and (max-width: 500px) {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
     }
   }
 }

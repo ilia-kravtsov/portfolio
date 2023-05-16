@@ -46,11 +46,11 @@ export const About: FC<AboutType> = ({linkColorAbout}) => {
                             <div className={s.circle}></div>
                             <div className={s.headerLine}></div>
                         </h3>
-                        <p className={s.strengthContainer}><img src={disciplineIcon} alt="disciplineIcon" className={s.icon}/>Discipline</p>
-                        <p className={s.strengthContainer}><img src={punctualityIcon} alt="punctualityIcon" className={s.icon}/>Punctuality</p>
-                        <p className={s.teamPlayerIcon}><img src={teamPlayerIcon} alt="Team play Icon" className={s.icon}/>Team play</p>
-                        <p className={s.teamPlayerIcon}><img src={flowIcon} alt="flowIcon" className={s.icon}/>Feeling of the Code flow</p>
-                        <p className={s.teamPlayerIcon}><img src={worker} alt="Hard worker" className={s.icon}/>Hard worker</p>
+                            <p className={s.teamPlayerIcon}><img src={disciplineIcon} alt="disciplineIcon" className={s.icon}/>Discipline</p>
+                            <p className={s.teamPlayerIcon}><img src={punctualityIcon} alt="punctualityIcon" className={s.icon}/>Punctuality</p>
+                            <p className={s.teamPlayerIcon}><img src={teamPlayerIcon} alt="Team play Icon" className={s.icon}/>Team play</p>
+                            <p className={s.teamPlayerIcon}><img src={flowIcon} alt="flowIcon" className={s.icon}/>Feeling of the Code flow</p>
+                            <p className={s.teamPlayerIcon}><img src={worker} alt="Hard worker" className={s.icon}/>Hard worker</p>
                     </section>
                 </div>
                <div className={s.contentRight}>
@@ -58,12 +58,12 @@ export const About: FC<AboutType> = ({linkColorAbout}) => {
                        <h3>EXPERIENCE & EDUCATION:<div className={s.circle}></div><div className={s.headerLine}></div></h3>
                        <p>University: <span>Stavropol State University</span></p>
                        <p>Qualification: <span>engineering degree</span></p>
-                       <p>Specialization: <span>electrification and automation</span></p>
+                       <p>Specialization: <span className={s.electrification}>electrification</span></p>
                        <section className={s.programming_training}>
                            <h3>Programming training:<div className={s.circle}></div><div className={s.headerLine}></div></h3>
                            <p>Main Experience: <span>IT INCUBATOR</span></p>
                            <p>Codewars: <span>5 kyu rank</span></p>
-                           <p>FreeCodeCamp: <span>JS and HTML programs are done</span></p>
+                           <p>FCC: <span>JS and HTML</span></p>
                            <p>Hexlet: <span>Base JS program is done</span></p>
                        </section>
                    </section>
