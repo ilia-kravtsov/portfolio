@@ -73,7 +73,6 @@ export const About: FC<AboutType> = ({linkColorAbout}) => {
                        <div className={s.circleContainer}>
                            <Circle percents={100} title={'Russian'}/>
                            <Circle percents={70} title={'English'}/>
-                           <Circle percents={20} title={'Norsk'}/>
                        </div>
                    </section>
                </div>

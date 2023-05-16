@@ -6,14 +6,14 @@ export const Skills = () => {
     return (
         <div className={s.container}>
             <div className={s.titleContainer}>
-                <div className={s.dotContainer}>
+                <div className={s.dotContainer_left}>
                     <div className={s.leftDot}></div>
                 </div>
                 <h1 className={s.title}>
-                    Skills
+                    Skill<span className={s.s}>s</span>
                     <span className={s.titleRight}>set</span>
                 </h1>
-                <div className={s.dotContainer}>
+                <div className={s.dotContainer_right}>
                     <div className={s.rightDot}></div>
                 </div>
                 <span className={s.titleBack}>Programming</span>

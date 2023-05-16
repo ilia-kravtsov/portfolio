@@ -41,6 +41,7 @@ function App() {
     return (
         <div className={s.App}>
             <main className={s.main}>
+                <div className={s.sun}>sun</div>
                 <Routes>
                         <Route path='/portfolio' element={<Navigate to="/home"/>}/>
                         <Route path='home' element={<Home/>}/>

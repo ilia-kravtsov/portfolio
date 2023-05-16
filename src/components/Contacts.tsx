@@ -52,11 +52,11 @@ export const Contacts = () => {
     return (
         <div className={s.container} >
             <div className={s.titleContainer}>
-                <div className={s.dotContainer}>
+                <div className={s.dotContainer_left}>
                     <div className={s.leftDot}></div>
                 </div>
                 <h1 className={s.title}>Сontact<span className={s.me}> ME</span></h1>
-                <div className={s.dotContainer}>
+                <div className={s.dotContainer_right}>
                     <div className={s.rightDot}></div>
                 </div>
             </div>
