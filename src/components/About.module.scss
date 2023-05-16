@@ -11,9 +11,20 @@
   @media screen and (max-width: 700px) {
     width: 100%;
   }
+  .colorBlock {
+    background: radial-gradient(circle at top right, rgba(0,0,0,0) 15px, #3a5ace);
+    position: fixed;
+    height: 200%;
+    width: 100%;
+    transform: rotate(-15deg);
+    left: -83%;
+    top: -50%;
+    z-index: 0;
+  }
   .titleSection {
     @include flex(column, space-between, center);
     font-family: inherit;
+    z-index: 1;
     .titleAboutPage {
       animation: titleAppear 1s forwards;
       font-size: 80px;
@@ -65,6 +76,7 @@
     width: 80%;
     min-height: 80%;
     flex-wrap: wrap;
+    z-index: 1;
     @media screen and (max-width: 700px) {
       width: 96%;
     }
@@ -125,14 +137,16 @@
 
       .languages {
         min-height: 40%;
-        margin-bottom: 15px;
+        @media screen and (max-width: 1800px) {
+          margin-bottom: 20px;
+        }
         .circleContainer {
           @include flex(row, space-evenly, center);
           position: relative;
           gap: 20px;
           height: 90%;
-          margin-top: 15px;
           @media screen and (max-width: 750px) {
+            margin-top: 15px;
             flex-direction: column;
           }
         }
