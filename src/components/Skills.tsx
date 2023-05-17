@@ -1,8 +1,12 @@
-import React from 'react';
+import React, {FC} from 'react';
 import s from './Skills.module.scss'
 import {Circle} from "./Circle";
 
-export const Skills = () => {
+type SkillsType = {
+    toggleLight: boolean
+}
+
+export const Skills: FC<SkillsType> = ({toggleLight}) => {
     return (
         <div className={s.container}>
             <div className={s.titleContainer}>
@@ -16,45 +20,45 @@ export const Skills = () => {
                 <div className={s.dotContainer_right}>
                     <div className={s.rightDot}></div>
                 </div>
-                <span className={s.titleBack}>Programming</span>
+                <span className={toggleLight ? `${s.titleBack} ${s.titleBackLight}` : s.titleBack}>Programming</span>
             </div>
             <div className={s.skillsContainer}>
-                <div className={s.skillsBack}></div>
+                <div className={toggleLight ? `${s.skillsBack} ${s.skillsBackLight}` : s.skillsBack}></div>
                 <div className={s.skill}>
-                    <Circle percents={80} title={'HTML'}/>
+                    <Circle percents={80} title={'HTML'} toggleLight={toggleLight}/>
                 </div>
                 <div className={s.skill}>
-                    <Circle percents={80} title={'CSS'}/>
+                    <Circle percents={80} title={'CSS'} toggleLight={toggleLight}/>
                 </div>
                 <div className={s.skill}>
-                    <Circle percents={60} title={'JavaScript'}/>
+                    <Circle percents={60} title={'JavaScript'} toggleLight={toggleLight}/>
                 </div>
                 <div className={s.skill}>
-                    <Circle percents={60} title={'TypeScript'}/>
+                    <Circle percents={60} title={'TypeScript'} toggleLight={toggleLight}/>
                 </div>
                 <div className={s.skill}>
-                    <Circle percents={30} title={'Storybook'}/>
+                    <Circle percents={30} title={'Storybook'} toggleLight={toggleLight}/>
                 </div>
                 <div className={s.skill}>
-                    <Circle percents={40} title={'Unit Testing'}/>
+                    <Circle percents={40} title={'Unit Testing'} toggleLight={toggleLight}/>
                 </div>
                 <div className={s.skill}>
-                    <Circle percents={70} title={'React'}/>
+                    <Circle percents={70} title={'React'} toggleLight={toggleLight}/>
                 </div>
                 <div className={s.skill}>
-                    <Circle percents={70} title={'Redux'}/>
+                    <Circle percents={70} title={'Redux'} toggleLight={toggleLight}/>
                 </div>
                 <div className={s.skill}>
-                    <Circle percents={70} title={'SASS'}/>
+                    <Circle percents={70} title={'SASS'} toggleLight={toggleLight}/>
                 </div>
                 <div className={s.skill}>
-                    <Circle percents={70} title={'Rest API'}/>
+                    <Circle percents={70} title={'Rest API'} toggleLight={toggleLight}/>
                 </div>
                 <div className={s.skill}>
-                    <Circle percents={70} title={'MUI'}/>
+                    <Circle percents={70} title={'MUI'} toggleLight={toggleLight}/>
                 </div>
                 <div className={s.skill}>
-                    <Circle percents={70} title={'Axios'}/>
+                    <Circle percents={70} title={'Axios'} toggleLight={toggleLight}/>
                 </div>
             </div>
         </div>

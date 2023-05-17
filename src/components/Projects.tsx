@@ -1,7 +1,11 @@
-import React from 'react';
+import React, {FC} from 'react';
 import s from './Projects.module.scss'
 
-export const Projects = () => {
+type ProjectsType = {
+    toggleLight: boolean
+}
+
+export const Projects: FC<ProjectsType> = ({toggleLight}) => {
     return (
         <div className={s.container}>
             <div className={s.titleContainer}>
@@ -18,29 +22,29 @@ export const Projects = () => {
                     <div className={s.socialNetworkBack}>
                         <a href='https://ilia-kravtsov.github.io/samurai_way/' target='_blank' className={s.projectLink} rel="noreferrer">check</a>
                     </div>
-                    <h3>Social network</h3>
-                    <span className={s.status}>Status: in progress</span>
+                    <h3 className={toggleLight ? s.lightH3 : ''}>Social network</h3>
+                    <span className={toggleLight ? `${s.status} ${s.lightH3}` : s.status}>Status: in progress</span>
                 </div>
                 <div className={s.contentContainer}>
                     <div className={s.todolistBack}>
                         <a href='https://ilia-kravtsov.github.io/todolist/' target='_blank' className={s.projectLink} rel="noreferrer">check</a>
                     </div>
-                    <h3>Todolist</h3>
-                    <span className={s.status}>Status: in progress</span>
+                    <h3 className={toggleLight ? s.lightH3 : ''}>Todolist</h3>
+                    <span className={toggleLight ? `${s.status} ${s.lightH3}` : s.status}>Status: in progress</span>
                 </div>
                 <div className={s.contentContainer}>
                     <div className={s.telegram}>
                         <a href='https://ilia-kravtsov.github.io/telegram_clone_2' target='_blank' className={s.projectLink} rel="noreferrer">check</a>
                     </div>
-                    <h3>Telegram clone</h3>
-                    <span className={s.status}>Status: in progress</span>
+                    <h3 className={toggleLight ? s.lightH3 : ''}>Telegram clone</h3>
+                    <span className={toggleLight ? `${s.status} ${s.lightH3}` : s.status}>Status: in progress</span>
                 </div>
                 <div className={s.contentContainer}>
                     <div className={s.counter}>
                         <a href='https://ilia-kravtsov.github.io/counter/' target='_blank' className={s.projectLink} rel="noreferrer">check</a>
                     </div>
-                    <h3>Counter</h3>
-                    <span className={s.status}>Status: my first project</span>
+                    <h3 className={toggleLight ? s.lightH3 : ''}>Counter</h3>
+                    <span className={toggleLight ? `${s.status} ${s.lightH3}` : s.status}>Status: my first project</span>
                 </div>
             </div>
         </div>

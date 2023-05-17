@@ -175,7 +175,7 @@ input[type="number"]:focus {
             position: relative;
             width: 80%;
         }
-        .inputBox input {
+        .input {
             width: 100%;
             padding: 10px;
             border: 1px solid rgba(255, 255, 255, 0.25);
@@ -185,6 +185,9 @@ input[type="number"]:focus {
             color: lightgrey;
             font-size: 24px;
             transition: 0.5s;
+        }
+        .inputLight {
+            background: rgba(200, 200, 200, 0.8);
         }
         .inputBox span {
             position: absolute;
@@ -213,7 +216,7 @@ input[type="number"]:focus {
             border: 1px solid $accentColor;
         }
 
-        .inputBox textarea {
+        .textareaContact {
             width: 100%;
             padding: 10px;
             border: 1px solid rgba(255, 255, 255, 0.25);
@@ -223,6 +226,9 @@ input[type="number"]:focus {
             color: lightgrey;
             font-size: 24px;
             transition: 0.5s;
+        }
+        .textAreaLight {
+            background-color: rgba(200, 200, 200, 0.8);
         }
         .inputBox textarea:valid ~ span,
         .inputBox textarea:focus ~ span {
@@ -309,14 +315,49 @@ input[type="number"]:focus {
             left: 50%;
             transform: translate(-50%, -75%);
         }
-        a .liquid:before {
+        .liquid:before {
             border-radius: 45%;
             background: rgba(20,20,20,1);
             animation: animate 5s linear infinite;
         }
-        a .liquid:after {
+        .liquid:after {
             border-radius: 40%;
             background: rgba(20,20,20,0.5);
+            animation: animate 10s linear infinite;
+        }
+
+        a .liquidLight {
+            position: absolute;
+            left: 0;
+            top: -80px;
+            width: 200px;
+            height: 200px;
+            background: #3a5ace;
+            box-shadow: 0 0 50px rgba(0,0,0,.5);
+            transition: 0.5s;
+        }
+        a:hover .liquidLight {
+            top: -120px;
+        }
+
+        a .liquidLight:before,
+        a .liquidLight:after {
+            content: '';
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%, -75%);
+        }
+        .liquidLight:before {
+            border-radius: 45%;
+            background: rgba(200, 200, 200, 1);
+            animation: animate 5s linear infinite;
+        }
+        .liquidLight:after {
+            border-radius: 40%;
+            background: rgba(200, 200, 200, 0.5);
             animation: animate 10s linear infinite;
         }
         @keyframes animate {

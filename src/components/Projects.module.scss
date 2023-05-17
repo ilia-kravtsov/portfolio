@@ -145,7 +145,7 @@
             border-radius: 4px;
             margin-top: 20px;
             padding-top: 20px;
-            background-color: rgba(50, 50, 50, 0.7);
+            background-color: rgba(150, 150, 150, 0.7);
             transition: all;
             transition-duration: 1s;
             @media screen and (min-width: 3001px) {
@@ -160,7 +160,9 @@
                 height: 250px;
                 width: 220px;
             }
-
+            .contentContainerLight {
+                background-color: rgba(150, 150, 150, 1);
+            }
             &:hover {
                 transform: scale(1.1);
             }
@@ -215,6 +217,9 @@
                 @media screen and (max-width: 500px) {
                     font-size: 18px;
                 }
+            }
+            .lightH3 {
+                color: rgba(255,255,255,1);
             }
             span {
                 @media screen and (max-width: 500px) {

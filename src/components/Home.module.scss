@@ -109,7 +109,7 @@
 .navLink {
   @include flex(column, flex-end, center);
   width: 80%;
-  color: whitesmoke;
+  color: white;
   text-decoration: none;
   transition-duration: 1s;
   transition-property: all;
@@ -595,4 +595,12 @@
   .container {
     display: none;
   }
+}
+
+.light {
+  color: #111111;
+}
+
+.lightPostText {
+  color: rgb(80, 80, 80);
 }

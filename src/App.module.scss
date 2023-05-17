@@ -1,3 +1,6 @@
+@import 'sass/variables';
+@import 'sass/mixin';
+
 .App {
     display: flex;
     width: 100vw;
@@ -34,22 +37,31 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    position: relative;
 }
 
-.sun {
+.flashLight {
     position: absolute;
-    width: 20px;
-    height: 20px;
+    width: 80px;
+    height: 80px;
     z-index: 2;
-    top: 10px;
-    right: 20px;
-    background-color: red;
+    top: 20px;
+    right: 40px;
+    transform: rotate(180deg);
+    transition-duration: 0.4s;
+    transition-property: all;
+}
+
+.flashLight:hover {
+    cursor: pointer;
+}
+
+.flashLight:active {
+    transform: rotate(180deg) scale(0.6);
 }
 
 .navLink {
     width: 80%;
-    color: whitesmoke;
+    color: white;
     text-decoration: none;
     font-size: 20px;
     text-align: center;
@@ -61,7 +73,6 @@
 }
 
 .navLink:hover {
-    color: whitesmoke;
     transform: scale(1.2);
 }
 
@@ -238,6 +249,14 @@
         transform: scale(1.1);
     }
 }
+@media screen and (max-width: 1700px) {
+    .flashLight {
+        top: 20px;
+        right: 30px;
+        width: 70px;
+        height: 70px;
+    }
+}
 @media screen and (max-width: 1500px) {
     .navContainer {
         width: 25%;
@@ -301,6 +320,11 @@
     .main {
         min-height: 90vh;
     }
+    .flashLight {
+        right: 20px;
+        width: 60px;
+        height: 60px;
+    }
 }
 @media screen and (max-width: 500px) {
     .navLink {
@@ -325,6 +349,12 @@
         width: 50px;
     }
     .navIcon {
+        width: 50px;
+        height: 50px;
+    }
+    .flashLight {
+        top: 15px;
+        right: 15px;
         width: 50px;
         height: 50px;
     }
@@ -363,9 +393,13 @@
     }
 }
 
+.light {
+    background-color: #dadada;
+}
 
-
-
+.lightNav {
+    color: #111111;
+}
 
 
 

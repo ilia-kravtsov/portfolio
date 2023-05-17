@@ -69,6 +69,10 @@
         display: none;
       }
     }
+    .lightMode {
+      color: rgba(200, 200, 200, 0.7);
+      z-index: -1;
+    }
   }
 
   .content {
@@ -174,6 +178,9 @@
       @media screen and (max-width: 650px) {
         font-size: 14px;
       }
+    }
+    .lightH3 {
+      color: rgb(80, 80, 80);
     }
 
     .circle {

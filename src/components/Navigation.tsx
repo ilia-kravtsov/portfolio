@@ -1,11 +1,12 @@
 import React, {FC} from 'react';
-import s from "../App.module.css";
+import s from "../App.module.scss";
 import {NavLink} from "react-router-dom";
 import homeIcon from "../images/home-button.png";
 import skillsIcon from "../images/settings.png";
 import projectsIcon from "../images/project.png";
 import contactsIcon from "../images/contacting.png";
 import aboutIcon from "../images/boy.png";
+import flashLight_1 from "../images/flashlight_1.png";
 
 type NavLinkBorderType = {
     home: number
@@ -18,9 +19,11 @@ type NavLinkBorderType = {
 type NaviType = {
     navState: NavLinkBorderType
     setNavState: (navState: NavLinkBorderType) => void
+    lightToggleClick: () => void
+    toggleLight: boolean
 }
 
-export const Navigation: FC<NaviType> = ({navState, setNavState}) => {
+export const Navigation: FC<NaviType> = ({navState, setNavState, lightToggleClick, toggleLight}) => {
 
     const onHomeClick = () => {
         setNavState({
@@ -68,9 +71,14 @@ export const Navigation: FC<NaviType> = ({navState, setNavState}) => {
         })
     }
 
+    const flashLightCB = () => {
+        lightToggleClick()
+    }
+
     return (
-        <nav className={s.navContainer}>
+        <nav className={toggleLight? `${s.navContainer} ${s.light}` : s.navContainer}>
             <div className={s.navLinksContainer}>
+                <img className={s.flashLight} src={flashLight_1} alt={'FlashLight'} onClick={flashLightCB}/>
                 <NavLink to='/home'
                          className={s.navLink}
                          onClick={onHomeClick}>

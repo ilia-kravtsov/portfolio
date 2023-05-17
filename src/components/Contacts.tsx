@@ -1,7 +1,11 @@
-import React, {ChangeEvent, useState} from 'react';
+import React, {ChangeEvent, FC, useState} from 'react';
 import s from './Contacts.module.scss'
 
-export const Contacts = () => {
+type ContactsType = {
+    toggleLight: boolean
+}
+
+export const Contacts: FC<ContactsType> = ({toggleLight}) => {
 
     let [name, setName] = useState<string>('')
     let [phone, setPhone] = useState<string>('')
@@ -62,19 +66,19 @@ export const Contacts = () => {
             </div>
             <form action="" className={s.form}>
                 <div className={s.inputBox}>
-                    <input type="text" required value={name} onChange={nameChange}/>
+                    <input type="text" required value={name} onChange={nameChange} className={toggleLight ? `${s.input} ${s.inputLight}` : s.input}/>
                     <span>First name</span>
                 </div>
                 <div className={s.inputBox}>
-                    <input type="number" required value={phone} onChange={phoneChange}/>
+                    <input type="number" required value={phone} onChange={phoneChange} className={toggleLight ? `${s.input} ${s.inputLight}` : s.input}/>
                     <span>Phone number</span>
                 </div>
                 <div className={s.inputBox}>
-                    <input type="text" required value={email} onChange={emailChange}/>
+                    <input type="text" required value={email} onChange={emailChange} className={toggleLight ? `${s.input} ${s.inputLight}` : s.input}/>
                     <span>Email</span>
                 </div>
                 <div className={s.inputBox}>
-                    <textarea className={s.textarea} required value={comment} onChange={commentChange}></textarea>
+                    <textarea className={toggleLight ? `${s.textareaContact} ${s.textAreaLight}` : s.textareaContact} required value={comment} onChange={commentChange}></textarea>
                     <span>Enter your comment</span>
                 </div>
                 <div className={s.errorContainer}>
@@ -82,7 +86,7 @@ export const Contacts = () => {
                 </div>
                     <a href="#" className={s.sendButton} onClick={sendClick}>
                         <span className={s.sendTitle}>Send</span>
-                        <div className={s.liquid}></div>
+                        <div className={toggleLight ? s.liquidLight : s.liquid}></div>
                     </a>
             </form>
         </div>
