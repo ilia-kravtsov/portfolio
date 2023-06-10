@@ -12,6 +12,9 @@
     @media screen and (max-width: 1200px) {
         width: 100%;
     }
+    @media screen and (max-width: 1800px) {
+        margin-bottom: 12vh;
+    }
     .titleContainer {
         @include flex(row, center, center);
         border-radius: 4px;

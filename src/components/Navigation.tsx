@@ -6,9 +6,7 @@ import skillsIcon from "../images/settings.png";
 import projectsIcon from "../images/project.png";
 import contactsIcon from "../images/contacting.png";
 import aboutIcon from "../images/boy.png";
-import flashLight_1 from "../images/flashlight_1.png";
-import {IconButton} from "@mui/material";
-import NightlightRoundSharpIcon from '@mui/icons-material/NightlightRoundSharp';
+import flashLight_1 from "../images/flashlight_2.png";
 
 type NavLinkBorderType = {
     home: number

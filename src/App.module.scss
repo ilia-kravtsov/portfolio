@@ -47,7 +47,7 @@
     width: 60px;
     height: 60px;
     margin-left: auto;
-    transform: rotate(-90deg);
+    transform: rotate(0deg);
     transition-duration: 0.4s;
     transition-property: all;
     margin-right: 60px;
@@ -58,7 +58,7 @@
 }
 
 .flashLight:active {
-    transform: rotate(-90deg) scale(0.8);
+    transform: rotate(0deg) scale(0.8);
 }
 
 .navLink {
@@ -254,33 +254,6 @@
         transform: scale(1.1);
     }
 }
-//@media screen and (max-width: 1700px) {
-//    .flashLight {
-//        top: 20px;
-//        right: 30px;
-//        width: 60px;
-//        height: 60px;
-//    }
-//}
-//@media screen and (max-width: 1500px) {
-//    .navContainer {
-//        width: 17%;
-//    }
-//    .navIconContainer {
-//        width: 70px;
-//    }
-//    .navIcon {
-//        width: 70px;
-//        height: 70px;
-//    }
-//    .linkTitle {
-//        font-size: 22px;
-//    }
-//    .navLink:hover {
-//        color: whitesmoke;
-//        transform: scale(1.1);
-//    }
-//}
 @media screen and (max-width: 1800px) {
     .App {
         flex-direction: column;
@@ -313,13 +286,12 @@
         width: 100%;
     }
     .flashLight {
-        transform: rotate(0deg);
         width: 55px;
         height: 55px;
         margin-left: 40px;
     }
     .flashLight:active {
-        transform: rotate(0deg) scale(0.8);
+        transform: scale(0.8);
     }
 }
 @media screen and (max-width: 1000px) {
@@ -327,7 +299,7 @@
         justify-content: center;
     }
     .navLink:hover .navIconContainer {
-        width: 70px;
+        width: 60px;
         border-radius: 15px;
     }
     .linkTitle {

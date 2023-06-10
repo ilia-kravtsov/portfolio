@@ -8,6 +8,9 @@
     @media screen and (max-width: 1200px) {
         width: 100%;
     }
+    @media screen and (max-width: 1800px) {
+        margin-bottom: 10vh;
+    }
     .titleContainer {
         @include flex(row, center, center);
         @include size(100%, 12%);
@@ -89,22 +92,12 @@
             animation: invertedTitle 0.5s ease-in-out forwards, correctTitle 0.5s ease-in-out 4.9s forwards;
             @keyframes invertedTitle {
                 0% {
-                    transform: rotate(30deg);
                     margin-top: 50%;
                 }
                 100% {
                     margin-top: 0;
-                    transform: rotate(0deg);
                 }
             }
-            //@keyframes correctTitle {
-            //    0% {
-            //        transform: rotate(-360deg);
-            //    }
-            //    100% {
-            //        transform: rotate(0deg);
-            //    }
-            //}
             @media screen and (min-width: 2500px) {
                 font-size: 90px;
             }

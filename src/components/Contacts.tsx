@@ -67,7 +67,7 @@ export const Contacts: FC<ContactsType> = ({toggleLight}) => {
             <form action="" className={s.form}>
                 <div className={s.inputBox}>
                     <input type="text" required value={name} onChange={nameChange} className={toggleLight ? `${s.input} ${s.inputLight}` : s.input}/>
-                    <span>First name</span>
+                    <span className={toggleLight ? s.spanLight : ''}>First name</span>
                 </div>
                 <div className={s.inputBox}>
                     <input type="number" required value={phone} onChange={phoneChange} className={toggleLight ? `${s.input} ${s.inputLight}` : s.input}/>
