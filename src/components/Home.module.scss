@@ -138,7 +138,7 @@
   transition-duration: 1s;
   transition-property: all;
   white-space: nowrap;
-  animation: marquee 3s infinite linear;
+  animation: marquee 4s infinite linear;
   overflow: hidden;
   width: 100%;
   @keyframes marquee {
@@ -162,6 +162,9 @@
 }
 
 @media screen and (min-width: 3001px) {
+  .container {
+    width: 80%;
+  }
   .photo {
     width: 35vw;
   }
@@ -190,6 +193,9 @@
   }
 }
 @media screen and (max-width: 3000px) {
+  .container {
+    width: 80%;
+  }
   .photo {
     background-position: 75% 50%;
     width: 35vw;
@@ -208,6 +214,9 @@
   }
 }
 @media screen and (max-width: 2500px) {
+  .container {
+    width: 80%;
+  }
   .photo {
     background-position: 75% 50%;
     width: 30vw;
@@ -227,7 +236,7 @@
 }
 @media screen and (max-width: 2000px) {
   .container {
-    width: 85%;
+    width: 75%;
   }
   .photo {
     background-position: 75% 50%;
@@ -246,13 +255,22 @@
     font-size: 40px;
   }
 }
+@media screen and (max-width: 1800px) {
+  .container {
+    width: 80%;
+  }
+  .photo {
+    background-position: 90% 50%;
+    width: 40vw;
+  }
+}
 @media screen and (max-width: 1500px) {
   .container {
-    width: 90%;
+    width: 80%;
   }
   .photo {
     background-position: 73% 50%;
-    width: 35vw;
+    width: 40vw;
   }
   .aboutMeText {
     font-size: 22px;
@@ -280,7 +298,7 @@
 @media screen and (max-width: 1300px) {
   .photo {
     background-position: 73% 50%;
-    width: 35vw;
+    width: 40vw;
   }
   .aboutMeText {
     font-size: 20px;

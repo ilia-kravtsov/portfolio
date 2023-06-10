@@ -35,13 +35,11 @@ export const About: FC<AboutType> = ({linkColorAbout, toggleLight}) => {
                         <p className={toggleLight ? s.lightH3 : ''}><span>Last name:</span><span>kravtsov</span></p>
                         <p className={toggleLight ? s.lightH3 : ''}><span>Age:</span> <span>29</span></p>
                         <p className={toggleLight ? s.lightH3 : ''}><span>Address:</span> <span>Stavropol, Russia</span></p>
-                        <p className={toggleLight ? s.lightH3 : ''}><span>Drinking:</span> <span>not for me</span></p>
-                        <p className={toggleLight ? s.lightH3 : ''}><span>Smoking:</span> <span>non smoker</span></p>
-                        <p className={toggleLight ? s.lightH3 : ''}><span>Snowboarding:</span> <span>is my hobby</span></p>
-                        <p className={toggleLight ? s.lightH3 : ''}><span>Workout:</span> <span>every day</span></p>
-                        <p className={toggleLight ? s.lightH3 : ''}><span>Programming:</span> <span>every day</span></p>
-                        <p className={toggleLight ? s.lightH3 : ''}><span>Learning languages:</span> <span>every day</span></p>
                         <p className={toggleLight ? s.lightH3 : ''}><span>Job Status:</span> <span>in active search</span></p>
+                        <h3 className={toggleLight ? s.lightH3 : ''}>Hobbies:</h3>
+                        <p className={toggleLight ? s.lightH3 : ''}><span>Learning languages:</span></p>
+                        <p className={toggleLight ? s.lightH3 : ''}><span>Snowboarding:</span></p>
+                        <p className={toggleLight ? s.lightH3 : ''}><span>Workout:</span></p>
                     </section>
                     <section className={s.personalStrengths}>
                         <h3 className={toggleLight ? s.lightH3 : ''}>Strengths:

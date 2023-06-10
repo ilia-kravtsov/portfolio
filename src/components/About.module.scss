@@ -26,7 +26,7 @@
     font-family: inherit;
     z-index: 1;
     .titleAboutPage {
-      animation: titleAppear 1s forwards;
+      animation: titleAppear 0.5s forwards;
       font-size: 80px;
       @media screen and (max-width: 2000px) {
         font-size: 52px;

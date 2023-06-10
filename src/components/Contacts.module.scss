@@ -120,10 +120,10 @@ input[type="number"]:focus {
             @keyframes titleAppear {
                 from {
                     margin-top: 100%;
-                    transform: rotate(0deg)
+                    transform: rotate(30deg)
                 }
                 to {
-                    transform: rotate(360deg)
+                    transform: rotate(0deg)
                 }
             }
         }

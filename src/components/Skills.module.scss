@@ -86,23 +86,25 @@
             text-align: center;
             font-family: $textStyle;
             font-size: 72px;
-            animation: invertedTitle 0.5s ease-in-out forwards, correctTitle 0.5s ease-in-out 4.3s forwards;
+            animation: invertedTitle 0.5s ease-in-out forwards, correctTitle 0.5s ease-in-out 4.9s forwards;
             @keyframes invertedTitle {
                 0% {
-                    transform: rotate(180deg) scale(0);
+                    transform: rotate(30deg);
+                    margin-top: 50%;
                 }
                 100% {
-                    transform: rotate(-180deg) scale(1);
-                }
-            }
-            @keyframes correctTitle {
-                0% {
-                    transform: rotate(-180deg);
-                }
-                100% {
+                    margin-top: 0;
                     transform: rotate(0deg);
                 }
             }
+            //@keyframes correctTitle {
+            //    0% {
+            //        transform: rotate(-360deg);
+            //    }
+            //    100% {
+            //        transform: rotate(0deg);
+            //    }
+            //}
             @media screen and (min-width: 2500px) {
                 font-size: 90px;
             }
@@ -118,7 +120,7 @@
             }
             .s {
                 font-family: 'Poppins', sans-serif;
-                animation: coloredS 1s ease-in-out 6s forwards;
+                animation: coloredS 1s ease-in-out 4.9s forwards;
                 @keyframes coloredS {
                     0% {
 
@@ -132,7 +134,7 @@
                 position: absolute;
                 color: $accentColor;
                 font-family: $textStyle;
-                animation: setDisappear 1s ease-in-out 4.9s forwards;
+                animation: setDisappear 1s ease-in-out 4s forwards;
                 margin-left: 8px;
                 @keyframes setDisappear {
                     0% {
