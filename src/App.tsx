@@ -7,7 +7,6 @@ import {Navigate, Route, Routes} from "react-router-dom";
 import {About} from "./components/About";
 import s from "./App.module.scss";
 import {Navigation} from "./components/Navigation";
-import flashLight_1 from './images/flashlight_1.png'
 
 export type NavLinkBorderType = {
     home: number
