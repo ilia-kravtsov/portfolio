@@ -1,5 +1,5 @@
-@import '../sass/variables';
-@import '../sass/mixin';
+@import 'sass/variables';
+@import 'sass/mixin';
 
 .skillCircle {
   @include flex(row, center, center);
@@ -98,7 +98,7 @@
       animation-delay: 2.5s;
       .percents {
         color: whitesmoke;
-        font-family: $textStyle;
+        font-family: $fontFamily_1;
         font-size: 16px;
         font-weight: 700;
         gap: 25px;

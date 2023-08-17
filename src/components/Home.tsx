@@ -1,6 +1,6 @@
 import React, {FC} from 'react';
-import s from './Home.module.scss'
-import aboutIcon from "../images/boy.png";
+import s from '../style/Home.module.scss'
+import aboutIcon from "../style/images/boy.png";
 import {NavLink} from "react-router-dom";
 
 type HomeType = {
@@ -11,7 +11,6 @@ export const Home: FC<HomeType> = ({toggleLight}) => {
 
     return (
             <div className={s.container}>
-                <div className={s.colorBlock}></div>
                 <div className={s.photoWrapper}>
                     <div className={s.photo}></div>
                 </div>

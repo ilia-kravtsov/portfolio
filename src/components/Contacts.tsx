@@ -1,5 +1,5 @@
 import React, {ChangeEvent, FC, useState} from 'react';
-import s from './Contacts.module.scss'
+import s from '../style/Contacts.module.scss'
 
 type ContactsType = {
     toggleLight: boolean
@@ -84,8 +84,8 @@ export const Contacts: FC<ContactsType> = ({toggleLight}) => {
                 <div className={s.errorContainer}>
                     <span className={error === 'Fill in all the fields' ? s.errorActive : s.errorDisabled}>{error}</span>
                 </div>
-                    <a href="#" className={s.sendButton} onClick={sendClick}>
-                        <span className={s.sendTitle}>Send</span>
+                    <a href="#" onClick={sendClick}>
+                        <span>Send</span>
                         <div className={toggleLight ? s.liquidLight : s.liquid}></div>
                     </a>
             </form>

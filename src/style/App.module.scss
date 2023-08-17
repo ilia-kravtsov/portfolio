@@ -3,16 +3,16 @@
 
 .App {
     display: flex;
-    width: 100vw;
+    width: 100%;
     box-sizing: border-box;
-    font-family: 'Lora', serif;
+    font-family: $fontFamily_1;
     margin: 0;
     padding: 0;
-    color: white;
+    color: $fontColor;
 }
 
 .navContainer {
-    background-color: #111111;
+    background-color: $bgDarkFirst;
     width: 15%;
     display: flex;
     align-items: center;
@@ -22,6 +22,7 @@
     top: 0;
     right: 0;
     height: 100%;
+    border: 1px solid red;
 }
 
 .navLinksContainer {
@@ -34,13 +35,13 @@
 }
 
 .main {
-    background-color: #111111;
+    background-color: $bgDarkFirst;
     width: 85%;
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    border: 1px solid red;
 }
 
 .flashLight {
@@ -63,7 +64,7 @@
 
 .navLink {
     width: 80%;
-    color: white;
+    color: $fontColor;
     text-decoration: none;
     font-size: 20px;
     text-align: center;
@@ -173,7 +174,7 @@
 }
 
 .footer {
-    background-color: darkgray;
+    background-color: $bgDarkFirst;
     min-width: 100%;
     min-height: 20vh;
     display: flex;
@@ -250,7 +251,7 @@
         width: 80%;
     }
     .navLink:hover {
-        color: whitesmoke;
+        color: $fontColor;
         transform: scale(1.1);
     }
 }
@@ -400,14 +401,22 @@
 }
 
 .light {
-    background-color: #dadada;
+    background-color: $bgLightFirst;
 }
 
 .lightNav {
-    color: #111111;
+    color: $bgDarkFirst;
 }
 
-
+//.colorBlock {
+//  background: radial-gradient(circle at top right, rgba(0,0,0,0) 15px, #3a5ace);
+//  position: fixed;
+//  height: 200%;
+//  width: 100%;
+//  transform: rotate(-15deg);
+//  left: -83%;
+//  top: -50%;
+//}
 
 
 

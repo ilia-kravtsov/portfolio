@@ -1,5 +1,5 @@
 import React, {FC} from 'react';
-import s from './Skills.module.scss'
+import s from '../style/Skills.module.scss'
 import {Circle} from "./Circle";
 
 type SkillsType = {

@@ -1,5 +1,5 @@
-@import '../sass/variables';
-@import '../sass/mixin';
+@import 'sass/variables';
+@import 'sass/mixin';
 
 .container {
     @include flex(column, space-between, normal);
@@ -8,7 +8,7 @@
     box-sizing: border-box;
     align-items: center;
     border-radius: 4px;
-    margin: 15px 0;
+    border: 1px solid blue;
     @media screen and (max-width: 1200px) {
         width: 100%;
     }
@@ -87,7 +87,7 @@
             border-radius: 4px;
             width: 100%;
             text-align: center;
-            font-family: $textStyle;
+            font-family: $fontFamily_1;
             text-transform: uppercase;
             font-size: 72px;
             animation: projectsAppear 0.7s forwards;
@@ -174,7 +174,7 @@
                 height: 80%;
                 width: 80%;
                 box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5);
-                background-image: url('../images/social.png');
+                background-image: url('images/social.png');
                 background-size: cover;
                 background-position: 0 50%;
                 border-radius: 4px;
@@ -186,7 +186,7 @@
                 width: 80%;
                 box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5);
                 border-radius: 4px;
-                background-image: url(../images/todo.png);
+                background-image: url(images/todo.png);
                 background-size: cover;
                 background-position: -120% 50%;
                 margin-bottom: 15px;
@@ -197,7 +197,7 @@
                 width: 80%;
                 box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5);
                 border-radius: 4px;
-                background-image: url(../images/counter.jpg);
+                background-image: url(images/counter.jpg);
                 background-size: cover;
                 background-position: 50% 50%;
                 margin-bottom: 15px;
@@ -208,7 +208,7 @@
                 width: 80%;
                 box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5);
                 border-radius: 4px;
-                background-image: url(../images/1234.png);
+                background-image: url(images/1234.png);
                 background-size: cover;
                 background-position: 50% 50%;
                 margin-bottom: 15px;

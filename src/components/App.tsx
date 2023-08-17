@@ -1,12 +1,11 @@
 import React, {useState} from 'react';
-import {Home} from "./components/Home";
-import {Skills} from "./components/Skills";
-import {Contacts} from "./components/Contacts";
-import {Projects} from "./components/Projects";
-import {Navigate, Route, Routes} from "react-router-dom";
-import {About} from "./components/About";
-import s from "./App.module.scss";
-import {Navigation} from "./components/Navigation";
+import {Home} from "./Home";
+import {Skills} from "./Skills";
+import {Contacts} from "./Contacts";
+import {Projects} from "./Projects";
+import {About} from "./About";
+import {Navigation} from "./Navigation";
+import s from "../style/App.module.scss";
 
 export type NavLinkBorderType = {
     home: number
@@ -45,16 +44,14 @@ function App() {
     return (
         <div className={s.App}>
             <main className={toggleLight ? `${s.main} ${s.light}` : s.main}>
-                <Routes>
-                        <Route path='/portfolio' element={<Navigate to="/home"/>}/>
-                        <Route path='home' element={<Home toggleLight={toggleLight}/>}/>
-                        <Route path='about' element={<About linkColorAbout={linkColorAbout} toggleLight={toggleLight}/>}/>
-                        <Route path='skills' element={<Skills toggleLight={toggleLight}/>}/>
-                        <Route path='projects' element={<Projects toggleLight={toggleLight}/>}/>
-                        <Route path='contacts' element={<Contacts toggleLight={toggleLight}/>}/>
-                </Routes>
+                <Home toggleLight={toggleLight}/>
+                <About linkColorAbout={linkColorAbout} toggleLight={toggleLight}/>
+                <Skills toggleLight={toggleLight}/>
+                <Projects toggleLight={toggleLight}/>
+                <Contacts toggleLight={toggleLight}/>
             </main>
-            <Navigation navState={navState} setNavState={setNavState} lightToggleClick={lightToggleClick} toggleLight={toggleLight}/>
+            <Navigation navState={navState} setNavState={setNavState} lightToggleClick={lightToggleClick}
+                        toggleLight={toggleLight}/>
         </div>
     );
 }

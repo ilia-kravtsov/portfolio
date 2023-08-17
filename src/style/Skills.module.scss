@@ -1,10 +1,12 @@
-@import '../sass/variables.scss';
-@import '../sass/mixin.scss';
+@import 'sass/variables';
+@import 'sass/mixin';
 
 .container {
     @include flex(column, space-between, normal);
     width: 90%;
     min-height: 90vh;
+    border: 1px solid blue;
+    z-index: 1;
     @media screen and (max-width: 1200px) {
         width: 100%;
     }
@@ -87,7 +89,7 @@
             width: 30%;
             border-radius: 4px;
             text-align: center;
-            font-family: $textStyle;
+            font-family: $fontFamily_1;
             font-size: 72px;
             animation: invertedTitle 0.5s ease-in-out forwards, correctTitle 0.5s ease-in-out 4.9s forwards;
             @keyframes invertedTitle {
@@ -126,7 +128,7 @@
             .titleRight {
                 position: absolute;
                 color: $accentColor;
-                font-family: $textStyle;
+                font-family: $fontFamily_1;
                 animation: setDisappear 1s ease-in-out 4s forwards;
                 margin-left: 8px;
                 @keyframes setDisappear {
@@ -168,7 +170,7 @@
             left: 50%;
             transform: translate(-50%, -50%);
             font-weight: 900;
-            font-family: $textStyle;
+            font-family: $fontFamily_1;
             @media screen and (max-width: 1500px) {
                 font-size: 90px;
             }
@@ -180,7 +182,7 @@
             }
         }
         .titleBackLight {
-            color: rgba(200, 200, 200, 0.7);
+            color: $titleLight;
             z-index: -1;
         }
     }
@@ -215,7 +217,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background-image: url("../images/45.jpg");
+            background-image: url("images/45.jpg");
             background-size: cover;
             opacity: 0.20;
             transition: all 1s ease;

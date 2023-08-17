@@ -1,22 +1,13 @@
-@import '../sass/variables.scss';
-@import '../sass/mixin.scss';
+@import 'sass/variables';
+@import 'sass/mixin';
 
 .container {
   @include flex(row, space-between, center);
   flex-wrap: wrap;
-  width: 80%;
-  min-height: 90vh;
+  //min-height: 90vh;
+  height: 100vh;
   box-sizing: border-box;
-}
-
-.colorBlock {
-  background-color: #3a5ace;
-  position: fixed;
-  height: 200%;
-  width: 100%;
-  transform: rotate(-15deg);
-  left: -83%;
-  top: -50%;
+  border: 1px solid blue;
 }
 
 .photoWrapper {
@@ -29,7 +20,7 @@
 .photo {
   width: 30vw;
   height: calc(100vh - 80px);
-  background-image: url(../images/ava.jpg);
+  background-image: url(images/ava.jpg);
   background-size: cover;
   background-position: 75% 50%;
   transition: all 1s ease;
@@ -47,16 +38,16 @@
 .name {
   font-size: 52px;
   font-weight: bold;
-  font-family: $textStyle;
+  font-family: $fontFamily_1;
   box-sizing: border-box;
-  color: #3a5ace;
+  color: $accentColor;
 }
 
 .preName {
   font-size: inherit;
   font-weight: bold;
-  font-family: $textStyle;
-  color: white;
+  font-family: $fontFamily_1;
+  color: $fontColor;
 }
 
 .professionConatiner {
@@ -67,7 +58,7 @@
 
 .profession {
   font-size: 52px;
-  font-family: $textStyle;
+  font-family: $fontFamily_1;
   font-weight: bold;
   box-sizing: border-box;
   width: 0;
@@ -80,7 +71,7 @@
       border-right-color: transparent
     }
     50% {
-      border-right-color: white
+      border-right-color: $fontColor
     }
     100% {
       border-right-color: transparent
@@ -99,8 +90,8 @@
 .aboutMeText {
   margin-top: 20px;
   font-size: 28px;
-  color: white;
-
+  color: $fontColor;
+  font-family: 'Poppins', serif;
   .letsBuild {
     margin-top: 20px;
   }
@@ -109,7 +100,7 @@
 .navLink {
   @include flex(column, flex-end, center);
   width: 80%;
-  color: white;
+  color: $fontColor;
   text-decoration: none;
   transition-duration: 1s;
   transition-property: all;
@@ -119,7 +110,7 @@
   }
   &:hover .navIconContainer {
     border-radius: 50px;
-    background-color: #3a5ace;
+    background-color: $accentColor;
   }
 }
 
@@ -127,10 +118,10 @@
   @include flex(row, space-between, center);
   border-radius: 5px;
   width: 400px;
-  border: 1px solid #3a5ace;
   overflow: hidden;
   transition-duration: 0.5s;
   transition-property: all;
+  //border: 1px solid #3a5ace;
 }
 
 .linkTitle {
@@ -157,13 +148,13 @@
   padding: 10px;
   border-radius: 5px;
   margin-left: auto;
-  background-color: #3a5ace;
+  background-color: $accentColor;
   z-index: 1;
 }
 
 @media screen and (min-width: 3001px) {
   .container {
-    width: 80%;
+    width: 90%;
   }
   .photo {
     width: 35vw;
@@ -194,7 +185,7 @@
 }
 @media screen and (max-width: 3000px) {
   .container {
-    width: 80%;
+    width: 90%;
   }
   .photo {
     background-position: 75% 50%;
@@ -617,7 +608,7 @@
 }
 
 .light {
-  color: #111111;
+  color: $bgDarkFirst;
 }
 
 .lightPostText {

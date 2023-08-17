@@ -1,5 +1,5 @@
 import React, {FC} from 'react';
-import s from './Projects.module.scss'
+import s from '../style/Projects.module.scss'
 
 type ProjectsType = {
     toggleLight: boolean

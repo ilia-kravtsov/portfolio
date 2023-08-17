@@ -1,12 +1,12 @@
 import React, {FC} from 'react';
-import s from "../App.module.scss";
+import s from "../style/App.module.scss";
 import {NavLink} from "react-router-dom";
-import homeIcon from "../images/home-button.png";
-import skillsIcon from "../images/settings.png";
-import projectsIcon from "../images/project.png";
-import contactsIcon from "../images/contacting.png";
-import aboutIcon from "../images/boy.png";
-import flashLight_1 from "../images/flashlight_2.png";
+import homeIcon from "../style/images/home-button.png";
+import skillsIcon from "../style/images/settings.png";
+import projectsIcon from "../style/images/project.png";
+import contactsIcon from "../style/images/contacting.png";
+import aboutIcon from "../style/images/boy.png";
+import flashLight_1 from "../style/images/flashlight_2.png";
 
 type NavLinkBorderType = {
     home: number

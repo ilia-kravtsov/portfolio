@@ -1,7 +1,7 @@
 import React, {FC} from 'react';
-import s from "./Circle.module.scss";
+import s from "../style/Circle.module.scss";
 import { CSSProperties } from "react";
-import '../sass/variables.scss';
+import '../style/sass/variables.scss';
 
 type CircleType = {
     percents: number

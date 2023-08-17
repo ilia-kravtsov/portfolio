@@ -1,28 +1,20 @@
-@import '../sass/variables';
-@import '../sass/mixin';
+@import 'sass/variables';
+@import 'sass/mixin';
 
 .container {
   @include flex(column, space-between, center);
   width: 90%;
-  min-height: 90vh;
+  //min-height: 90vh;
+  height: 100vh;
   box-sizing: border-box;
-  font-family: $textStyle;
+  font-family: $fontFamily_1;
   font-size: 20px;
+  border: 1px solid blue;
   @media screen and (max-width: 700px) {
     width: 100%;
   }
   @media screen and (max-width: 1800px) {
     margin-bottom: 10vh;
-  }
-  .colorBlock {
-    background: radial-gradient(circle at top right, rgba(0,0,0,0) 15px, #3a5ace);
-    position: fixed;
-    height: 200%;
-    width: 100%;
-    transform: rotate(-15deg);
-    left: -83%;
-    top: -50%;
-    z-index: 0;
   }
   .titleSection {
     @include flex(column, space-between, center);
@@ -65,7 +57,7 @@
       font-size: 110px;
       z-index: 0;
       opacity: 1;
-      color: hsla(0, 0%, 100%, .07);
+      color: $titleDark;
       font-weight: 900;
       text-transform: uppercase;
       @media screen and (max-width: 750px) {
@@ -73,7 +65,7 @@
       }
     }
     .lightMode {
-      color: rgba(180, 180, 180, 0.7);
+      color: $titleLight;
       z-index: -1;
     }
   }
@@ -174,8 +166,8 @@
 
     h3 {
       @include flex(row, normal, center);
-      color: lightgrey;
-      font-family: $textStyle;
+      color: $fontColor;
+      font-family: $fontFamily_1;
       font-size: inherit;
       font-weight: 700;
       gap: 25px;
@@ -195,7 +187,7 @@
       }
     }
     .lightH3 {
-      color: white;
+      color: $fontColor;
     }
     .circle {
       @include size(10px, 10px);
@@ -206,7 +198,7 @@
     }
 
     .headerLine {
-      background-color: #3a5ace;
+      background-color: $accentColor;
       display: inline-block;
       flex-grow: 1;
       height: 1px;

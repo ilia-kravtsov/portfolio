@@ -1,13 +1,13 @@
 import React, {FC, useEffect} from 'react';
-import s from './About.module.scss'
-import disciplineIcon from '../images/martial-arts.png'
-import punctualityIcon from '../images/time-manager.png'
-import teamPlayerIcon from '../images/together.png'
-import flowIcon from '../images/data-flow.png'
-import worker from '../images/working.png'
-import bord from '../images/board.png'
-import workout from '../images/workout.png'
-import vocabulary from '../images/vocabulary.png'
+import s from '../style/About.module.scss'
+import disciplineIcon from '../style/images/martial-arts.png'
+import punctualityIcon from '../style/images/time-manager.png'
+import teamPlayerIcon from '../style/images/together.png'
+import flowIcon from '../style/images/data-flow.png'
+import worker from '../style/images/working.png'
+import bord from '../style/images/board.png'
+import workout from '../style/images/workout.png'
+import vocabulary from '../style/images/vocabulary.png'
 import {Circle} from './Circle';
 
 type AboutType = {
@@ -23,7 +23,6 @@ export const About: FC<AboutType> = ({linkColorAbout, toggleLight}) => {
 
     return (
         <div className={s.container}>
-            <div className={s.colorBlock}></div>
             <section className={s.titleSection}>
                 <h2 className={s.titleAboutPage}>ABOUT
                     <span className={s.me}> ME</span>
