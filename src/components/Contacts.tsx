@@ -1,5 +1,6 @@
-import React, {ChangeEvent, FC, useState} from 'react';
+import React, {ChangeEvent, FC, useState, MouseEvent} from 'react';
 import s from '../style/Contacts.module.scss'
+import sb from "../style/Skills.module.scss";
 
 type ContactsType = {
     toggleLight: boolean
@@ -32,7 +33,8 @@ export const Contacts: FC<ContactsType> = ({toggleLight}) => {
         setError(null)
     }
 
-    const sendClick = () => {
+    const sendClick = (event: any) => {
+        event.preventDefault()
         if (name.trim() !== '' && phone.trim() !== '' && email.trim() !== '' && comment.trim() !== '') {
             setName('')
             setPhone('')
@@ -54,41 +56,49 @@ export const Contacts: FC<ContactsType> = ({toggleLight}) => {
     }
 
     return (
-        <div className={s.container} >
-            <div className={s.titleContainer}>
-                <div className={s.dotContainer_left}>
-                    <div className={s.leftDot}></div>
+        <div className={sb.subContainer}>
+            <div className={s.container}>
+                <div className={s.titleContainer} id={'contacts'}>
+                    <div className={s.dotContainer_left}>
+                        <div className={s.leftDot}></div>
+                    </div>
+                    <h1 className={s.title}>Сontact<span className={s.me}> ME</span></h1>
+                    <div className={s.dotContainer_right}>
+                        <div className={s.rightDot}></div>
+                    </div>
                 </div>
-                <h1 className={s.title}>Сontact<span className={s.me}> ME</span></h1>
-                <div className={s.dotContainer_right}>
-                    <div className={s.rightDot}></div>
-                </div>
-            </div>
-            <form action="" className={s.form}>
-                <div className={s.inputBox}>
-                    <input type="text" required value={name} onChange={nameChange} className={toggleLight ? `${s.input} ${s.inputLight}` : s.input}/>
-                    <span className={toggleLight ? s.spanLight : ''}>First name</span>
-                </div>
-                <div className={s.inputBox}>
-                    <input type="number" required value={phone} onChange={phoneChange} className={toggleLight ? `${s.input} ${s.inputLight}` : s.input}/>
-                    <span>Phone number</span>
-                </div>
-                <div className={s.inputBox}>
-                    <input type="text" required value={email} onChange={emailChange} className={toggleLight ? `${s.input} ${s.inputLight}` : s.input}/>
-                    <span>Email</span>
-                </div>
-                <div className={s.inputBox}>
-                    <textarea className={toggleLight ? `${s.textareaContact} ${s.textAreaLight}` : s.textareaContact} required value={comment} onChange={commentChange}></textarea>
-                    <span>Enter your comment</span>
-                </div>
-                <div className={s.errorContainer}>
-                    <span className={error === 'Fill in all the fields' ? s.errorActive : s.errorDisabled}>{error}</span>
-                </div>
+                <form action="" className={s.form}>
+                    <div className={s.inputBox}>
+                        <input type="text" required value={name} onChange={nameChange}
+                               className={toggleLight ? `${s.input} ${s.inputLight}` : s.input}/>
+                        <span className={toggleLight ? s.spanLight : ''}>First name</span>
+                    </div>
+                    <div className={s.inputBox}>
+                        <input type="number" required value={phone} onChange={phoneChange}
+                               className={toggleLight ? `${s.input} ${s.inputLight}` : s.input}/>
+                        <span>Phone number</span>
+                    </div>
+                    <div className={s.inputBox}>
+                        <input type="text" required value={email} onChange={emailChange}
+                               className={toggleLight ? `${s.input} ${s.inputLight}` : s.input}/>
+                        <span>Email</span>
+                    </div>
+                    <div className={s.inputBox}>
+                        <textarea
+                            className={toggleLight ? `${s.textareaContact} ${s.textAreaLight}` : s.textareaContact}
+                            required value={comment} onChange={commentChange}></textarea>
+                        <span>Enter your comment</span>
+                    </div>
+                    <div className={s.errorContainer}>
+                        <span
+                            className={error === 'Fill in all the fields' ? s.errorActive : s.errorDisabled}>{error}</span>
+                    </div>
                     <a href="#" onClick={sendClick}>
                         <span>Send</span>
                         <div className={toggleLight ? s.liquidLight : s.liquid}></div>
                     </a>
-            </form>
+                </form>
+            </div>
         </div>
     );
 };

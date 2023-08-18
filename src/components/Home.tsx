@@ -1,5 +1,6 @@
 import React, {FC} from 'react';
 import s from '../style/Home.module.scss'
+import sb from '../style/Home.module.scss'
 import aboutIcon from "../style/images/boy.png";
 import {NavLink} from "react-router-dom";
 
@@ -10,6 +11,7 @@ type HomeType = {
 export const Home: FC<HomeType> = ({toggleLight}) => {
 
     return (
+        <div className={sb.subContainer} id={'home'}>
             <div className={s.container}>
                 <div className={s.photoWrapper}>
                     <div className={s.photo}></div>
@@ -38,6 +40,7 @@ export const Home: FC<HomeType> = ({toggleLight}) => {
                     </NavLink>
                 </div>
             </div>
+        </div>
     );
 };
 

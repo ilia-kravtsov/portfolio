@@ -1,11 +1,16 @@
 @import 'sass/variables';
 @import 'sass/mixin';
 
+.subContainer {
+  @include flex(column, center, flex-start);
+  width: 100%;
+  background-color: $bgDarkFirst;
+}
+
 .container {
-  @include flex(row, space-between, center);
+  @include flex(row, space-evenly, center);
   flex-wrap: wrap;
-  //min-height: 90vh;
-  height: 100vh;
+  min-height: 100vh;
   box-sizing: border-box;
   border: 1px solid blue;
 }
@@ -19,7 +24,7 @@
 
 .photo {
   width: 30vw;
-  height: calc(100vh - 80px);
+  height: calc(100vh - 200px);
   background-image: url(images/ava.jpg);
   background-size: cover;
   background-position: 75% 50%;
@@ -91,7 +96,7 @@
   margin-top: 20px;
   font-size: 28px;
   color: $fontColor;
-  font-family: 'Poppins', serif;
+  font-family: $fontFamily_2;
   .letsBuild {
     margin-top: 20px;
   }
@@ -119,9 +124,9 @@
   border-radius: 5px;
   width: 400px;
   overflow: hidden;
-  transition-duration: 0.5s;
+  transition-duration: 0.6s;
   transition-property: all;
-  //border: 1px solid #3a5ace;
+  border: 1px solid $accentColor;
 }
 
 .linkTitle {
@@ -154,7 +159,7 @@
 
 @media screen and (min-width: 3001px) {
   .container {
-    width: 90%;
+    width: 85%;
   }
   .photo {
     width: 35vw;
@@ -185,7 +190,7 @@
 }
 @media screen and (max-width: 3000px) {
   .container {
-    width: 90%;
+    width: 85%;
   }
   .photo {
     background-position: 75% 50%;
@@ -206,7 +211,7 @@
 }
 @media screen and (max-width: 2500px) {
   .container {
-    width: 80%;
+    width: 100%;
   }
   .photo {
     background-position: 75% 50%;
