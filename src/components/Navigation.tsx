@@ -17,59 +17,13 @@ type NavLinkBorderType = {
 }
 
 type NaviType = {
-    navState: NavLinkBorderType
-    setNavState: (navState: NavLinkBorderType) => void
+    navState?: NavLinkBorderType
+    setNavState?: (navState: NavLinkBorderType) => void
     lightToggleClick: () => void
     toggleLight: boolean
 }
 
-export const Navigation: FC<NaviType> = ({navState, setNavState, lightToggleClick, toggleLight}) => {
-
-    const onHomeClick = () => {
-        setNavState({
-            home: 1,
-            about: 0,
-            skills: 0,
-            projects: 0,
-            contacts: 0
-        })
-    }
-    const onAboutClick = () => {
-        setNavState({
-            home: 0,
-            about: 1,
-            skills: 0,
-            projects: 0,
-            contacts: 0
-        })
-    }
-    const onSkillClick = () => {
-        setNavState({
-            home: 0,
-            about: 0,
-            skills: 1,
-            projects: 0,
-            contacts: 0
-        })
-    }
-    const onProjectClick = () => {
-        setNavState({
-            home: 0,
-            about: 0,
-            skills: 0,
-            projects: 1,
-            contacts: 0
-        })
-    }
-    const onContactClick = () => {
-        setNavState({
-            home: 0,
-            about: 0,
-            skills: 0,
-            projects: 0,
-            contacts: 1
-        })
-    }
+export const Navigation: FC<NaviType> = ({lightToggleClick, toggleLight}) => {
 
     const flashLightCB = () => {
         lightToggleClick()
@@ -78,19 +32,14 @@ export const Navigation: FC<NaviType> = ({navState, setNavState, lightToggleClic
     return (
         <nav className={toggleLight ? `${s.navContainer} ${s.light}` : s.navContainer}>
             <div className={s.navLinksContainer}>
-
                 <Link activeClass={s.active}
                       className={s.navLink}
-                      onClick={onHomeClick}
                       to="home"
                       spy={true}
                       smooth={true}
                       offset={0}
                       duration={600}>
-                    <div className={navState.home === 1
-                        ? `${s.navIconContainer} ${s.active}`
-                        : s.navIconContainer
-                    }>
+                    <div className={s.navIconContainer}>
                         <span className={s.linkTitle}>Home</span>
                         <img src={homeIcon}
                              className={s.navIcon}
@@ -100,16 +49,12 @@ export const Navigation: FC<NaviType> = ({navState, setNavState, lightToggleClic
 
                 <Link activeClass={s.active}
                       className={s.navLink}
-                      onClick={onAboutClick}
                       to="about"
                       spy={true}
                       smooth={true}
                       offset={0}
                       duration={600}>
-                    <div className={navState.about === 1
-                        ? `${s.navIconContainer} ${s.active}`
-                        : s.navIconContainer
-                    }>
+                    <div className={s.navIconContainer}>
                         <div className={s.linkTitle}>
                             <span className={s.inline}>
                                 <span>About</span>
@@ -124,16 +69,12 @@ export const Navigation: FC<NaviType> = ({navState, setNavState, lightToggleClic
 
                 <Link activeClass={s.active}
                       className={s.navLink}
-                      onClick={onSkillClick}
                       to="skills"
                       spy={true}
                       smooth={true}
                       offset={0}
                       duration={600}>
-                    <div className={navState.skills === 1
-                        ? `${s.navIconContainer} ${s.active}`
-                        : s.navIconContainer
-                    }>
+                    <div className={s.navIconContainer}>
                         <span className={s.linkTitle}>Skills</span>
                         <img src={skillsIcon}
                              className={s.navIcon}
@@ -143,15 +84,12 @@ export const Navigation: FC<NaviType> = ({navState, setNavState, lightToggleClic
 
                 <Link activeClass={s.active}
                       className={s.navLink}
-                      onClick={onProjectClick}
                       to="projects"
                       spy={true}
                       smooth={true}
                       offset={0}
                       duration={600}>
-                    <div className={navState.projects === 1
-                        ? `${s.navIconContainer} ${s.active}`
-                        : s.navIconContainer}>
+                    <div className={s.navIconContainer}>
                         <span className={s.linkTitle}>Projects</span>
                         <img src={projectsIcon}
                              className={s.navIcon}
@@ -162,25 +100,22 @@ export const Navigation: FC<NaviType> = ({navState, setNavState, lightToggleClic
 
                 <Link activeClass={s.active}
                       className={s.navLink}
-                      onClick={onContactClick}
                       to="contacts"
                       spy={true}
                       smooth={true}
                       offset={0}
                       duration={600}>
-                            <div className={navState.contacts === 1
-                                ? `${s.navIconContainer} ${s.active}`
-                                : s.navIconContainer}>
-                                <span className={s.linkTitle}>
+                    <div className={s.navIconContainer}>
+                      <span className={s.linkTitle}>
                                     <span className={s.inline}>Let's
                                         <span className={s.ml}>Talk</span>
                                     </span>
                                 </span>
-                                <img src={contactsIcon}
-                                     className={s.navIcon}
-                                     alt={'contactsIcon'}
-                                />
-                            </div>
+                        <img src={contactsIcon}
+                             className={s.navIcon}
+                             alt={'contactsIcon'}
+                        />
+                    </div>
                 </Link>
 
                 <img className={s.flashLight} src={flashLight_1} alt={'FlashLight'} onClick={flashLightCB}/>
@@ -254,4 +189,50 @@ export const Navigation: FC<NaviType> = ({navState, setNavState, lightToggleClic
                         />
                     </div>
                 </a>
+
+                    // const onHomeClick = () => {
+    //     setNavState({
+    //         home: 1,
+    //         about: 0,
+    //         skills: 0,
+    //         projects: 0,
+    //         contacts: 0
+    //     })
+    // }
+    // const onAboutClick = () => {
+    //     setNavState({
+    //         home: 0,
+    //         about: 1,
+    //         skills: 0,
+    //         projects: 0,
+    //         contacts: 0
+    //     })
+    // }
+    // const onSkillClick = () => {
+    //     setNavState({
+    //         home: 0,
+    //         about: 0,
+    //         skills: 1,
+    //         projects: 0,
+    //         contacts: 0
+    //     })
+    // }
+    // const onProjectClick = () => {
+    //     setNavState({
+    //         home: 0,
+    //         about: 0,
+    //         skills: 0,
+    //         projects: 1,
+    //         contacts: 0
+    //     })
+    // }
+    // const onContactClick = () => {
+    //     setNavState({
+    //         home: 0,
+    //         about: 0,
+    //         skills: 0,
+    //         projects: 0,
+    //         contacts: 1
+    //     })
+    // }
 */

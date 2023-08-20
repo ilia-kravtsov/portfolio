@@ -32,6 +32,7 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    margin-left: 30px;
 }
 
 .main {
@@ -45,19 +46,20 @@
 .flashLight {
     width: 60px;
     height: 60px;
-    margin-left: auto;
+    margin-right: auto;
+    margin-left: 50px;
     transform: rotate(0deg);
     transition-duration: 0.4s;
     transition-property: all;
-    margin-right: 60px;
 }
 
 .flashLight:hover {
     cursor: pointer;
+    transform: scale(1.2);
 }
 
 .flashLight:active {
-    transform: rotate(0deg) scale(0.8);
+    transform: rotate(0deg) scale(0.9);
 }
 
 .navLink {
@@ -69,17 +71,16 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    transition-duration: 1s;
+    transition-duration: 0.5s;
     transition-property: all;
 }
 
 .navLink:hover {
-    transform: scale(1.2);
+
 }
 
 .navLink:hover .navIconContainer {
     width: 100%;
-    border-radius: 40px;
 }
 
 .navIconContainer {
@@ -91,15 +92,15 @@
     align-items: center;
     transition-duration: 1s;
     transition-property: all;
+    margin-right: auto;
 }
 
 .navIconContainer:hover .linkTitle {
-    margin-right: auto;
     opacity: 1;
     width: 90px;
 }
 .navIconContainer:hover {
-    border: 1px solid #3a5ace;
+    border: 1px solid $accentColor;
 }
 
 .linkTitle {
@@ -200,9 +201,9 @@
 }
 
 .active {
-    background-color: #3a5ace;
+    background-color: $accentColor;
+    border-radius: 4px;
 }
-
 
 @media screen and (min-width: 2801px) {
     .navIconContainer {

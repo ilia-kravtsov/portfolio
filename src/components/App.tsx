@@ -6,36 +6,14 @@ import {Projects} from "./Projects";
 import {About} from "./About";
 import {Navigation} from "./Navigation";
 import s from "../style/App.module.scss";
-
-export type NavLinkBorderType = {
-    home: number
-    about: number
-    skills: number
-    projects: number
-    contacts: number
-}
+import Particles from 'react-particles-js';
 
 function App() {
 
-    let [navState, setNavState] = useState<NavLinkBorderType>({
-        home: 1,
-        skills: 0,
-        about: 0,
-        projects: 0,
-        contacts: 0
-    })
     let [toggleLight, setToggleLight] = useState<boolean>(false)
 
     const linkColorAbout = (toggle: boolean) => {
-        if (toggle) {
-            setNavState({
-                home: 0,
-                skills: 0,
-                about: 1,
-                projects: 0,
-                contacts: 0
-            })
-        }
+        if (toggle) {}
     }
     const lightToggleClick = () => {
         setToggleLight(!toggleLight)
@@ -44,14 +22,16 @@ function App() {
     return (
         <div className={s.App}>
             <main className={toggleLight ? `${s.main} ${s.light}` : s.main}>
+                <Particles />
                 <Home toggleLight={toggleLight}/>
                 <About linkColorAbout={linkColorAbout} toggleLight={toggleLight}/>
                 <Skills toggleLight={toggleLight}/>
                 <Projects toggleLight={toggleLight}/>
                 <Contacts toggleLight={toggleLight}/>
             </main>
-            <Navigation navState={navState} setNavState={setNavState} lightToggleClick={lightToggleClick}
-                        toggleLight={toggleLight}/>
+            <Navigation lightToggleClick={lightToggleClick}
+                        toggleLight={toggleLight}
+            />
         </div>
     );
 }
