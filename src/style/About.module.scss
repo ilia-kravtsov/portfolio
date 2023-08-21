@@ -14,7 +14,6 @@
   box-sizing: border-box;
   font-family: $fontFamily_1;
   font-size: 20px;
-  border: 1px solid blue;
   @media screen and (max-width: 700px) {
     width: 100%;
   }
@@ -25,7 +24,7 @@
     @include flex(column, space-between, center);
     font-family: inherit;
     z-index: 1;
-    margin-top: 100px;
+    margin-top: 20px;
     .titleAboutPage {
       animation: titleAppear 0.5s forwards;
       font-size: 80px;

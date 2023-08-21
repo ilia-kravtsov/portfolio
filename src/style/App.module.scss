@@ -22,7 +22,6 @@
     top: 0;
     right: 0;
     height: 100%;
-    border: 1px solid yellow;
 }
 
 .navLinksContainer {
@@ -40,17 +39,17 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    border: 1px solid red;
 }
 
 .flashLight {
     width: 60px;
     height: 60px;
     margin-right: auto;
-    margin-left: 50px;
+    margin-left: 35px;
     transform: rotate(0deg);
     transition-duration: 0.4s;
     transition-property: all;
+    align-self: flex-start;
 }
 
 .flashLight:hover {
@@ -407,9 +406,6 @@
     color: $bgDarkFirst;
 }
 
-.particle {
-    color: darkgrey;
-}
 
 
 

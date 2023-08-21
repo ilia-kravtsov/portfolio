@@ -24,10 +24,10 @@ function App() {
             <main className={toggleLight ? `${s.main} ${s.light}` : s.main}>
                 <Particle/>
                 <Home toggleLight={toggleLight}/>
-                <About linkColorAbout={linkColorAbout} toggleLight={toggleLight}/>
-                <Skills toggleLight={toggleLight}/>
-                <Projects toggleLight={toggleLight}/>
-                <Contacts toggleLight={toggleLight}/>
+                    <About linkColorAbout={linkColorAbout} toggleLight={toggleLight}/>
+                    <Skills toggleLight={toggleLight}/>
+                    <Projects toggleLight={toggleLight}/>
+                    <Contacts toggleLight={toggleLight}/>
             </main>
             <Navigation lightToggleClick={lightToggleClick}
                         toggleLight={toggleLight}

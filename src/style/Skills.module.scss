@@ -11,9 +11,8 @@
     @include flex(column, space-between, normal);
     width: 85%;
     min-height: 100vh;
-    border: 1px solid blue;
     background-color: $bgDarkFirst;
-    z-index: 1;
+
     @media screen and (max-width: 1200px) {
         width: 100%;
     }
