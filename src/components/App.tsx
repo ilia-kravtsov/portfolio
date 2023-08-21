@@ -6,7 +6,7 @@ import {Projects} from "./Projects";
 import {About} from "./About";
 import {Navigation} from "./Navigation";
 import s from "../style/App.module.scss";
-import Particles from 'react-particles-js';
+import {Particle} from "./Particle";
 
 function App() {
 
@@ -22,7 +22,7 @@ function App() {
     return (
         <div className={s.App}>
             <main className={toggleLight ? `${s.main} ${s.light}` : s.main}>
-                <Particles />
+                <Particle/>
                 <Home toggleLight={toggleLight}/>
                 <About linkColorAbout={linkColorAbout} toggleLight={toggleLight}/>
                 <Skills toggleLight={toggleLight}/>
