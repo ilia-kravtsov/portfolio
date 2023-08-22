@@ -14,7 +14,7 @@ export const Home: FC<HomeType> = ({toggleLight}) => {
 
     const defaultOptions = {
         reverse: true,  // reverse the tilt direction
-        max: 50,     // max tilt rotation (degrees)
+        max: 80,     // max tilt rotation (degrees)
         perspective: 2000,   // Transform perspective, the lower the more extreme the tilt gets.
         scale: 1,    // 2 = 200%, 1.5 = 150%, etc..
         speed: 1000,   // Speed of the enter/exit transition
@@ -46,12 +46,12 @@ export const Home: FC<HomeType> = ({toggleLight}) => {
                             <p className={s.letsBuild}>Programmers - are modern sculptors,</p>
                             <p>who create intellectual masterpieces.</p>
                         </div>
-                        <a href={'#about'} className={s.navLink}>
+                        <a href={'https://t.me/kravtsov_ilia'} className={s.navLink} target={'_blank'}>
                             <div className={toggleLight ? `${s.navIconContainer} ${s.light}` : s.navIconContainer}>
                                 <div className={s.linkTitle}>
-                                    <span>find out more about me</span>
+                                    <span>Hire me</span>
                                 </div>
-                                <img src={aboutIcon}
+                                <img src={'https://ouch-cdn2.icons8.com/kSIAJQ2detV1XffgFuJ10fUEsh4Gm2atdnFRLFz3ORI/rs:fit:368:368/czM6Ly9pY29uczgu/b3VjaC1wcm9kLmFz/c2V0cy9wbmcvOTg1/L2I5MDg2ZjUyLTRi/NWMtNDYyZC1iMTli/LTk5Y2Q0NGZiYjI4/Yi5wbmc.png'}
                                      className={s.navIcon}
                                      alt={'aboutIcon'}/>
                             </div>

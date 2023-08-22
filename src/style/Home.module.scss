@@ -109,7 +109,7 @@
   transition-property: all;
   margin-top: 50px;
   &:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
   }
   &:hover .navIconContainer {
     border-radius: 50px;
@@ -120,7 +120,7 @@
 .navIconContainer {
   @include flex(row, space-between, center);
   border-radius: 5px;
-  width: 400px;
+  width: 250px;
   overflow: hidden;
   transition-duration: 0.6s;
   transition-property: all;
@@ -132,7 +132,7 @@
   transition-duration: 1s;
   transition-property: all;
   white-space: nowrap;
-  animation: marquee 4s infinite linear;
+  animation: marquee 3s infinite linear;
   overflow: hidden;
   width: 100%;
   @keyframes marquee {

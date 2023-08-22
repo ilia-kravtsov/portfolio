@@ -8,6 +8,7 @@
 }
 
 .container {
+  border: 1px solid red;
   @include flex(column, space-between, center);
   width: 85%;
   min-height: 100vh;
@@ -21,6 +22,7 @@
     margin-bottom: 10vh;
   }
   .titleSection {
+    border: 1px solid blue;
     @include flex(column, space-between, center);
     font-family: inherit;
     z-index: 1;
@@ -76,8 +78,9 @@
   }
 
   .content {
-    @include flex(row, space-evenly, normal);
-    width: 80%;
+    border: 1px solid beige;
+    @include flex(column, center, space-between);
+    width: 100%;
     min-height: 80%;
     flex-wrap: wrap;
     z-index: 1;
@@ -85,44 +88,79 @@
       width: 96%;
     }
 
-    .contentLeft {
-      @include flex(column, space-between, normal);
+    .lineContent {
+      @include flex(row, space-evenly, flex-start);
       overflow: hidden;
-      width: 30%;
-      @media screen and (max-width: 2000px) {
-        width: 46%;
-      }
-      @media screen and (max-width: 1800px) {
-        width: 90%;
-      }
-      @media screen and (max-width: 1500px) {
-        width: 100%;
-      }
+      width: 100%;
+      border: 1px solid red;
+      //@media screen and (max-width: 2000px) {
+      //  width: 46%;
+      //}
+      //@media screen and (max-width: 1800px) {
+      //  width: 90%;
+      //}
+      //@media screen and (max-width: 1500px) {
+      //  width: 100%;
+      //}
       .personalInfo {
-        font-family: inherit;
+        border: 1px solid blue;
+        width: 40vw;
       }
-
-      .personalStrengths {
-        @include flex(column, normal, flex-start);
-        height: 40%;
-        @media screen and (max-width: 500px) {
-          align-items: center;
-        }
-        .icon {
-          @include size(30px, 30px);
-          margin-right: 10px;
+      .programming_training {
+        width: 40vw;
+        border: 1px solid yellow;
+      }
+      .experience_education {
+        width: 40vw;
+        border: 1px solid yellow;
+        .electrification {
+          @media screen and (max-width: 450px) {
+            display: block;
+          }
         }
       }
       .personalHobbies {
         @include flex(column, normal, flex-start);
         height: 40%;
-        margin-top: 10px;
+        width: 40vw;
+        border: 1px solid yellow;
         @media screen and (max-width: 500px) {
           align-items: center;
         }
         .icon {
           @include size(30px, 30px);
           margin-right: 10px;
+        }
+      }
+      .personalStrengths {
+        @include flex(column, normal, flex-start);
+        height: 40%;
+        border: 1px solid blue;
+        width: 40vw;
+        @media screen and (max-width: 500px) {
+          align-items: center;
+        }
+        .icon {
+          @include size(30px, 30px);
+          margin-right: 10px;
+        }
+      }
+      .languages {
+        min-height: 40%;
+        border: 1px solid blue;
+        width: 40vw;
+        @media screen and (max-width: 1800px) {
+          margin-bottom: 20px;
+        }
+        .circleContainer {
+          @include flex(row, space-evenly, center);
+          position: relative;
+          gap: 20px;
+          height: 90%;
+          @media screen and (max-width: 750px) {
+            margin-top: 15px;
+            flex-direction: column;
+          }
         }
       }
     }
@@ -140,16 +178,7 @@
       @media screen and (max-width: 1500px) {
         width: 100%;
       }
-      .experience_education {
-        .electrification {
-          @media screen and (max-width: 450px) {
-            display: block;
-          }
-        }
-        .programming_training {
-          margin-top: 10%;
-        }
-      }
+
 
       .languages {
         min-height: 40%;

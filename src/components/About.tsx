@@ -35,7 +35,7 @@ export const About: FC<AboutType> = ({linkColorAbout, toggleLight}) => {
                     </section>
                 </Fade>
                 <section className={s.content}>
-                    <div className={s.contentLeft}>
+                    <div className={s.lineContent}>
                         <Fade direction={'up'}>
                             <section className={s.personalInfo}>
                                 <h3 className={toggleLight ? s.lightH3 : ''}>info: <div className={s.circle}></div>
@@ -50,25 +50,56 @@ export const About: FC<AboutType> = ({linkColorAbout, toggleLight}) => {
                                     <span>Stavropol, Russia</span></p>
                                 <p className={toggleLight ? s.lightH3 : ''}><span>Job Status:</span>
                                     <span>in active search</span></p>
-                                <section className={s.personalHobbies}>
-                                    <h3 className={toggleLight ? s.lightH3 : ''}>Hobbies: <div
-                                        className={s.circle}></div>
-                                        <div className={s.headerLine}></div>
-                                    </h3>
-                                    <p className={toggleLight ? s.lightH3 : ''}><img src={vocabulary}
-                                                                                     alt="disciplineIcon"
-                                                                                     className={s.hobbieIcon}/>Learning
-                                        languages</p>
-                                    <p className={toggleLight ? s.lightH3 : ''}><img src={workout} alt="disciplineIcon"
-                                                                                     className={s.hobbieIcon}/>Snowboarding
-                                    </p>
-                                    <p className={toggleLight ? s.lightH3 : ''}><img src={bord} alt="disciplineIcon"
-                                                                                     className={s.hobbieIcon}/>Workout
-                                    </p>
-                                </section>
                             </section>
-
-
+                            <section className={s.programming_training}>
+                                <h3 className={toggleLight ? s.lightH3 : ''}>Experience:
+                                    <div className={s.circle}></div>
+                                    <div className={s.headerLine}></div>
+                                </h3>
+                                <p className={toggleLight ? s.lightH3 : ''}>Main
+                                    Experience: <span>IT INCUBATOR</span>
+                                </p>
+                                <p className={toggleLight ? s.lightH3 : ''}>Codewars: <span>4 kyu rank</span></p>
+                                <p className={toggleLight ? s.lightH3 : ''}>FCC: <span>JS and HTML</span></p>
+                                <p className={toggleLight ? s.lightH3 : ''}>Hexlet: <span>Base JS program is done</span>
+                                </p>
+                            </section>
+                        </Fade>
+                    </div>
+                    <div className={s.lineContent}>
+                        <Fade direction={'up'}>
+                            <section className={s.experience_education}>
+                                <h3 className={toggleLight ? s.lightH3 : ''}>EDUCATION:
+                                    <div className={s.circle}></div>
+                                    <div className={s.headerLine}></div>
+                                </h3>
+                                <p className={toggleLight ? s.lightH3 : ''}>University: <span>Stavropol State University</span>
+                                </p>
+                                <p className={toggleLight ? s.lightH3 : ''}>Qualification: <span>engineering degree</span>
+                                </p>
+                                <p className={toggleLight ? s.lightH3 : ''}>Specialization: <span
+                                    className={s.electrification}>electrification</span></p>
+                            </section>
+                            <section className={s.personalHobbies}>
+                                <h3 className={toggleLight ? s.lightH3 : ''}>Hobbies: <div
+                                    className={s.circle}></div>
+                                    <div className={s.headerLine}></div>
+                                </h3>
+                                <p className={toggleLight ? s.lightH3 : ''}><img src={vocabulary}
+                                                                                 alt="disciplineIcon"
+                                                                                 className={s.hobbieIcon}/>Learning
+                                    languages</p>
+                                <p className={toggleLight ? s.lightH3 : ''}><img src={workout} alt="disciplineIcon"
+                                                                                 className={s.hobbieIcon}/>Snowboarding
+                                </p>
+                                <p className={toggleLight ? s.lightH3 : ''}><img src={bord} alt="disciplineIcon"
+                                                                                 className={s.hobbieIcon}/>Workout
+                                </p>
+                            </section>
+                        </Fade>
+                    </div>
+                    <div className={s.lineContent}>
+                        <Fade direction={'up'}>
                             <section className={s.personalStrengths}>
                                 <h3 className={toggleLight ? s.lightH3 : ''}>Strengths:
                                     <div className={s.circle}></div>
@@ -82,41 +113,12 @@ export const About: FC<AboutType> = ({linkColorAbout, toggleLight}) => {
                                                                                  className={s.icon}/>Punctuality</p>
                                 <p className={toggleLight ? s.lightH3 : ''}><img src={teamPlayerIcon}
                                                                                  alt="Team play Icon"
-                                                                                 className={s.icon}/>Team play</p>
+                                                                                 className={s.icon}/>Team player</p>
                                 <p className={toggleLight ? s.lightH3 : ''}><img src={worker} alt="Hard worker"
                                                                                  className={s.icon}/>Hard worker</p>
                                 <p className={toggleLight ? s.lightH3 : ''}><img src={flowIcon} alt="flowIcon"
                                                                                  className={s.icon}/>Feeling of the Code
                                     flow</p>
-                            </section>
-                        </Fade>
-                    </div>
-                    <div className={s.contentRight}>
-                        <Fade direction={'up'}>
-                            <section className={s.experience_education}>
-                                <h3 className={toggleLight ? s.lightH3 : ''}>EDUCATION:
-                                    <div className={s.circle}></div>
-                                    <div className={s.headerLine}></div>
-                                </h3>
-                                <p className={toggleLight ? s.lightH3 : ''}>University: <span>Stavropol State University</span>
-                                </p>
-                                <p className={toggleLight ? s.lightH3 : ''}>Qualification: <span>engineering degree</span>
-                                </p>
-                                <p className={toggleLight ? s.lightH3 : ''}>Specialization: <span
-                                    className={s.electrification}>electrification</span></p>
-                                <section className={s.programming_training}>
-                                    <h3 className={toggleLight ? s.lightH3 : ''}>Experience:
-                                        <div className={s.circle}></div>
-                                        <div className={s.headerLine}></div>
-                                    </h3>
-                                    <p className={toggleLight ? s.lightH3 : ''}>Main
-                                        Experience: <span>IT INCUBATOR</span>
-                                    </p>
-                                    <p className={toggleLight ? s.lightH3 : ''}>Codewars: <span>5 kyu rank</span></p>
-                                    <p className={toggleLight ? s.lightH3 : ''}>FCC: <span>JS and HTML</span></p>
-                                    <p className={toggleLight ? s.lightH3 : ''}>Hexlet: <span>Base JS program is done</span>
-                                    </p>
-                                </section>
                             </section>
                             <section className={s.languages}>
                                 <h3 className={toggleLight ? s.lightH3 : ''}>Languages:
