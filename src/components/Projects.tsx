@@ -22,49 +22,100 @@ export const Projects: FC<ProjectsType> = ({toggleLight}) => {
                         </div>
                     </div>
                 </Fade>
-                    <div className={s.projectsContainer}>
-                        <Fade direction={'up'}>
-                        <div className={s.contentContainer}>
-                            <div className={s.socialNetworkBack}>
-                                <a href='https://ilia-kravtsov.github.io/samurai_way/' target='_blank'
-                                   className={s.projectLink} rel="noreferrer">check</a>
+                <div className={s.projectsContainer}>
+                    <Fade direction={'up'}>
+                        <div className={s.projectContainer}>
+                            <div className={s.projectDescription}>
+                                <p>
+                                    In this project i used some legacy js code,
+                                    <p>
+                                        old libraries, syntax, and class components
+                                    </p>
+                                    <p>
+                                        RESTful (registration, loginization, pagination)
+                                    </p>
+                                </p>
                             </div>
-                            <h3 className={toggleLight ? s.lightH3 : ''}>Social network</h3>
-                            <span
-                                className={toggleLight ? `${s.status} ${s.lightH3}` : s.status}>Status: in progress</span>
-                        </div>
-                        <div className={s.contentContainer}>
-                            <div className={s.todolistBack}>
-                                <a href='https://ilia-kravtsov.github.io/todolist/' target='_blank'
-                                   className={s.projectLink} rel="noreferrer">check</a>
+                            <div className={s.project}>
+                                <div className={s.socialNetworkBack}>
+                                    <a href='https://ilia-kravtsov.github.io/samurai_way/' target='_blank'
+                                       className={s.projectLink} rel="noreferrer">check</a>
+                                </div>
+                                <h3 className={toggleLight ? s.lightH3 : ''}>Social network</h3>
+                                <span
+                                    className={toggleLight ? `${s.status} ${s.lightH3}` : s.status}>Status: in progress
+                                </span>
                             </div>
-                            <h3 className={toggleLight ? s.lightH3 : ''}>Todolist</h3>
-                            <span
-                                className={toggleLight ? `${s.status} ${s.lightH3}` : s.status}>Status: in progress</span>
                         </div>
-                        <div className={s.contentContainer}>
-                            <div className={s.telegram}>
-                                <a href='https://ilia-kravtsov.github.io/telegram_clone_2' target='_blank'
-                                   className={s.projectLink} rel="noreferrer">check</a>
+
+                        <div className={s.projectContainer}>
+                            <div className={s.project}>
+                                <div className={s.todolistBack}>
+                                    <a href='https://ilia-kravtsov.github.io/todolist/' target='_blank'
+                                       className={s.projectLink} rel="noreferrer">check</a>
+                                </div>
+                                <h3 className={toggleLight ? s.lightH3 : ''}>Todolist</h3>
+                                <span
+                                    className={toggleLight ? `${s.status} ${s.lightH3}` : s.status}>Status: in progress
+                                </span>
                             </div>
-                            <h3 className={toggleLight ? s.lightH3 : ''}>Telegram clone</h3>
-                            <span
-                                className={toggleLight ? `${s.status} ${s.lightH3}` : s.status}>Status: in progress</span>
-                        </div>
-                        <div className={s.contentContainer}>
-                            <div className={s.counter}>
-                                <a href='https://ilia-kravtsov.github.io/counter/' target='_blank'
-                                   className={s.projectLink}
-                                   rel="noreferrer">check</a>
+                            <div className={s.projectDescription}>
+                                <p>
+                                    Here i used modern syntax
+                                    <p>
+                                        Project architectural solutions
+                                    </p>
+                                    <p>
+                                        (separation into layers: UI, BLL, DAL, Server)
+                                    </p>
+                                    <p>
+                                        Using BLL state managment with Redux, Thunk, Redux-Toolkit
+                                    </p>
+                                </p>
                             </div>
-                            <h3 className={toggleLight ? s.lightH3 : ''}>Counter</h3>
-                            <span
-                                className={toggleLight ? `${s.status} ${s.lightH3}` : s.status}>Status: my first project</span>
                         </div>
-                        </Fade>
-                    </div>
+
+                        <div className={s.projectContainer}>
+                            <div className={s.projectDescription}>
+                                <p>
+                                    This is my pet project
+                                </p>
+                            </div>
+                            <div className={s.project}>
+                                <div className={s.telegram}>
+                                    <a href='https://ilia-kravtsov.github.io/telegram_clone_2' target='_blank'
+                                       className={s.projectLink} rel="noreferrer">check</a>
+                                </div>
+                                <h3 className={toggleLight ? s.lightH3 : ''}>Telegram clone</h3>
+                                <span
+                                    className={toggleLight ? `${s.status} ${s.lightH3}` : s.status}>Status: in progress
+                                </span>
+                            </div>
+                        </div>
+
+                        <div className={s.projectContainer}>
+                            <div className={s.project}>
+                                <div className={s.counter}>
+                                    <a href='https://ilia-kravtsov.github.io/counter/' target='_blank'
+                                       className={s.projectLink}
+                                       rel="noreferrer">check</a>
+                                </div>
+                                <h3 className={toggleLight ? s.lightH3 : ''}>Counter</h3>
+                                <span
+                                    className={toggleLight ? `${s.status} ${s.lightH3}` : s.status}>Status: my first project
+                                </span>
+                            </div>
+                            <div className={s.projectDescription}>
+                                <p>
+                                    This is my first project
+                                </p>
+                            </div>
+                        </div>
+
+                    </Fade>
+                </div>
             </div>
         </div>
-);
+    );
 };
 

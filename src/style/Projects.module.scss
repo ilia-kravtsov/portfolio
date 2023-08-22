@@ -3,10 +3,10 @@
 
 .container {
     @include flex(column, space-between, normal);
+    border: 1px solid blue;
     width: 85%;
     min-height: 100vh;
     box-sizing: border-box;
-    align-items: center;
     border-radius: 4px;
     background-color: $bgDarkSecond;
     @media screen and (max-width: 1200px) {
@@ -15,139 +15,146 @@
     @media screen and (max-width: 1800px) {
         margin-bottom: 12vh;
     }
-    .titleContainer {
-        @include flex(row, center, center);
-        border-radius: 4px;
-        width: 100%;
-        height: 12%;
-        margin-top: 100px;
-        position: relative;
-        .dotContainer_left {
-            width: 15%;
-            position: absolute;
-            display: flex;
-            justify-content: center;
-            top: 5vh;
-            left: 10px;
-            .leftDot {
-                width: 10px;
-                height: 10px;
-                border-radius: 50%;
-                background-color: $accentColor;
-                box-shadow: 0 0 10px $accentColor, 0 0 30px $accentColor;
-                animation: dotAnimation 2.5s linear infinite;
-                @keyframes dotAnimation {
-                    0% {
-                        margin-right: 170px;
-                        opacity: 1;
-                    }
-                    50% {
-                        margin-right: 0;
-                        opacity: 0;
-                    }
-                    100% {
-                        margin-right: 170px;
-                        opacity: 1;
-                    }
-                }
-            }
-        }
-        .dotContainer_right {
-            width: 15%;
-            position: absolute;
-            display: flex;
-            justify-content: center;
-            top: 5vh;
-            right: 10px;
-            .rightDot {
-                width: 10px;
-                height: 10px;
-                border-radius: 50%;
-                background-color: $accentColor;
-                box-shadow: 0 0 10px $accentColor, 0 0 30px $accentColor;
-                animation: dotAnimation2 2.5s linear infinite;
-                @keyframes dotAnimation2 {
-                    0% {
-                        margin-left: 170px;
-                        opacity: 1;
-                    }
-                    50% {
-                        margin-left: 0;
-                        opacity: 0;
-                    }
-                    100% {
-                        margin-left: 170px;
-                        opacity: 1;
-                    }
-                }
-            }
-        }
-        .title {
-            align-self: center;
-            padding: 10px;
-            border-radius: 4px;
-            width: 100%;
-            text-align: center;
-            font-family: $fontFamily_1;
-            text-transform: uppercase;
-            font-size: 72px;
-            animation: projectsAppear 0.7s forwards;
-            @keyframes projectsAppear {
+}
+
+.titleContainer {
+    border: 1px solid red;
+    @include flex(row, center, center);
+    width: 100%;
+    border-radius: 4px;
+    position: relative;
+    .dotContainer_left {
+        width: 15%;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        top: 5vh;
+        left: 10px;
+        .leftDot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: $accentColor;
+            box-shadow: 0 0 10px $accentColor, 0 0 30px $accentColor;
+            animation: dotAnimation 2.5s linear infinite;
+            @keyframes dotAnimation {
                 0% {
-                    margin-bottom: 30%;
+                    margin-right: 170px;
+                    opacity: 1;
+                }
+                50% {
+                    margin-right: 0;
+                    opacity: 0;
                 }
                 100% {
-
+                    margin-right: 170px;
+                    opacity: 1;
                 }
             }
-            @media screen and (min-width: 2500px) {
-                font-size: 90px;
-            }
-            @media screen and (max-width: 650px) {
-                font-size: 52px;
-            }
-            @media screen and (max-width: 500px) {
-                font-size: 32px;
-            }
-            .me {
-                position: absolute;
-                color: $accentColor;
-                font-family: inherit;
-                animation: Sappear 4s forwards;
-                @keyframes Sappear {
-                    0% {
-                        transform: scale(0) rotate(0);
-                    }
-                    100% {
-                        transform: scale(1) rotate(720deg);
-                    }
+        }
+    }
+    .dotContainer_right {
+        width: 15%;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        top: 5vh;
+        right: 10px;
+        .rightDot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: $accentColor;
+            box-shadow: 0 0 10px $accentColor, 0 0 30px $accentColor;
+            animation: dotAnimation2 2.5s linear infinite;
+            @keyframes dotAnimation2 {
+                0% {
+                    margin-left: 170px;
+                    opacity: 1;
+                }
+                50% {
+                    margin-left: 0;
+                    opacity: 0;
+                }
+                100% {
+                    margin-left: 170px;
+                    opacity: 1;
                 }
             }
+        }
+    }
+    .title {
+        border: 1px solid blue;
+        text-align: center;
+        border-radius: 4px;
+        width: 70%;
+        font-family: $fontFamily_1;
+        text-transform: uppercase;
+        font-size: 72px;
+        animation: projectsAppear 0.7s forwards;
+        @keyframes projectsAppear {
+            0% {
+                margin-bottom: 30%;
+            }
+            100% {
 
+            }
+        }
+        @media screen and (min-width: 2500px) {
+            font-size: 90px;
+        }
+        @media screen and (max-width: 650px) {
+            font-size: 52px;
+        }
+        @media screen and (max-width: 500px) {
+            font-size: 32px;
+        }
+        .me {
+            position: absolute;
+            color: $accentColor;
+            font-family: inherit;
+            animation: Sappear 4s forwards;
+            @keyframes Sappear {
+                0% {
+                    transform: scale(0) rotate(0);
+                }
+                100% {
+                    transform: scale(1) rotate(720deg);
+                }
+            }
         }
 
     }
-    .projectsContainer {
-        @include flex(row, space-evenly, center);
-        width: 100%;
-        min-height: 70vh;
-        border-radius: 5px;
-        flex-wrap: wrap;
-        animation: projectAppear 1s forwards;
-        @keyframes projectAppear {
-            from {
-                transform: scale(0.5);
-            }
-            to {
-                transform: scale(1);
-            }
+
+}
+
+.projectsContainer {
+    border: 1px solid yellow;
+    @include flex(column, space-evenly, center);
+    width: 100%;
+    min-height: 70vh;
+    border-radius: 5px;
+    flex-wrap: wrap;
+    animation: projectAppear 1s forwards;
+    @keyframes projectAppear {
+        from {
+            transform: scale(0.5);
         }
-        .contentContainer {
+        to {
+            transform: scale(1);
+        }
+    }
+    .projectContainer {
+        border: 1px solid red;
+        width: 60vw;
+        @include flex(row, space-evenly, center);
+        .projectDescription {
+
+        }
+        .project {
             @include flex(column, space-evenly, center);
-            height: 430px;
+            border: 1px solid yellow;
             width: 400px;
-            border-radius: 4px;
-            margin-top: 20px;
             padding-top: 20px;
             background-color: $bgDarkFirst;
             transition: all;
@@ -249,4 +256,3 @@
         }
     }
 }
-

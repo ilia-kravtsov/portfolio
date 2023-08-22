@@ -29,7 +29,10 @@
   background-position: 75% 50%;
   transition: all 1s ease;
   z-index: 2;
-  transform: scale(1.2);
+}
+
+.photo:hover {
+  transform: scale(1.1) rotate(3deg);
 }
 
 .textGreeting {
@@ -120,7 +123,7 @@
 .navIconContainer {
   @include flex(row, space-between, center);
   border-radius: 5px;
-  width: 250px;
+  width: 300px;
   overflow: hidden;
   transition-duration: 0.6s;
   transition-property: all;

@@ -11,6 +11,13 @@
     color: $fontColor;
 }
 
+.main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .navContainer {
     background-color: transparent;
     width: 15%;
@@ -34,33 +41,6 @@
     margin-left: 30px;
 }
 
-.main {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.flashLight {
-    width: 60px;
-    height: 60px;
-    margin-right: auto;
-    margin-left: 35px;
-    transform: rotate(0deg);
-    transition-duration: 0.4s;
-    transition-property: all;
-    align-self: flex-start;
-}
-
-.flashLight:hover {
-    cursor: pointer;
-    transform: scale(1.2);
-}
-
-.flashLight:active {
-    transform: rotate(0deg) scale(0.9);
-}
-
 .navLink {
     width: 80%;
     color: $fontColor;
@@ -74,12 +54,9 @@
     transition-property: all;
 }
 
-.navLink:hover {
-
-}
-
 .navLink:hover .navIconContainer {
     width: 100%;
+    border: 1px solid $accentColor;
 }
 
 .navIconContainer {
@@ -98,9 +75,9 @@
     opacity: 1;
     width: 90px;
 }
-.navIconContainer:hover {
-    border: 1px solid $accentColor;
-}
+//.navIconContainer:hover {
+//    border: 1px solid $accentColor;
+//}
 
 .linkTitle {
     font-size: 24px;
@@ -406,7 +383,25 @@
     color: $bgDarkFirst;
 }
 
+.flashLight {
+    width: 60px;
+    height: 60px;
+    margin-right: auto;
+    margin-left: 35px;
+    transform: rotate(0deg);
+    transition-duration: 0.4s;
+    transition-property: all;
+    align-self: flex-start;
+}
 
+.flashLight:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+.flashLight:active {
+    transform: rotate(0deg) scale(0.9);
+}
 
 
 

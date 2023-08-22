@@ -13,6 +13,7 @@ export const Skills: FC<SkillsType> = ({toggleLight}) => {
         <div className={sb.subContainer} id={'skills'}>
             <div className={s.container}>
                 <Fade direction={'up'}>
+
                     <div className={s.titleContainer}>
                         <div className={s.dotContainer_left}>
                             <div className={s.leftDot}></div>
