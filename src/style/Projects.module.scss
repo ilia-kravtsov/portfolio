@@ -152,6 +152,7 @@
         .projectDescription {
             background-color: $bgDarkFirst;
             padding: 20px;
+            width: 27vw;
         }
         .project {
             @include flex(column, space-evenly, center);

@@ -32,29 +32,31 @@ export const Navigation: FC<NaviType> = ({lightToggleClick, toggleLight}) => {
     return (
         <nav className={toggleLight ? `${s.navContainer} ${s.light}` : s.navContainer}>
             <div className={s.navLinksContainer}>
-                <Link activeClass={s.active}
-                      className={s.navLink}
-                      to="home"
-                      spy={true}
-                      smooth={true}
-                      offset={0}
-                      duration={600}>
-                    <div className={s.navIconContainer}>
+
+                <div className={s.navLink}>
+                    <Link activeClass={s.active}
+                          className={s.navIconContainer}
+                          to="home"
+                          spy={true}
+                          smooth={true}
+                          offset={0}
+                          duration={600}>
                         <span className={s.linkTitle}>Home</span>
                         <img src={homeIcon}
                              className={s.navIcon}
                              alt={'homeIcon'}/>
-                    </div>
-                </Link>
 
-                <Link activeClass={s.active}
-                      className={s.navLink}
-                      to="about"
-                      spy={true}
-                      smooth={true}
-                      offset={0}
-                      duration={600}>
-                    <div className={s.navIconContainer}>
+                    </Link>
+                </div>
+
+                <div className={s.navLink}>
+                    <Link activeClass={s.active}
+                          className={s.navIconContainer}
+                          to="about"
+                          spy={true}
+                          smooth={true}
+                          offset={0}
+                          duration={600}>
                         <div className={s.linkTitle}>
                             <span className={s.inline}>
                                 <span>About</span>
@@ -64,48 +66,48 @@ export const Navigation: FC<NaviType> = ({lightToggleClick, toggleLight}) => {
                         <img src={aboutIcon}
                              className={s.navIcon}
                              alt={'aboutIcon'}/>
-                    </div>
-                </Link>
+                    </Link>
+                </div>
 
-                <Link activeClass={s.active}
-                      className={s.navLink}
-                      to="skills"
-                      spy={true}
-                      smooth={true}
-                      offset={0}
-                      duration={600}>
-                    <div className={s.navIconContainer}>
+                <div className={s.navLink}>
+                    <Link activeClass={s.active}
+                          className={s.navIconContainer}
+                          to="skills"
+                          spy={true}
+                          smooth={true}
+                          offset={0}
+                          duration={600}>
                         <span className={s.linkTitle}>Skills</span>
                         <img src={skillsIcon}
                              className={s.navIcon}
                              alt={'skillsIcon'}/>
-                    </div>
-                </Link>
+                    </Link>
+                </div>
 
+                <div className={s.navLink}>
                 <Link activeClass={s.active}
-                      className={s.navLink}
+                      className={s.navIconContainer}
                       to="projects"
                       spy={true}
                       smooth={true}
                       offset={0}
                       duration={600}>
-                    <div className={s.navIconContainer}>
                         <span className={s.linkTitle}>Projects</span>
                         <img src={projectsIcon}
                              className={s.navIcon}
                              alt={'projectsIcon'}
                         />
-                    </div>
                 </Link>
+                </div>
 
+                <div className={s.navLink}>
                 <Link activeClass={s.active}
-                      className={s.navLink}
+                      className={s.navIconContainer}
                       to="contacts"
                       spy={true}
                       smooth={true}
                       offset={0}
                       duration={600}>
-                    <div className={s.navIconContainer}>
                       <span className={s.linkTitle}>
                                     <span className={s.inline}>Let's
                                         <span className={s.ml}>Talk</span>
@@ -115,8 +117,8 @@ export const Navigation: FC<NaviType> = ({lightToggleClick, toggleLight}) => {
                              className={s.navIcon}
                              alt={'contactsIcon'}
                         />
-                    </div>
                 </Link>
+                </div>
 
                 <img className={s.flashLight} src={flashLight_1} alt={'FlashLight'} onClick={flashLightCB}/>
             </div>

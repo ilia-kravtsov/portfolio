@@ -19,38 +19,30 @@
 }
 
 .navContainer {
+    @include flex(row, normal, center);
     background-color: transparent;
     width: 15%;
-    display: flex;
-    align-items: center;
     z-index: 5;
     box-sizing: border-box;
     position: fixed;
     top: 0;
     right: 0;
     height: 100%;
+    border: 1px solid blue;
 }
 
 .navLinksContainer {
+    @include flex(column, space-between, center);
     width: 100%;
-    display: flex;
     height: 75vh;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    margin-left: 30px;
+    border: 1px solid red;
 }
 
 .navLink {
     width: 80%;
     color: $fontColor;
-    text-decoration: none;
     font-size: 20px;
-    text-align: center;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    transition-duration: 0.5s;
+    transition-duration: 1s;
     transition-property: all;
 }
 
@@ -60,31 +52,25 @@
 }
 
 .navIconContainer {
-    border-radius: 5px;
+    @include flex(row, space-between, center);
+    border-radius: 4px;
     width: 90px;
-    overflow: hidden;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     transition-duration: 1s;
     transition-property: all;
-    margin-right: auto;
 }
 
 .navIconContainer:hover .linkTitle {
     opacity: 1;
-    width: 90px;
+    margin-left: 20px;
 }
-//.navIconContainer:hover {
-//    border: 1px solid $accentColor;
-//}
 
 .linkTitle {
-    font-size: 24px;
-    margin-left: auto;
-    width: 0;
+    position: absolute;
     opacity: 0;
-    transition-duration: 1s;
+    font-size: 24px;
+    width: 120px;
+    margin-left: 100px;
+    transition-duration: 0.5s;
     transition-property: all;
 }
 
@@ -97,8 +83,6 @@
 }
 
 .navIcon {
-    width: 70px;
-    height: 70px;
     padding: 10px;
     border-radius: 5px;
     margin-left: auto;
@@ -178,7 +162,6 @@
 
 .active {
     background-color: $accentColor;
-    border-radius: 4px;
 }
 
 @media screen and (min-width: 2801px) {

@@ -41,11 +41,9 @@ export const Home: FC<HomeType> = ({toggleLight}) => {
                         </div>
                         {/*<ReactTypingEffect text={'A FRONTEND DEVELOPER'}/>*/}
                         <div className={toggleLight ? `${s.aboutMeText} ${s.lightPostText}` : s.aboutMeText}>
-                            <p>
-                                with 1+ year of work experience <br/>
-                                in creating Single Page Applications<br/>
-                                using React, Redux, Redux-Toolkit, TypeScript
-                            </p>
+                            <p>with 1+ year of work experience</p>
+                            <p>in creating Single Page Applications</p>
+                            <p>using React, Redux, Redux-Toolkit, TypeScript</p>
                         </div>
                         <a href={'https://t.me/kravtsov_ilia'} className={s.navLink} target={'_blank'}>
                             <div className={toggleLight ? `${s.navIconContainer} ${s.light}` : s.navIconContainer}>

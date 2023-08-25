@@ -9,6 +9,7 @@ type SkillsType = {
 }
 
 export const Skills: FC<SkillsType> = ({toggleLight}) => {
+
     return (
         <div className={sb.subContainer} id={'skills'}>
             <div className={s.container}>

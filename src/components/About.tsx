@@ -64,26 +64,57 @@ export const About: FC<AboutType> = ({linkColorAbout, toggleLight}) => {
                     </div>
                     <div className={s.lineContent}>
                         <Fade direction={'up'}>
+
+                            <section className={s.personalStrengths}>
+                                <h3 className={toggleLight ? s.lightH3 : ''}>My message:
+                                    <div className={s.circle}></div>
+                                    <div className={s.headerLine}></div>
+                                </h3>
+                                <div>
+                                    <p className={toggleLight ? s.lightH3 : ''}>
+                                        I'm constantly improving my skills
+                                        in web developing
+                                        and plan to expand my knowledge with new technologies,
+                                        such as React Native.
+                                    </p>
+                                    <p className={toggleLight ? s.lightH3 : ''}>
+                                        In my spare time, I usually read IT literature,
+                                        such as: "Grokking Algorithms",
+                                        challenge myself with Codewars,
+                                        and work on improving my English skills.
+                                    </p>
+                                </div>
+                            </section>
+
                             <section className={s.experience_education}>
                                 <h3 className={toggleLight ? s.lightH3 : ''}>EDUCATION:
                                     <div className={s.circle}></div>
                                     <div className={s.headerLine}></div>
                                 </h3>
                                 <p className={toggleLight ? s.lightH3 : ''}>
-                                    2022 IT-INCUBATOR <span>Frontend developer - key skills:</span>
+                                    2022 IT-INCUBATOR: <span> Frontend developer</span>
                                 </p>
-                                <p>
-                                    <span>JS, React, Redux, TypeScript, Rest API, Axious, Formik, GIT, <br/>
-                                        React-router-dom, Unit-test, Storybook, Redux-Toolkit, <br/>
-                                        Material UI, HTML & CSS, SASS</span>
+                                <p>Key Skills:</p>
+                                <p className={toggleLight ? s.lightH3 : ''}>
+                                    <span>
+                                        JS, React, Redux, TypeScript, Rest API,
+                                        Axious, Formik, GIT, React-router-dom,
+                                        Unit-test, Storybook, Redux-Toolkit,
+                                        Material UI, HTML & CSS, SASS
+                                    </span>
                                 </p>
                                 <p className={toggleLight ? s.lightH3 : ''}>
-                                    2010 - 2015 Stavropol State University:<br/>
-                                    <span>engineer</span>
+                                    2010 - 2015 Stavropol State University: <span>engineer</span>
                                 </p>
                             </section>
-                            <section className={s.personalHobbies}>
-                                <h3 className={toggleLight ? s.lightH3 : ''}>Relevant Links:
+
+                        </Fade>
+                    </div>
+                    <div className={s.lineContent}>
+                        <Fade direction={'up'}>
+
+                            <section className={s.relevantLinks}>
+                                <h3 className={toggleLight ? s.lightH3 : ''}>Useful Links:
                                     <div className={s.circle}></div>
                                     <div className={s.headerLine}></div>
                                 </h3>
@@ -109,17 +140,7 @@ export const About: FC<AboutType> = ({linkColorAbout, toggleLight}) => {
                                     </a>
                                 </div>
                             </section>
-                        </Fade>
-                    </div>
-                    <div className={s.lineContent}>
-                        <Fade direction={'up'}>
-                            <section className={s.lifePath}>
-                                <h3 className={toggleLight ? s.lightH3 : ''}>Strength:
-                                    <div className={s.circle}></div>
-                                    <div className={s.headerLine}></div>
-                                </h3>
 
-                            </section>
                             <section className={s.languages}>
                                 <h3 className={toggleLight ? s.lightH3 : ''}>Languages:
                                     <div className={s.circle}></div>
@@ -130,10 +151,6 @@ export const About: FC<AboutType> = ({linkColorAbout, toggleLight}) => {
                                     <Circle percents={70} title={'English'} toggleLight={toggleLight}/>
                                 </div>
                             </section>
-                        </Fade>
-                    </div>
-                    <div className={s.lineContent}>
-                        <Fade direction={'up'}>
 
                         </Fade>
                     </div>

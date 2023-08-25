@@ -27,10 +27,10 @@ export const Projects: FC<ProjectsType> = ({toggleLight}) => {
                         <div className={s.projectContainer}>
                             <div className={s.projectDescription}>
                                 <p>
-                                    In this project, I incorporated some legacy JavaScript code,<br/>
-                                    utilized older libraries, employed syntax, class components<br/>
-                                    that are no longer in mainstream use,<br/>
-                                    implemented RESTful features such as registration, loginization, and pagination,<br/>
+                                    In this project, I incorporated some legacy React code,
+                                    utilized older libraries, employed syntax, class components
+                                    that are no longer in mainstream use,
+                                    implemented RESTful features such as registration, loginization, and pagination,
                                     and developed components using React and Redux.
                                 </p>
                             </div>
@@ -60,10 +60,10 @@ export const Projects: FC<ProjectsType> = ({toggleLight}) => {
                             </div>
                             <div className={s.projectDescription}>
                                 <p>
-                                    Here i used modern syntax like: Redux-Toolkit,<br/>
-                                    Project architectural solutions<br/>
-                                    (separation into layers: UI, BLL, DAL, Server)<br/>
-                                    Using BLL state management with Redux, Thunks<br/>
+                                    Here i used modern syntax like: Redux-Toolkit,
+                                    Project architectural solutions
+                                    (separation into layers: UI, BLL, DAL, Server)
+                                    Using BLL state management with Redux, Thunks
                                 </p>
                             </div>
                         </div>
@@ -71,10 +71,9 @@ export const Projects: FC<ProjectsType> = ({toggleLight}) => {
                         <div className={s.projectContainer}>
                             <div className={s.projectDescription}>
                                 <p>
-                                    I've made an effort to showcase<br/>
-                                    my passion for developing mobile applications,<br/>
-                                    the area i'd gravitate towards in the case that<br/>
-                                    something were to occur within web development.
+                                    I've made an effort to showcase
+                                    my passion for mobile app development it's
+                                    an area that I also gravitate towards
                                 </p>
                             </div>
                             <div className={s.project}>
@@ -103,8 +102,8 @@ export const Projects: FC<ProjectsType> = ({toggleLight}) => {
                             </div>
                             <div className={s.projectDescription}>
                                 <p>
-                                    This is my first react project,<br/>
-                                    and what makes it truly delightful<br/>
+                                    This is my first react project,
+                                    and what makes it truly delightful
                                     is its simplicity and conciseness.
                                 </p>
                             </div>

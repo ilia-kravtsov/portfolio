@@ -8,6 +8,7 @@
 }
 
 .container {
+    border: 1px solid red;
     @include flex(column, space-between, normal);
     width: 85%;
     min-height: 100vh;
