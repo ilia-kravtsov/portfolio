@@ -46,8 +46,6 @@ export const About: FC<AboutType> = ({linkColorAbout, toggleLight}) => {
                                 <p className={toggleLight ? s.lightH3 : ''}><span>Age:</span> <span>29</span></p>
                                 <p className={toggleLight ? s.lightH3 : ''}><span>Address:</span>
                                     <span>Stavropol, Russia</span></p>
-                                <p className={toggleLight ? s.lightH3 : ''}><span>Job Status:</span>
-                                    <span>in active search</span></p>
                             </section>
                             <section className={s.programming_training}>
                                 <h3 className={toggleLight ? s.lightH3 : ''}>Experience:
@@ -71,12 +69,18 @@ export const About: FC<AboutType> = ({linkColorAbout, toggleLight}) => {
                                     <div className={s.circle}></div>
                                     <div className={s.headerLine}></div>
                                 </h3>
-                                <p className={toggleLight ? s.lightH3 : ''}>University: <span>Stavropol State University</span>
+                                <p className={toggleLight ? s.lightH3 : ''}>
+                                    2022 IT-INCUBATOR <span>Frontend developer - key skills:</span>
                                 </p>
-                                <p className={toggleLight ? s.lightH3 : ''}>Qualification: <span>engineering degree</span>
+                                <p>
+                                    <span>JS, React, Redux, TypeScript, Rest API, Axious, Formik, GIT, <br/>
+                                        React-router-dom, Unit-test, Storybook, Redux-Toolkit, <br/>
+                                        Material UI, HTML & CSS, SASS</span>
                                 </p>
-                                <p className={toggleLight ? s.lightH3 : ''}>Specialization: <span
-                                    className={s.electrification}>electrification</span></p>
+                                <p className={toggleLight ? s.lightH3 : ''}>
+                                    2010 - 2015 Stavropol State University:<br/>
+                                    <span>engineer</span>
+                                </p>
                             </section>
                             <section className={s.personalHobbies}>
                                 <h3 className={toggleLight ? s.lightH3 : ''}>Relevant Links:
@@ -110,36 +114,11 @@ export const About: FC<AboutType> = ({linkColorAbout, toggleLight}) => {
                     <div className={s.lineContent}>
                         <Fade direction={'up'}>
                             <section className={s.lifePath}>
-                                <h3 className={toggleLight ? s.lightH3 : ''}>life path:
+                                <h3 className={toggleLight ? s.lightH3 : ''}>Strength:
                                     <div className={s.circle}></div>
                                     <div className={s.headerLine}></div>
                                 </h3>
-                                <p className={toggleLight ? s.lightH3 : ''}>
-                                    2022 - 2023 IT-INCUBATOR
-                                    Frontend developer - key skills:
-                                    JS, React, Redux, TypeScript, Rest API, Axious,
-                                    Formik, React-router-dom Unit-test, Storybook,
-                                    GIT, Redux-Toolkit, Material UI, HTML & CSS, SASS
-                                </p>
-                                <p className={toggleLight ? s.lightH3 : ''}>
-                                    2020 - 2022 Moscow Tourist Police:
-                                    i'd gained life experience communicating with
-                                    English speakers which has improved my
-                                    ability to confidently speak English with pretty
-                                    good pronunciation at a true B1 level
-                                </p>
-                                <p className={toggleLight ? s.lightH3 : ''}>
-                                    2015 - 2020 I'd worked as an engineer
-                                    working with normative and technical
-                                    documentation,
-                                    development of projects for the production
-                                    of works,
-                                    quality control of works
-                                </p>
-                                <p className={toggleLight ? s.lightH3 : ''}>
-                                    2010 - 2015 Stavropol State University
-                                    engineer
-                                </p>
+
                             </section>
                             <section className={s.languages}>
                                 <h3 className={toggleLight ? s.lightH3 : ''}>Languages:

@@ -37,13 +37,15 @@ export const Home: FC<HomeType> = ({toggleLight}) => {
                         <span className={toggleLight ? `${s.preName} ${s.light}` : s.preName}>I'M ILIA </span>KRAVTSOV
                     </span>
                         <div className={s.professionConatiner}>
-                            <span className={toggleLight ? `${s.profession} ${s.light}` : s.profession}>A FRONT-END WEB DEVELOPER</span>
+                            <span className={toggleLight ? `${s.profession} ${s.light}` : s.profession}>FRONT-END WEB DEVELOPER</span>
                         </div>
                         {/*<ReactTypingEffect text={'A FRONTEND DEVELOPER'}/>*/}
                         <div className={toggleLight ? `${s.aboutMeText} ${s.lightPostText}` : s.aboutMeText}>
-                            <p>Writing the application Code - is an art.</p>
-                            <p className={s.letsBuild}>Programmers - are modern sculptors,</p>
-                            <p>who create intellectual masterpieces.</p>
+                            <p>
+                                with 1+ year of work experience <br/>
+                                in creating Single Page Applications<br/>
+                                using React, Redux, Redux-Toolkit, TypeScript
+                            </p>
                         </div>
                         <a href={'https://t.me/kravtsov_ilia'} className={s.navLink} target={'_blank'}>
                             <div className={toggleLight ? `${s.navIconContainer} ${s.light}` : s.navIconContainer}>

@@ -27,20 +27,19 @@ export const Projects: FC<ProjectsType> = ({toggleLight}) => {
                         <div className={s.projectContainer}>
                             <div className={s.projectDescription}>
                                 <p>
-                                    In this project i used some legacy js code,
-                                    <p>
-                                        old libraries, syntax, and class components
-                                    </p>
-                                    <p>
-                                        RESTful (registration, loginization, pagination)
-                                    </p>
+                                    In this project, I incorporated some legacy JavaScript code,<br/>
+                                    utilized older libraries, employed syntax, class components<br/>
+                                    that are no longer in mainstream use,<br/>
+                                    implemented RESTful features such as registration, loginization, and pagination,<br/>
+                                    and developed components using React and Redux.
                                 </p>
                             </div>
                             <div className={s.project}>
-                                <div className={s.socialNetworkBack}>
-                                    <a href='https://ilia-kravtsov.github.io/samurai_way/' target='_blank'
-                                       className={s.projectLink} rel="noreferrer">check</a>
-                                </div>
+                                <a href='https://ilia-kravtsov.github.io/samurai_way/' target='_blank'
+                                   className={s.projectLink} rel="noreferrer">
+                                    <div className={s.socialNetworkBack}>
+                                    </div>
+                                </a>
                                 <h3 className={toggleLight ? s.lightH3 : ''}>Social network</h3>
                                 <span
                                     className={toggleLight ? `${s.status} ${s.lightH3}` : s.status}>Status: in progress
@@ -61,16 +60,10 @@ export const Projects: FC<ProjectsType> = ({toggleLight}) => {
                             </div>
                             <div className={s.projectDescription}>
                                 <p>
-                                    Here i used modern syntax
-                                    <p>
-                                        Project architectural solutions
-                                    </p>
-                                    <p>
-                                        (separation into layers: UI, BLL, DAL, Server)
-                                    </p>
-                                    <p>
-                                        Using BLL state managment with Redux, Thunk, Redux-Toolkit
-                                    </p>
+                                    Here i used modern syntax like: Redux-Toolkit,<br/>
+                                    Project architectural solutions<br/>
+                                    (separation into layers: UI, BLL, DAL, Server)<br/>
+                                    Using BLL state management with Redux, Thunks<br/>
                                 </p>
                             </div>
                         </div>
@@ -78,7 +71,10 @@ export const Projects: FC<ProjectsType> = ({toggleLight}) => {
                         <div className={s.projectContainer}>
                             <div className={s.projectDescription}>
                                 <p>
-                                    This is my pet project
+                                    I've made an effort to showcase<br/>
+                                    my passion for developing mobile applications,<br/>
+                                    the area i'd gravitate towards in the case that<br/>
+                                    something were to occur within web development.
                                 </p>
                             </div>
                             <div className={s.project}>
@@ -107,7 +103,9 @@ export const Projects: FC<ProjectsType> = ({toggleLight}) => {
                             </div>
                             <div className={s.projectDescription}>
                                 <p>
-                                    This is my first project
+                                    This is my first react project,<br/>
+                                    and what makes it truly delightful<br/>
+                                    is its simplicity and conciseness.
                                 </p>
                             </div>
                         </div>
