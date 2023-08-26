@@ -9,7 +9,6 @@
 }
 
 .container {
-  border: 1px solid red;
   @include flex(column, space-between, center);
   width: 85%;
   min-height: 100vh;
@@ -17,270 +16,264 @@
   font-family: $fontFamily_1;
   font-size: 20px;
   z-index: 1;
-  @extend .dotContainer_left;
-  @extend .leftDot;
-  @extend .dotContainer_right;
-  @extend .rightDot;
   @media screen and (max-width: 700px) {
     width: 100%;
   }
   @media screen and (max-width: 1800px) {
     margin-bottom: 10vh;
   }
-  .titleSection {
-    border: 1px solid blue;
-    width: 100%;
-    @include flex(column, space-between, center);
-    font-family: inherit;
-    z-index: 1;
-    .titleAboutPage {
-      animation: titleAppear 0.5s forwards;
-      font-size: 80px;
-      @media screen and (max-width: 2000px) {
-        font-size: 70px;
-        padding-top: 10px;
-      }
-      @media screen and (max-width: 500px) {
-        font-size: 36px;
-        padding-top: 25px;
-      }
-      @keyframes titleAppear {
-        from {
-          margin-top: 100%;
-          transform: rotate(20deg)
-        }
-        to {
-          margin-top: 20px;
-          transform: rotate(0deg)
-        }
-      }
-    }
-    h2 {
-      font-family: inherit;
-      font-size: inherit;
-      .me {
-        color: $accentColor;
-        font-family: inherit;
-      }
-    }
+}
 
-    .titleBack {
-      position: absolute;
-      font-size: 110px;
-      z-index: 1;
-      opacity: 1;
-      color: $titleDark;
-      font-weight: 900;
-      text-transform: uppercase;
-      @media screen and (max-width: 750px) {
-        display: none;
-      }
+.titleSection {
+  width: 100%;
+  @include flex(column, space-between, center);
+  font-family: inherit;
+  z-index: 1;
+}
+
+.titleAboutPage {
+  animation: titleAppear 0.5s forwards;
+  font-size: 80px;
+  @media screen and (max-width: 2000px) {
+    font-size: 70px;
+    padding-top: 10px;
+  }
+  @media screen and (max-width: 500px) {
+    font-size: 36px;
+    padding-top: 25px;
+  }
+  @keyframes titleAppear {
+    from {
+      margin-top: 100%;
+      transform: rotate(20deg)
     }
-    .lightMode {
-      color: $titleLight;
-      z-index: -1;
+    to {
+      margin-top: 20px;
+      transform: rotate(0deg)
     }
   }
+}
 
-  .content {
-    border: 1px solid beige;
-    @include flex(column, center, space-between);
+h2 {
+  font-family: inherit;
+  font-size: inherit;
+  .me {
+    color: $accentColor;
+    font-family: inherit;
+  }
+}
+
+.titleBack {
+  position: absolute;
+  font-size: 110px;
+  z-index: 1;
+  opacity: 1;
+  color: $titleDark;
+  font-weight: 900;
+  text-transform: uppercase;
+  @media screen and (max-width: 750px) {
+    display: none;
+  }
+}
+
+.lightMode {
+  color: $titleLight;
+  z-index: -1;
+}
+
+.content {
+  @include flex(column, center, space-between);
+  width: 100%;
+  min-height: 80%;
+  flex-wrap: wrap;
+  z-index: 1;
+  @media screen and (max-width: 700px) {
+    width: 96%;
+  }
+}
+
+.lineContent {
+  @include flex(row, space-evenly, flex-start);
+  width: 100%;
+  min-height: 30%;
+}
+
+.personalInfo {
+  width: 40vw;
+}
+
+.programming_training {
+  width: 40vw;
+}
+
+.experience_education {
+  width: 40vw;
+}
+
+.electrification {
+  @media screen and (max-width: 450px) {
+    display: block;
+  }
+}
+
+.relevantLinks {
+  @include flex(column, center, space-between);
+  min-height: 40%;
+  width: 40vw;
+  @media screen and (max-width: 500px) {
+    align-items: center;
+  }
+}
+
+.icon {
+  @include size(30px, 30px);
+  margin-right: 10px;
+}
+.linksContainer {
+  margin-top: 10px;
+  @include flex(row, space-evenly, center);
+}
+
+.relevantLinks img {
+  width: 70px;
+  z-index: 2;
+}
+
+.personalStrengths {
+  @include flex(column, normal, flex-start);
+  height: 40%;
+  width: 40vw;
+  @media screen and (max-width: 500px) {
+    align-items: center;
+  }
+}
+
+.icon {
+  @include size(30px, 30px);
+  margin-right: 10px;
+}
+
+.languages {
+  min-height: 50%;
+  width: 40vw;
+  @media screen and (max-width: 1800px) {
+    margin-bottom: 20px;
+  }
+}
+
+.circleContainer {
+  @include flex(row, space-evenly, center);
+  position: relative;
+  gap: 20px;
+  height: 90%;
+  @media screen and (max-width: 750px) {
+    margin-top: 15px;
+    flex-direction: column;
+  }
+}
+
+.contentRight {
+  @include flex(column, space-between, normal);
+  overflow: hidden;
+  width: 45%;
+  @media screen and (max-width: 2000px) {
+    width: 50%;
+  }
+  @media screen and (max-width: 1800px) {
+    width: 90%;
+  }
+  @media screen and (max-width: 1500px) {
     width: 100%;
-    min-height: 80%;
-    flex-wrap: wrap;
-    z-index: 1;
-    @media screen and (max-width: 700px) {
-      width: 96%;
-    }
+  }
+}
 
-    .lineContent {
-      @include flex(row, space-evenly, flex-start);
-      width: 100%;
-      border: 1px solid red;
-      //@media screen and (max-width: 2000px) {
-      //  width: 46%;
-      //}
-      //@media screen and (max-width: 1800px) {
-      //  width: 90%;
-      //}
-      //@media screen and (max-width: 1500px) {
-      //  width: 100%;
-      //}
-      .personalInfo {
-        border: 1px solid blue;
-        width: 40vw;
-      }
-      .programming_training {
-        width: 40vw;
-        border: 1px solid yellow;
-      }
-      .experience_education {
-        width: 40vw;
-        border: 1px solid yellow;
-        .electrification {
-          @media screen and (max-width: 450px) {
-            display: block;
-          }
-        }
-      }
-      .relevantLinks {
-        @include flex(column, center, space-between);
-        height: 40%;
-        width: 40vw;
-        border: 1px solid yellow;
-        @media screen and (max-width: 500px) {
-          align-items: center;
-        }
-        .icon {
-          @include size(30px, 30px);
-          margin-right: 10px;
-        }
-        .linksContainer {
-          margin-top: 10px;
-          @include flex(row, space-evenly, center);
-        }
-      }
-      .relevantLinks img {
-        width: 70px;
-        z-index: 2;
-      }
-      .personalStrengths {
-        @include flex(column, normal, flex-start);
-        height: 40%;
-        border: 1px solid blue;
-        width: 40vw;
-        @media screen and (max-width: 500px) {
-          align-items: center;
-        }
-        .icon {
-          @include size(30px, 30px);
-          margin-right: 10px;
-        }
-      }
-      .languages {
-        min-height: 50%;
-        border: 1px solid blue;
-        width: 40vw;
-        @media screen and (max-width: 1800px) {
-          margin-bottom: 20px;
-        }
-        .circleContainer {
-          @include flex(row, space-evenly, center);
-          position: relative;
-          gap: 20px;
-          height: 90%;
-          @media screen and (max-width: 750px) {
-            margin-top: 15px;
-            flex-direction: column;
-          }
-        }
-      }
-    }
+.languages {
+  @media screen and (min-width: 3000px) {
+    min-height: 50%;
+  }
+  @media screen and (max-width: 1800px) {
+    margin-bottom: 20px;
+  }
+}
 
-    .contentRight {
-      @include flex(column, space-between, normal);
-      overflow: hidden;
-      width: 45%;
-      @media screen and (max-width: 2000px) {
-        width: 50%;
-      }
-      @media screen and (max-width: 1800px) {
-        width: 90%;
-      }
-      @media screen and (max-width: 1500px) {
-        width: 100%;
-      }
+.circleContainer {
+  @include flex(row, space-evenly, center);
+  position: relative;
+  gap: 20px;
+  height: 90%;
+  @media screen and (max-width: 750px) {
+    margin-top: 15px;
+    flex-direction: column;
+  }
+}
 
+.header_3 {
+  @include flex(row, normal, center);
+  color: $fontColor;
+  font-family: $fontFamily_1;
+  font-size: inherit;
+  font-weight: 700;
+  gap: 25px;
+  letter-spacing: 8px;
+  line-height: 1.7;
+  text-transform: uppercase;
+  width: 100%;
+  margin-top: 10px;
+  @media screen and (max-width: 2000px) {
+    font-size: 18px;
+  }
+  @media screen and (max-width: 750px) {
+    font-size: 16px;
+  }
+  @media screen and (max-width: 650px) {
+    font-size: 14px;
+  }
+}
+.lightH3 {
+  color: $fontColor;
+}
+.circle {
+  @include size(10px, 10px);
+  border-radius: 50%;
+  background:  $accentColor;
+  box-shadow: 0 0 10px  $accentColor, 0 0 30px  $accentColor;
+  animation: circleAppearance 1s forwards ease-in-out;
+  @keyframes circleAppearance {
+    0% {
+      opacity: 0;
+      margin-left: 200px;
+    }
+    100% {
+      opacity: 1;
+      margin-left: 0;
+    }
+  }
+}
 
-      .languages {
-        min-height: 40%;
-        @media screen and (max-width: 1800px) {
-          margin-bottom: 20px;
-        }
-        .circleContainer {
-          @include flex(row, space-evenly, center);
-          position: relative;
-          gap: 20px;
-          height: 90%;
-          @media screen and (max-width: 750px) {
-            margin-top: 15px;
-            flex-direction: column;
-          }
-        }
-      }
-    }
-
-    h3 {
-      @include flex(row, normal, center);
-      color: $fontColor;
-      font-family: $fontFamily_1;
-      font-size: inherit;
-      font-weight: 700;
-      gap: 25px;
-      letter-spacing: 8px;
-      line-height: 1.7;
-      text-transform: uppercase;
-      width: 100%;
-      margin-top: 10px;
-      @media screen and (max-width: 2000px) {
-        font-size: 18px;
-      }
-      @media screen and (max-width: 750px) {
-        font-size: 16px;
-      }
-      @media screen and (max-width: 650px) {
-        font-size: 14px;
-      }
-    }
-    .lightH3 {
-      color: $fontColor;
-    }
-    .circle {
-      @include size(10px, 10px);
-      border-radius: 50%;
-      background:  $accentColor;
-      box-shadow: 0 0 10px  $accentColor, 0 0 30px  $accentColor;
-      animation: circleAppearance 1s forwards ease-in-out;
-    }
-
-    .headerLine {
-      background-color: $accentColor;
-      display: inline-block;
-      flex-grow: 1;
-      height: 1px;
-    }
-
-    @keyframes circleAppearance {
-      0% {
-        opacity: 0;
-        margin-left: 200px;
-      }
-      100% {
-        opacity: 1;
-        margin-left: 0;
-      }
-    }
-
-    section p {
-      @include flex(row, space-between, normal);
-      margin-top: 10px;
-      letter-spacing: 2px;
-      font-size: inherit;
-      @media screen and (max-width: 2000px) {
-        font-size: 18px;
-      }
-      @media screen and (max-width: 750px) {
-        font-size: 16px;
-      }
-      @media screen and (max-width: 650px) {
-        font-size: 14px;
-      }
-      @media screen and (max-width: 500px) {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-      }
-    }
+.headerLine {
+  background-color: $accentColor;
+  display: inline-block;
+  flex-grow: 1;
+  height: 1px;
+}
+section p {
+  @include flex(row, space-between, normal);
+  margin-top: 10px;
+  letter-spacing: 2px;
+  font-size: inherit;
+  @media screen and (max-width: 2000px) {
+    font-size: 18px;
+  }
+  @media screen and (max-width: 750px) {
+    font-size: 16px;
+  }
+  @media screen and (max-width: 650px) {
+    font-size: 14px;
+  }
+  @media screen and (max-width: 500px) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 }
 

@@ -1,19 +1,10 @@
-import React, {FC, useEffect} from 'react';
+import React, {FC} from 'react';
 import s from '../style/About.module.scss'
 import {Circle} from './Circle';
 import sb from "../style/About.module.scss";
 import {Fade} from "react-awesome-reveal";
 
-type AboutType = {
-    linkColorAbout: (toggle: boolean) => void
-    toggleLight: boolean
-}
-
-export const About: FC<AboutType> = ({linkColorAbout, toggleLight}) => {
-
-    useEffect(() => {
-        linkColorAbout(true)
-    }, [])
+export const About: FC = () => {
 
     return (
         <div className={sb.subContainer} id={'about'}>
@@ -26,7 +17,7 @@ export const About: FC<AboutType> = ({linkColorAbout, toggleLight}) => {
                         <h2 className={s.titleAboutPage}>ABOUT
                             <span className={s.me}> ME</span>
                         </h2>
-                        <span className={toggleLight ? `${s.titleBack} ${s.lightMode}` : s.titleBack}>Information</span>
+                        <span className={s.titleBack}>Information</span>
                     </section>
                     <div className={s.dotContainer_right}>
                         <div className={s.rightDot}></div>
@@ -36,29 +27,27 @@ export const About: FC<AboutType> = ({linkColorAbout, toggleLight}) => {
                     <div className={s.lineContent}>
                         <Fade direction={'up'}>
                             <section className={s.personalInfo}>
-                                <h3 className={toggleLight ? s.lightH3 : ''}>info: <div className={s.circle}></div>
-                                    <div className={s.headerLine}></div>
-                                </h3>
-                                <p className={toggleLight ? s.lightH3 : ''}><span>First name:</span><span>ilia</span>
-                                </p>
-                                <p className={toggleLight ? s.lightH3 : ''}><span>Last name:</span><span>kravtsov</span>
-                                </p>
-                                <p className={toggleLight ? s.lightH3 : ''}><span>Age:</span> <span>29</span></p>
-                                <p className={toggleLight ? s.lightH3 : ''}><span>Address:</span>
-                                    <span>Stavropol, Russia</span></p>
-                            </section>
-                            <section className={s.programming_training}>
-                                <h3 className={toggleLight ? s.lightH3 : ''}>Experience:
+                                <h3 className={s.header_3}>info:
                                     <div className={s.circle}></div>
                                     <div className={s.headerLine}></div>
                                 </h3>
-                                <p className={toggleLight ? s.lightH3 : ''}>Main
-                                    Experience: <span>IT INCUBATOR</span>
+                                <p><span>First name:</span><span>ilia</span>
                                 </p>
-                                <p className={toggleLight ? s.lightH3 : ''}>Codewars: <span>4 kyu rank</span></p>
-                                <p className={toggleLight ? s.lightH3 : ''}>FCC: <span>JS and HTML</span></p>
-                                <p className={toggleLight ? s.lightH3 : ''}>Hexlet: <span>Base JS program is done</span>
+                                <p><span>Last name:</span><span>kravtsov</span>
                                 </p>
+                                <p><span>Age:</span> <span>29</span></p>
+                                <p><span>Address:</span>
+                                    <span>Stavropol, Russia</span></p>
+                            </section>
+                            <section className={s.programming_training}>
+                                <h3 className={s.header_3}>Experience:
+                                    <div className={s.circle}></div>
+                                    <div className={s.headerLine}></div>
+                                </h3>
+                                <p>Main Experience:<span>IT INCUBATOR</span></p>
+                                <p>Codewars: <span>4 kyu rank</span></p>
+                                <p>FCC: <span>JS and HTML</span></p>
+                                <p>Hexlet: <span>Base JS program is done</span></p>
                             </section>
                         </Fade>
                     </div>
@@ -66,18 +55,18 @@ export const About: FC<AboutType> = ({linkColorAbout, toggleLight}) => {
                         <Fade direction={'up'}>
 
                             <section className={s.personalStrengths}>
-                                <h3 className={toggleLight ? s.lightH3 : ''}>My message:
+                                <h3 className={s.header_3}>My message:
                                     <div className={s.circle}></div>
                                     <div className={s.headerLine}></div>
                                 </h3>
                                 <div>
-                                    <p className={toggleLight ? s.lightH3 : ''}>
+                                    <p>
                                         I'm constantly improving my skills
                                         in web developing
                                         and plan to expand my knowledge with new technologies,
                                         such as React Native.
                                     </p>
-                                    <p className={toggleLight ? s.lightH3 : ''}>
+                                    <p>
                                         In my spare time, I usually read IT literature,
                                         such as: "Grokking Algorithms",
                                         challenge myself with Codewars,
@@ -87,15 +76,15 @@ export const About: FC<AboutType> = ({linkColorAbout, toggleLight}) => {
                             </section>
 
                             <section className={s.experience_education}>
-                                <h3 className={toggleLight ? s.lightH3 : ''}>EDUCATION:
+                                <h3 className={s.header_3}>EDUCATION:
                                     <div className={s.circle}></div>
                                     <div className={s.headerLine}></div>
                                 </h3>
-                                <p className={toggleLight ? s.lightH3 : ''}>
+                                <p>
                                     2022 IT-INCUBATOR: <span> Frontend developer</span>
                                 </p>
                                 <p>Key Skills:</p>
-                                <p className={toggleLight ? s.lightH3 : ''}>
+                                <p>
                                     <span>
                                         JS, React, Redux, TypeScript, Rest API,
                                         Axious, Formik, GIT, React-router-dom,
@@ -103,7 +92,7 @@ export const About: FC<AboutType> = ({linkColorAbout, toggleLight}) => {
                                         Material UI, HTML & CSS, SASS
                                     </span>
                                 </p>
-                                <p className={toggleLight ? s.lightH3 : ''}>
+                                <p>
                                     2010 - 2015 Stavropol State University: <span>engineer</span>
                                 </p>
                             </section>
@@ -114,7 +103,7 @@ export const About: FC<AboutType> = ({linkColorAbout, toggleLight}) => {
                         <Fade direction={'up'}>
 
                             <section className={s.relevantLinks}>
-                                <h3 className={toggleLight ? s.lightH3 : ''}>Useful Links:
+                                <h3 className={s.header_3}>Useful Links:
                                     <div className={s.circle}></div>
                                     <div className={s.headerLine}></div>
                                 </h3>
@@ -142,13 +131,13 @@ export const About: FC<AboutType> = ({linkColorAbout, toggleLight}) => {
                             </section>
 
                             <section className={s.languages}>
-                                <h3 className={toggleLight ? s.lightH3 : ''}>Languages:
+                                <h3 className={s.header_3}>Languages:
                                     <div className={s.circle}></div>
                                     <div className={s.headerLine}></div>
                                 </h3>
                                 <div className={s.circleContainer}>
-                                    <Circle percents={100} title={'Russian'} toggleLight={toggleLight}/>
-                                    <Circle percents={70} title={'English'} toggleLight={toggleLight}/>
+                                    <Circle percents={100} title={'Russian'}/>
+                                    <Circle percents={70} title={'English'}/>
                                 </div>
                             </section>
 

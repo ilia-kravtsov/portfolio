@@ -5,7 +5,6 @@
   @include flex(column, center, flex-start);
   width: 100%;
   background-color: $bgDarkFirst;
-
 }
 
 .container {
@@ -13,7 +12,6 @@
   flex-wrap: wrap;
   min-height: 100vh;
   box-sizing: border-box;
-  border: 1px solid blue;
   width: 85%;
 }
 
@@ -32,10 +30,6 @@
   background-position: 75% 50%;
   transition: all 1s ease;
   z-index: 2;
-}
-
-.photo:hover {
-  transform: scale(1.1) rotate(3deg);
 }
 
 .textGreeting {
@@ -160,18 +154,8 @@
 }
 
 @media screen and (min-width: 3001px) {
-  .container {
-    width: 85%;
-  }
   .photo {
     width: 35vw;
-  }
-  .linkTitle {
-    font-size: 28px;
-  }
-  .navIconContainer {
-    width: 600px;
-    height: 100px;
   }
   .aboutMeText {
     font-size: 45px;
@@ -185,15 +169,8 @@
   .name {
     font-size: 70px;
   }
-  .navIcon {
-    width: 100px;
-    height: 100px;
-  }
 }
 @media screen and (max-width: 3000px) {
-  .container {
-    width: 85%;
-  }
   .photo {
     background-position: 75% 50%;
     width: 35vw;
@@ -210,11 +187,9 @@
   .name {
     font-size: 52px;
   }
+
 }
 @media screen and (max-width: 2500px) {
-  .container {
-    width: 85%;
-  }
   .photo {
     background-position: 75% 50%;
     width: 30vw;

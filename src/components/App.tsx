@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {Home} from "./Home";
 import {Skills} from "./Skills";
 import {Contacts} from "./Contacts";
@@ -10,28 +10,17 @@ import {Particle} from "./Particle";
 
 function App() {
 
-    let [toggleLight, setToggleLight] = useState<boolean>(false)
-
-    const linkColorAbout = (toggle: boolean) => {
-        if (toggle) {}
-    }
-    const lightToggleClick = () => {
-        setToggleLight(!toggleLight)
-    }
-
     return (
         <div className={s.App}>
-            <main className={toggleLight ? `${s.main} ${s.light}` : s.main}>
-                <Particle/>
-                <Home toggleLight={toggleLight}/>
-                    <About linkColorAbout={linkColorAbout} toggleLight={toggleLight}/>
-                    <Skills toggleLight={toggleLight}/>
-                    <Projects toggleLight={toggleLight}/>
-                    <Contacts toggleLight={toggleLight}/>
+            <main className={s.main}>
+                <Particle />
+                <Home/>
+                    <About/>
+                    <Skills/>
+                    <Projects/>
+                    <Contacts/>
             </main>
-            <Navigation lightToggleClick={lightToggleClick}
-                        toggleLight={toggleLight}
-            />
+            <Navigation/>
         </div>
     );
 }

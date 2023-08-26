@@ -6,10 +6,9 @@ import '../style/sass/variables.scss';
 type CircleType = {
     percents: number
     title: string
-    toggleLight: boolean
 }
 
-export const Circle: FC<CircleType> = ({percents, title, toggleLight}) => {
+export const Circle: FC<CircleType> = ({percents, title}) => {
 
     const styles: CSSProperties = {
         '--clr': '#3a5ace',
@@ -25,7 +24,7 @@ export const Circle: FC<CircleType> = ({percents, title, toggleLight}) => {
                     <circle cx={'70'} cy={'70'} r={'70'}></circle>
                 </svg>
                 <div className={s.amount}>
-                    <h3 className={toggleLight ? `${s.percents} ${s.percentsLight}` : s.percents}>{percents}%</h3>
+                    <h3 className={s.percents}>{percents}%</h3>
                     <p>{title}</p>
                 </div>
             </div>

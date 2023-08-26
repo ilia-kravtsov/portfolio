@@ -19,23 +19,22 @@
 }
 
 .navContainer {
+    border: 1px solid red;
+    width: 15%;
     @include flex(row, normal, center);
     background-color: transparent;
-    width: 15%;
     z-index: 5;
     box-sizing: border-box;
     position: fixed;
     top: 0;
     right: 0;
     height: 100%;
-    border: 1px solid blue;
 }
 
 .navLinksContainer {
     @include flex(column, space-between, center);
     width: 100%;
     height: 75vh;
-    border: 1px solid red;
 }
 
 .navLink {
@@ -86,22 +85,8 @@
     padding: 10px;
     border-radius: 5px;
     margin-left: auto;
-}
-
-.linkContacts {
-    color: #1b79ce;
-    text-decoration: none;
-    font-size: 20px;
-    text-align: center;
-    padding: 10px 20px;
-    margin: 30px 0 10px 0;
-    border: 1px solid transparent;
-    box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.2);
-    border-radius: 4px;
-}
-
-.linkContacts:hover {
-    background-color: rgba(42, 54, 255, 0.03);
+    width: 70px;
+    height: 70px;
 }
 
 .homeAnchor {
@@ -164,22 +149,26 @@
     background-color: $accentColor;
 }
 
-@media screen and (min-width: 2801px) {
-    .navIconContainer {
-        width: 90px;
-    }
+@media screen and (min-width: 3001px) {
     .navIcon {
         width: 90px;
         height: 90px;
+    }
+}
+
+@media screen and (max-width: 3000px) {
+    .navIconContainer {
+        width: 70px;
+    }
+    .navIcon {
+        width: 70px;
+        height: 70px;
     }
     .linkTitle {
         font-size: 28px;
     }
 }
 @media screen and (max-width: 2800px) {
-    .navIconContainer {
-        width: 75px;
-    }
     .navIcon {
         width: 70px;
         height: 70px;
@@ -187,13 +176,10 @@
     .linkTitle {
         font-size: 26px;
     }
-    .flashLight {
-        margin-right: 40px;
-    }
 }
 @media screen and (max-width: 2000px) {
     .navContainer {
-        width: 17%;
+        width: 15%;
     }
     .navIconContainer {
         width: 70px;
@@ -358,33 +344,7 @@
     }
 }
 
-.light {
-    background-color: $bgLightFirst;
-}
 
-.lightNav {
-    color: $bgDarkFirst;
-}
-
-.flashLight {
-    width: 60px;
-    height: 60px;
-    margin-right: auto;
-    margin-left: 35px;
-    transform: rotate(0deg);
-    transition-duration: 0.4s;
-    transition-property: all;
-    align-self: flex-start;
-}
-
-.flashLight:hover {
-    cursor: pointer;
-    transform: scale(1.2);
-}
-
-.flashLight:active {
-    transform: rotate(0deg) scale(0.9);
-}
 
 
 
