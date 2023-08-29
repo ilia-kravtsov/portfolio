@@ -1,7 +1,7 @@
 @import 'sass/variables';
 @import 'sass/mixin';
 
-.App {
+.app {
     display: flex;
     width: 100%;
     box-sizing: border-box;
@@ -13,36 +13,39 @@
 
 .main {
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    @include flex(column, center, normal);
+    border: 1px solid yellow;
 }
 
 .navContainer {
-    border: 1px solid red;
+    background-color: $bgcSecond;
+    box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.5);
     width: 15%;
     @include flex(row, normal, center);
-    background-color: transparent;
     z-index: 5;
     box-sizing: border-box;
     position: fixed;
     top: 0;
     right: 0;
     height: 100%;
+    border: 1px solid blue;
 }
 
 .navLinksContainer {
     @include flex(column, space-between, center);
     width: 100%;
     height: 75vh;
+    border: 1px solid red;
 }
 
 .navLink {
+    @include flex(row, space-between, center);
     width: 80%;
     color: $fontColor;
     font-size: 20px;
     transition-duration: 1s;
     transition-property: all;
+    border: 1px solid purple;
 }
 
 .navLink:hover .navIconContainer {
@@ -66,11 +69,13 @@
 .linkTitle {
     position: absolute;
     opacity: 0;
+    color: white;
     font-size: 24px;
     width: 120px;
-    margin-left: 100px;
+    margin-right: 50px;
     transition-duration: 0.5s;
     transition-property: all;
+    transition-delay: 0.2s;
 }
 
 .inline {
@@ -89,67 +94,14 @@
     height: 70px;
 }
 
-.homeAnchor {
-    height: 8vh;
-    width: 100%;
-}
-
-.skillsAnchor {
-    min-height: 7.3vh;
-    width: 100%;
-}
-
-.contactMe {
-    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
-    width: 45%;
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-    margin: 50px 0 -10px 0;
-    align-items: center;
-    justify-content: space-evenly;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
-
-.titleContact {
-    text-align: center;
-    margin-top: 10px;
-}
-
-.footer {
-    background-color: $bgDarkFirst;
-    min-width: 100%;
-    min-height: 20vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-.footerHeader {
-    font-family: 'Lora', serif;
-    font-size: 20px;
-    min-width: 20%;
-    text-align: center;
-}
-
-.footerIconsContainer {
-    display: flex;
-    justify-content: space-between;
-    min-width: 20%;
-}
-
-.footerLogo {
-    height: 50px;
-    width: 50px;
-}
-
 .active {
     background-color: $accentColor;
 }
 
 @media screen and (min-width: 3001px) {
+    .navContainer {
+        width: 15%;
+    }
     .navIcon {
         width: 90px;
         height: 90px;
@@ -168,11 +120,7 @@
         font-size: 28px;
     }
 }
-@media screen and (max-width: 2800px) {
-    .navIcon {
-        width: 70px;
-        height: 70px;
-    }
+@media screen and (max-width: 2500px) {
     .linkTitle {
         font-size: 26px;
     }
@@ -191,16 +139,9 @@
     .linkTitle {
         font-size: 24px;
     }
-    .navLink {
-        width: 80%;
-    }
-    .navLink:hover {
-        color: $fontColor;
-        transform: scale(1.1);
-    }
 }
 @media screen and (max-width: 1800px) {
-    .App {
+    .app {
         flex-direction: column;
     }
     .navContainer {
@@ -211,14 +152,11 @@
         bottom: 0;
     }
     .navLink {
-        justify-content: center;
+        @include flex(row, center, center);
     }
     .navLinksContainer {
         flex-direction: row-reverse;
         height: 10vh;
-    }
-    .navLink:hover {
-        transform: scale(1);
     }
     .navLink:hover .navIconContainer {
         width: 70px;
@@ -229,14 +167,6 @@
     }
     .main {
         width: 100%;
-    }
-    .flashLight {
-        width: 55px;
-        height: 55px;
-        margin-left: 40px;
-    }
-    .flashLight:active {
-        transform: scale(0.8);
     }
 }
 @media screen and (max-width: 1000px) {

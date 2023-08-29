@@ -4,7 +4,7 @@
 .subContainer {
   @include flex(column, center, flex-start);
   width: 100%;
-  background-color: $bgDarkFirst;
+  background-color: $bgcFirst;
 }
 
 .container {
@@ -13,13 +13,14 @@
   min-height: 100vh;
   box-sizing: border-box;
   width: 85%;
+  border: 1px solid red;
 }
 
 .photoWrapper {
   overflow: hidden;
   z-index: 2;
   border-radius: 20px;
-  box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.6);
+  box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.3);
 }
 
 .photo {
@@ -32,10 +33,17 @@
   z-index: 2;
 }
 
+.photo:hover {
+  transform: scale(1.1) rotate(3deg);
+}
+
 .textGreeting {
   @include flex(column, space-evenly, center);
   box-sizing: border-box;
   border-radius: 4px;
+  background-color: $bgcSecond;
+  padding: 30px;
+  box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.3);
 }
 
 .name {
@@ -63,31 +71,31 @@
   font-size: 52px;
   font-family: $fontFamily_1;
   font-weight: bold;
-  box-sizing: border-box;
-  width: 0;
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 3px solid; /* рисуем курсор */
-  animation: typing 2s steps(30, end) forwards, blinking 1s infinite;
-  @keyframes blinking {
-    0% {
-      border-right-color: transparent
-    }
-    50% {
-      border-right-color: $fontColor
-    }
-    100% {
-      border-right-color: transparent
-    }
-  }
-  @keyframes typing {
-    from {
-      width: 0
-    }
-    to {
-      width: 100%
-    }
-  }
+  //box-sizing: border-box;
+  //width: 0;
+  //white-space: nowrap;
+  //overflow: hidden;
+  //border-right: 3px solid; /* рисуем курсор */
+  //animation: typing 2s steps(30, end) forwards, blinking 1s infinite;
+  //@keyframes blinking {
+  //  0% {
+  //    border-right-color: transparent
+  //  }
+  //  50% {
+  //    border-right-color: $fontColor
+  //  }
+  //  100% {
+  //    border-right-color: transparent
+  //  }
+  //}
+  //@keyframes typing {
+  //  from {
+  //    width: 0
+  //  }
+  //  to {
+  //    width: 100%
+  //  }
+  //}
 }
 
 .aboutMeText {
@@ -158,16 +166,16 @@
     width: 35vw;
   }
   .aboutMeText {
-    font-size: 45px;
+    font-size: 30px;
   }
   .profession {
-    font-size: 70px;
+    font-size: 52px;
   }
   .preName {
-    font-size: 70px;
+    font-size: 52px;
   }
   .name {
-    font-size: 70px;
+    font-size: 52px;
   }
 }
 @media screen and (max-width: 3000px) {
@@ -195,21 +203,21 @@
     width: 30vw;
   }
   .aboutMeText {
-    font-size: 30px;
+    font-size: 26px;
   }
   .profession {
-    font-size: 52px;
+    font-size: 42px;
   }
   .preName {
-    font-size: 52px;
+    font-size: 42px;
   }
   .name {
-    font-size: 52px;
+    font-size: 42px;
   }
 }
 @media screen and (max-width: 2000px) {
   .container {
-    width: 83%;
+    width: 85%;
   }
   .photo {
     background-position: 75% 50%;
@@ -230,8 +238,7 @@
 }
 @media screen and (max-width: 1800px) {
   .container {
-    width: 80%;
-    margin-bottom: 12vh;
+    width: 100%;
   }
   .photo {
     background-position: 90% 50%;
@@ -240,7 +247,7 @@
 }
 @media screen and (max-width: 1500px) {
   .container {
-    width: 80%;
+    width: 100%;
   }
   .photo {
     background-position: 73% 50%;
@@ -269,87 +276,18 @@
     font-size: 20px;
   }
 }
-@media screen and (max-width: 1300px) {
-  .photo {
-    background-position: 73% 50%;
-    width: 40vw;
-  }
-  .aboutMeText {
-    font-size: 20px;
-  }
-  .profession {
-    font-size: 30px;
-  }
-  .preName {
-    font-size: 30px;
-  }
-  .name {
-    font-size: 30px;
-  }
-  .navIconContainer {
-    width: 350px;
-  }
-  .navIcon {
-    width: 70px;
-    height: 70px;
-  }
-  .linkTitle {
-    font-size: 20px;
-  }
-}
-@media screen and (max-width: 1200px) {
-  .photo {
-    background-position: 73% 50%;
-    width: 45vw;
-  }
-  .colorBlock {
-    display: none;
-  }
-  .aboutMeText {
-    font-size: 20px;
-  }
-  .profession {
-    font-size: 30px;
-  }
-  .preName {
-    font-size: 30px;
-  }
-  .name {
-    font-size: 30px;
-  }
-  .navIconContainer {
-    width: 350px;
-  }
-  .navIcon {
-    width: 70px;
-    height: 70px;
-  }
-  .linkTitle {
-    font-size: 20px;
-  }
-  .container {
-    width: 90%;
-  }
-}
-@media screen and (max-width: 1000px) {
-  .container {
-    @include flex(column, center, center);
-    min-height: 70vh;
-    width: 100%;
-  }
+@media screen and (max-width: 1500px) {
   .colorBlock {
     display: none;
   }
   .photoWrapper {
-    border-radius: 50%;
-    width: 272px;
-    height: 272px;
-    border: 2px solid $accentColor;
+    width: 500px;
+    height: 500px;
+    border-radius: 5px;
   }
   .photo {
-    width: 270px;
-    height: 270px;
-    border-radius: 50%;
+    width: 500px;
+    height: 500px;
     background-position: 100% 50%;
   }
   .aboutMeText {
@@ -368,18 +306,59 @@
     font-size: 36px;
     margin-top: 20px;
   }
-  .navIconContainer {
-    width: 330px;
+}
+@media screen and (max-width: 1300px) {
+  .profession {
+    font-size: 30px;
+  }
+  .preName {
+    font-size: 30px;
+  }
+  .name {
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .photoWrapper {
+    width: 400px;
+    height: 400px;
+  }
+  .photo {
+    width: 400px;
+    height: 400px;
+    background-position: 73% 50%;
+  }
+  .aboutMeText {
+    font-size: 20px;
+  }
+  .profession {
+    font-size: 24px;
+  }
+  .preName {
+    font-size: 24px;
+  }
+  .name {
+    font-size: 24px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .container {
+    @include flex(column, space-evenly, center);
+    min-height: 100vh;
+    width: 100%;
+  }
+  .linkTitle {
+    font-size: 18px;
   }
   .navIcon {
-    width: 60px;
-    height: 60px;
+    width: 70px;
+    height: 70px;
   }
 }
 @media screen and (max-width: 500px) {
   .container {
-    @include flex(column, center, center);
-    min-height: 70vh;
+    @include flex(column, space-evenly, center);
+    min-height: 100vh;
     width: 100%;
   }
   .photoWrapper {
@@ -590,7 +569,7 @@
 }
 
 .light {
-  color: $bgDarkFirst;
+  color: $bgcFirst;
 }
 
 .lightPostText {

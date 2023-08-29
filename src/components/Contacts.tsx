@@ -4,6 +4,8 @@ import sb from "../style/Skills.module.scss";
 import {Fade} from "react-awesome-reveal";
 import emailjs from '@emailjs/browser';
 import {Alert, Snackbar} from "@mui/material";
+import {Tilt} from 'react-tilt'
+import {defaultOptions} from '../features/features'
 
 export const Contacts: FC = () => {
 
@@ -64,7 +66,9 @@ export const Contacts: FC = () => {
                                 <span>First name</span>
                             </div>
                             <div className={s.inputBox}>
-                                <input type="number" required name="phone_number"
+                                <input type="number"
+                                       required
+                                       name="phone_number"
                                        className={s.input}/>
                                 <span>Phone number</span>
                             </div>
@@ -82,10 +86,12 @@ export const Contacts: FC = () => {
                                 </textarea>
                                 <span>Enter your comment</span>
                             </div>
-                            <button type={'submit'} disabled={waiting}>
-                                <span>Send</span>
-                                <div className={s.liquid}></div>
-                            </button>
+                            <Tilt options={defaultOptions}>
+                                <button type={'submit'} disabled={waiting}>
+                                    <span>Send</span>
+                                    <div className={s.liquid}></div>
+                                </button>
+                            </Tilt>
                         </form>
                         {<Snackbar open={success} autoHideDuration={6000} onClose={setSuccessClose}>
                             <Alert onClose={setSuccessClose} severity="success">
@@ -102,7 +108,7 @@ export const Contacts: FC = () => {
                                 Just a moment, we're sending your data!
                             </Alert>
                         </Snackbar>}
-                        <section className={s.explanation}>
+                        <section className={s.links}>
                             <div className={s.socialLinksContainer}>
                                 <h2>Social links:</h2>
                                 <div className={s.linksContainer}>

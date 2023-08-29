@@ -4,20 +4,21 @@
 .subContainer {
     @include flex(column, center, flex-start);
     width: 100%;
-    background-color: $bgDarkFirst;
+    background-color: $bgcFirst;
 }
 
 .container {
     @include flex(column, space-between, normal);
     width: 85%;
     min-height: 100vh;
-    background-color: $bgDarkFirst;
+    background-color: $bgcFirst;
     @media screen and (max-width: 1200px) {
         width: 100%;
     }
     @media screen and (max-width: 1800px) {
         margin-bottom: 10vh;
     }
+    border: 1px solid red;
 }
 
 .titleContainer {
@@ -251,7 +252,9 @@
     align-self: flex-end;
 }
 
+@media screen and (min-width: 3001px) {
 
+}
 
 
 

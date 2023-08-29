@@ -5,7 +5,7 @@
 .subContainer {
   @include flex(column, center, flex-start);
   width: 100%;
-  background-color: $bgDarkSecond;
+  background-color: $bgcSecond;
 }
 
 .container {
@@ -132,6 +132,7 @@ h2 {
 .linksContainer {
   margin-top: 10px;
   @include flex(row, space-evenly, center);
+  min-height: 20vh;
 }
 
 .relevantLinks img {
@@ -285,4 +286,8 @@ section p {
 
 .accentColor {
   color: $accentColor;
+}
+
+@media screen and (min-width: 3001px) {
+
 }

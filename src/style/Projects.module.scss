@@ -2,12 +2,13 @@
 @import 'sass/mixin';
 
 .container {
+    border: 1px solid blue;
     @include flex(column, space-between, normal);
     width: 85%;
     min-height: 100vh;
     box-sizing: border-box;
     border-radius: 4px;
-    background-color: $bgDarkSecond;
+    background-color: $bgcSecond;
     @media screen and (max-width: 1200px) {
         width: 100%;
     }
@@ -129,6 +130,7 @@
 
 
 .projectsContainer {
+    border: 1px solid beige;
     @include flex(column, space-evenly, center);
     width: 100%;
     min-height: 70vh;
@@ -146,13 +148,14 @@
 }
 
 .projectContainer {
-    width: 60vw;
+    border: 1px solid white;
+    width: 80vw;
     height: 43vh;
     @include flex(row, space-evenly, center);
 }
 
 .projectDescription {
-    background-color: $bgDarkFirst;
+    background-color: $bgcFirst;
     padding: 20px;
     width: 27vw;
 }
@@ -161,7 +164,6 @@
     @include flex(column, space-evenly, center);
     width: 400px;
     padding-top: 20px;
-    background-color: $bgDarkFirst;
     transition: all;
     transition-duration: 1s;
     text-align: center;
@@ -192,49 +194,24 @@
 .contentContainerLight {
     background-color: rgba(150, 150, 150, 1);
 }
+
 .socialNetworkBack {
-    @include flex(row, center, center);
-    height: 100%;
-    width: 80%;
-    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5);
-    background-image: url('images/social.png');
-    background-size: cover;
-    background-position: 0 50%;
-    border-radius: 2px;
+    @include project('https://img.freepik.com/free-photo/view-3d-man-with-tech-device_23-2150710044.jpg', -120%, 50%);
 }
+
 .todolistBack {
-    @include flex(row, center, center);
-    height: 80%;
-    width: 80%;
-    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5);
-    border-radius: 4px;
-    background-image: url(images/todo.png);
-    background-size: cover;
-    background-position: -120% 50%;
-    margin-bottom: 15px;
+    @include project('https://img.freepik.com/premium-photo/todo-list-checklist-clipboard-with-pencil-with-3d-style-generative-ai_82472-995.jpg', 50%, 50%);
 }
-.counter {
-    @include flex(row, center, center);
-    height: 80%;
-    width: 80%;
-    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5);
-    border-radius: 4px;
-    background-image: url(images/counter.jpg);
-    background-size: cover;
-    background-position: 50% 50%;
-    margin-bottom: 15px;
-}
+
 .telegram {
-    @include flex(row, center, center);
-    height: 80%;
-    width: 80%;
-    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.5);
-    border-radius: 4px;
-    background-image: url(images/1234.png);
-    background-size: cover;
-    background-position: 50% 50%;
-    margin-bottom: 15px;
+    @include project('https://img.freepik.com/free-photo/full-shot-people-using-apps-make-friends_23-2150580341.jpg?size=626&ext=jpg&ga=GA1.2.920400960.1690553660&semt=ais', 95%, 50%);
 }
+
+.counter {
+    @include project('https://img.freepik.com/free-vector/realistic-luxury-anniversary-labels-collection_23-2149319894.jpg?size=626&ext=jpg&uid=R96772405&ga=GA1.2.920400960.1690553660&semt=sph', 50%, 50%);
+}
+
+
 
 span {
     @media screen and (max-width: 500px) {
@@ -256,4 +233,8 @@ span {
     margin: 5px 0 10px 0;
     color: white;
     font-size: 24px;
+}
+
+@media screen and (min-width: 3001px) {
+
 }
