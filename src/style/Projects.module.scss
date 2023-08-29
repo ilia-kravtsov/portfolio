@@ -2,239 +2,218 @@
 @import 'sass/mixin';
 
 .container {
-    border: 1px solid blue;
-    @include flex(column, space-between, normal);
-    width: 85%;
-    min-height: 100vh;
-    box-sizing: border-box;
-    border-radius: 4px;
-    background-color: $bgcSecond;
-    @media screen and (max-width: 1200px) {
-        width: 100%;
-    }
-    @media screen and (max-width: 1800px) {
-        margin-bottom: 12vh;
-    }
+  border: 1px solid blue;
+  @include flex(column, space-between, normal);
+  width: 85%;
+  min-height: 100vh;
+  box-sizing: border-box;
+  border-radius: 4px;
+  background-color: $bgcSecond;
 }
-
-.titleContainer {
-    @include flex(row, center, center);
-    width: 100%;
-    border-radius: 4px;
-    position: relative;
-}
-
-.dotContainer_left {
-    width: 15%;
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    top: 5vh;
-    left: 10px;
-}
-
-.leftDot {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: $accentColor;
-    box-shadow: 0 0 10px $accentColor, 0 0 30px $accentColor;
-    animation: dotAnimation 2.5s linear infinite;
-    @keyframes dotAnimation {
-        0% {
-            margin-right: 170px;
-            opacity: 1;
-        }
-        50% {
-            margin-right: 0;
-            opacity: 0;
-        }
-        100% {
-            margin-right: 170px;
-            opacity: 1;
-        }
-    }
-}
-.dotContainer_right {
-    width: 15%;
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    top: 5vh;
-    right: 10px;
-
-}
-.rightDot {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: $accentColor;
-    box-shadow: 0 0 10px $accentColor, 0 0 30px $accentColor;
-    animation: dotAnimation2 2.5s linear infinite;
-    @keyframes dotAnimation2 {
-        0% {
-            margin-left: 170px;
-            opacity: 1;
-        }
-        50% {
-            margin-left: 0;
-            opacity: 0;
-        }
-        100% {
-            margin-left: 170px;
-            opacity: 1;
-        }
-    }
-}
-.title {
-    text-align: center;
-    border-radius: 4px;
-    width: 70%;
-    font-family: $fontFamily_1;
-    text-transform: uppercase;
-    font-size: 72px;
-    //animation: projectsAppear 0.7s forwards;
-    //@keyframes projectsAppear {
-    //    0% {
-    //        margin-bottom: 30%;
-    //    }
-    //    100% {
-    //
-    //    }
-    //}
-    @media screen and (min-width: 2500px) {
-        font-size: 90px;
-    }
-    @media screen and (max-width: 650px) {
-        font-size: 52px;
-    }
-    @media screen and (max-width: 500px) {
-        font-size: 32px;
-    }
-}
-
-.me {
-    position: absolute;
-    color: $accentColor;
-    font-family: inherit;
-    animation: Sappear 4s forwards;
-    @keyframes Sappear {
-        0% {
-            transform: scale(0) rotate(0);
-        }
-        100% {
-            transform: scale(1) rotate(720deg);
-        }
-    }
-}
-
 
 .projectsContainer {
-    border: 1px solid beige;
-    @include flex(column, space-evenly, center);
-    width: 100%;
-    min-height: 70vh;
-    border-radius: 5px;
-    flex-wrap: wrap;
-    animation: projectAppear 1s forwards;
-    @keyframes projectAppear {
-        from {
-            transform: scale(0.5);
-        }
-        to {
-            transform: scale(1);
-        }
-    }
+  border: 1px solid beige;
+  @include flex(column, space-evenly, center);
+  width: 100%;
+  min-height: 90vh;
+  flex-wrap: wrap;
 }
 
 .projectContainer {
-    border: 1px solid white;
-    width: 80vw;
-    height: 43vh;
-    @include flex(row, space-evenly, center);
-}
-
-.projectDescription {
-    background-color: $bgcFirst;
-    padding: 20px;
-    width: 27vw;
+  @include flex(row, space-evenly, center);
+  border: 1px solid white;
+  width: 80vw;
+  height: 43vh;
 }
 
 .project {
-    @include flex(column, space-evenly, center);
-    width: 400px;
-    padding-top: 20px;
-    transition: all;
-    transition-duration: 1s;
-    text-align: center;
-    @media screen and (min-width: 3001px) {
-        height: 530px;
-        width: 500px;
-    }
-    @media screen and (max-width: 2400px) {
-        height: 330px;
-        width: 300px;
-    }
-    @media screen and (max-width: 500px) {
-        height: 250px;
-        width: 220px;
-    }
+  @include flex(column, space-evenly, center);
+  width: 400px;
+  padding-top: 20px;
+  transition: all;
+  transition-duration: 1s;
+  text-align: center;
+  border: 1px solid red;
 }
 
-.header {
-    color: white;
-    text-align: center;
-    font-size: 24px;
-    font-weight: 500;
-    @media screen and (max-width: 500px) {
-        font-size: 18px;
-    }
+.projectHeader {
+  color: white;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 500;
 }
 
-.contentContainerLight {
-    background-color: rgba(150, 150, 150, 1);
+.projectDescription {
+  background-color: $bgcFirst;
+  padding: 30px;
+  width: 20vw;
 }
 
 .socialNetworkBack {
-    @include project('https://img.freepik.com/free-photo/view-3d-man-with-tech-device_23-2150710044.jpg', -120%, 50%);
+  @include project('https://img.freepik.com/free-photo/view-3d-man-with-tech-device_23-2150710044.jpg', -120%, 50%);
 }
 
 .todolistBack {
-    @include project('https://img.freepik.com/premium-photo/todo-list-checklist-clipboard-with-pencil-with-3d-style-generative-ai_82472-995.jpg', 50%, 50%);
+  @include project('https://img.freepik.com/premium-photo/todo-list-checklist-clipboard-with-pencil-with-3d-style-generative-ai_82472-995.jpg', 50%, 50%);
 }
 
 .telegram {
-    @include project('https://img.freepik.com/free-photo/full-shot-people-using-apps-make-friends_23-2150580341.jpg?size=626&ext=jpg&ga=GA1.2.920400960.1690553660&semt=ais', 95%, 50%);
+  @include project('https://img.freepik.com/free-photo/full-shot-people-using-apps-make-friends_23-2150580341.jpg?size=626&ext=jpg&ga=GA1.2.920400960.1690553660&semt=ais', 95%, 50%);
 }
 
 .counter {
-    @include project('https://img.freepik.com/free-vector/realistic-luxury-anniversary-labels-collection_23-2149319894.jpg?size=626&ext=jpg&uid=R96772405&ga=GA1.2.920400960.1690553660&semt=sph', 50%, 50%);
-}
-
-
-
-.project span {
-    @media screen and (max-width: 500px) {
-        font-size: 18px;
-    }
+  @include project('https://img.freepik.com/free-vector/realistic-luxury-anniversary-labels-collection_23-2149319894.jpg?size=626&ext=jpg&uid=R96772405&ga=GA1.2.920400960.1690553660&semt=sph', 50%, 50%);
 }
 
 .projectLink {
-    @include flex(row, center, center);
-    width: 100%;
-    height: 100%;
-    text-decoration: none;
-    color: whitesmoke;
-    border-radius: 1px;
-    font-size: 20px;
+  @include flex(row, center, center);
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: whitesmoke;
+  border-radius: 1px;
+  font-size: 20px;
 }
 
 .status {
-    margin: 5px 0 10px 0;
-    color: white;
-    font-size: 24px;
+  margin: 5px 0 10px 0;
+  color: white;
+  font-size: 24px;
 }
 
 @media screen and (min-width: 3001px) {
+  .projectDescription p {
+    font-size: 24px;
+  }
+  .project {
+      height: 530px;
+      width: 500px;
+  }
+}
 
+@media screen and (max-width: 3000px) {
+  .projectDescription p {
+    font-size: 20px;
+  }
+  .project {
+    height: 430px;
+    width: 400px;
+  }
+}
+
+@media screen and (max-width: 1800px) {
+  .projectContainer {
+    width: 100vw;
+  }
+  .container {
+    margin-bottom: 12vh;
+  }
+}
+
+@media screen and (max-width: 1700px) {
+  .projectDescription {
+    width: 25vw;
+  }
+}
+
+@media screen and (max-width: 1600px) {
+  .projectDescription p {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .project {
+    height: 330px;
+    width: 300px;
+  }
+  .projectHeader {
+    font-size: 18px;
+  }
+  .status {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .projectDescription {
+    width: 30vw;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .projectDescription {
+    width: 40vw;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .projectContainer {
+    @include flex(column, space-evenly, center);
+    height: 75vh;
+  }
+  .projectDescription {
+    width: 60vw;
+  }
+  .project {
+    height: 430px;
+    width: 400px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .project {
+    height: 330px;
+    width: 300px;
+  }
+  .projectDescription p {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .projectDescription p {
+    font-size: 14px;
+  }
+  .projectDescription {
+    width: 80vw;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .projectDescription {
+    width: 90vw;
+  }
+  .project {
+    height: 300px;
+    width: 270px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .project {
+    height: 250px;
+    width: 220px;
+  }
+  .projectDescription {
+    width: 96vw;
+  }
+}
+
+@media screen and (max-width: 250px) {
+  .project {
+    height: 200px;
+    width: 180px;
+  }
+  .projectDescription {
+    width: 98vw;
+  }
+  .projectDescription p {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 200px) {
+  .project {
+    display: none;
+  }
 }
