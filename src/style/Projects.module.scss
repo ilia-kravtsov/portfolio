@@ -93,15 +93,15 @@
     font-family: $fontFamily_1;
     text-transform: uppercase;
     font-size: 72px;
-    animation: projectsAppear 0.7s forwards;
-    @keyframes projectsAppear {
-        0% {
-            margin-bottom: 30%;
-        }
-        100% {
-
-        }
-    }
+    //animation: projectsAppear 0.7s forwards;
+    //@keyframes projectsAppear {
+    //    0% {
+    //        margin-bottom: 30%;
+    //    }
+    //    100% {
+    //
+    //    }
+    //}
     @media screen and (min-width: 2500px) {
         font-size: 90px;
     }
@@ -213,7 +213,7 @@
 
 
 
-span {
+.project span {
     @media screen and (max-width: 500px) {
         font-size: 18px;
     }

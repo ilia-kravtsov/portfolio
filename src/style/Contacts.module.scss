@@ -25,7 +25,6 @@ input[type="number"]:focus {
 
 .titleContainer {
   @include flex(row, center, center);
-
   width: 100%;
   border: 1px solid red;
   border-radius: 5px;

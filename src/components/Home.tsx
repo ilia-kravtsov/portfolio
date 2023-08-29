@@ -20,7 +20,7 @@ export const Home: FC = () => {
                     <Tilt>
                         <div className={s.textGreeting}>
                         <span className={s.name}>
-                            <span className={s.preName}>I'M ILIA </span>KRAVTSOV
+                            <span className={s.firstName}>I'M ILIA </span>KRAVTSOV
                         </span>
                             <div className={s.professionConatiner}>
                                 <ReactTypingEffect className={s.profession} text={'FRONT-END DEVELOPER'}/>
@@ -30,14 +30,14 @@ export const Home: FC = () => {
                                 <p>in creating Single Page Applications</p>
                                 <p>using React, Redux, Redux-Toolkit, TypeScript</p>
                             </div>
-                            <a href={'https://t.me/kravtsov_ilia'} className={s.navLink} target={'_blank'}>
-                                <div className={s.navIconContainer}>
-                                    <div className={s.linkTitle}>
+                            <a href={'https://t.me/kravtsov_ilia'} className={s.getHireLink} target={'_blank'}>
+                                <div className={s.getHireContainer}>
+                                    <div className={s.getHireTitle}>
                                         <span>Get hire me</span>
                                     </div>
                                     <img
                                         src={'https://ouch-cdn2.icons8.com/kSIAJQ2detV1XffgFuJ10fUEsh4Gm2atdnFRLFz3ORI/rs:fit:368:368/czM6Ly9pY29uczgu/b3VjaC1wcm9kLmFz/c2V0cy9wbmcvOTg1/L2I5MDg2ZjUyLTRi/NWMtNDYyZC1iMTli/LTk5Y2Q0NGZiYjI4/Yi5wbmc.png'}
-                                        className={s.navIcon}
+                                        className={s.getHireIcon}
                                         alt={'aboutIcon'}/>
                                 </div>
                             </a>
@@ -45,7 +45,6 @@ export const Home: FC = () => {
                     </Tilt>
                 </Fade>
             </div>
-
         </div>
     );
 };

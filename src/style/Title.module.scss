@@ -1,0 +1,175 @@
+@import 'sass/variables';
+@import 'sass/mixin';
+
+.titleContainer {
+  @include flex(row, center, center);
+  width: 85vw;
+  min-height: 10vh;
+  border: 1px solid red;
+  box-sizing: border-box;
+  background-color: $bgcSecond;
+}
+
+.title {
+  text-transform: uppercase;
+  width: 100%;
+  border-radius: 4px;
+  text-align: center;
+  font-family: $fontFamily_1;
+  font-size: 72px;
+  border: 1px solid blue;
+}
+
+.accentTitle {
+  position: absolute;
+  color: $accentColor;
+  font-family: inherit;
+  animation: appear 4s forwards;
+  @keyframes appear {
+    0% {
+      transform: scale(0) rotate(0);
+    }
+    100% {
+      transform: scale(1) rotate(720deg);
+    }
+  }
+}
+
+.titleBack {
+  @include flex(row, center, center);
+  text-transform: uppercase;
+  position: absolute;
+  font-size: 100px;
+  z-index: 0;
+  opacity: 1;
+  color: hsla(0, 0%, 100%, .07);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: 900;
+  font-family: $fontFamily_1;
+}
+
+.dotContainer_left {
+  @include dotContainer();
+  left: 10px;
+}
+
+.leftDot {
+  @include dot();
+  animation: dotAnimation 2.5s linear infinite;
+  @keyframes dotAnimation {
+    0% {
+      margin-right: 180px;
+      opacity: 1;
+    }
+    50% {
+      margin-right: 0;
+      opacity: 0;
+    }
+    100% {
+      margin-right: 180px;
+      opacity: 1;
+    }
+  }
+}
+
+.dotContainer_right {
+  @include dotContainer();
+  right: 10px;
+}
+
+.rightDot {
+  @include dot();
+  animation: dotAnimation2 2.5s linear infinite;
+  @keyframes dotAnimation2 {
+    0% {
+      margin-left: 170px;
+      opacity: 1;
+    }
+    50% {
+      margin-left: 0;
+      opacity: 0;
+    }
+    100% {
+      margin-left: 170px;
+      opacity: 1;
+    }
+  }
+}
+
+@media screen and (max-width: 1800px) {
+  .titleContainer {
+    width: 100vw;
+  }
+}
+
+@media screen and (max-width: 1600px) {
+  .leftDot {
+    display: none;
+  }
+  .rightDot {
+    display: none;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .title {
+    font-size: 52px;
+  }
+  .titleBack {
+    font-size: 72px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .title {
+    font-size: 42px;
+  }
+  .titleBack {
+    font-size: 62px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .title {
+    font-size: 32px;
+  }
+  .titleBack {
+    font-size: 52px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .title {
+    font-size: 32px;
+  }
+  .titleBack {
+    font-size: 42px;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .title {
+    font-size: 24px;
+  }
+  .titleBack {
+    font-size: 32px;
+  }
+}
+
+@media screen and (max-width: 250px) {
+  .title {
+    font-size: 20px;
+  }
+  .titleBack {
+    font-size: 22px;
+  }
+}
+@media screen and (max-width: 160px) {
+  .title {
+    font-size: 10px;
+  }
+  .titleBack {
+    font-size: 12px;
+  }
+}

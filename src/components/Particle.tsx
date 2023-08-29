@@ -2,7 +2,6 @@ import React, {useCallback} from 'react';
 import Particles from "react-tsparticles";
 import type { Engine } from "tsparticles-engine";
 import {loadFull} from "tsparticles";
-import s from '../style/Home.module.scss'
 
 export const Particle = () => {
 
@@ -10,7 +9,7 @@ export const Particle = () => {
         await loadFull(engine);
     }, []);
 
-    return <div className={s.particle}>
+    return <div>
         <Particles id="tsparticles" init={particlesInit} options={{
             "fullScreen": {
                 "enable": true,

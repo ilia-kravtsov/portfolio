@@ -1,29 +1,20 @@
 import React, {FC} from 'react';
 import s from '../style/About.module.scss'
 import {Circle} from './Circle';
-import sb from "../style/About.module.scss";
 import {Fade} from "react-awesome-reveal";
+import {Title} from "../components/Title";
 
 export const About: FC = () => {
 
     return (
-        <div className={sb.subContainer} id={'about'}>
+        <div className={s.subContainer} id={'about'}>
             <div className={s.container}>
-                <Fade direction={'up'}>
-                    <div className={s.dotContainer_left}>
-                        <div className={s.leftDot}></div>
-                    </div>
-                    <section className={s.titleSection}>
-                        <h2 className={s.titleAboutPage}>ABOUT
-                            <span className={s.me}> ME</span>
-                        </h2>
-                        <span className={s.titleBack}>Information</span>
-                    </section>
-                    <div className={s.dotContainer_right}>
-                        <div className={s.rightDot}></div>
-                    </div>
-                </Fade>
+                <Title title={'about'}
+                       accentTitle={' me'}
+                       titleBack={'information'}
+                />
                 <section className={s.content}>
+
                     <div className={s.lineContent}>
                         <Fade direction={'up'}>
                             <section className={s.personalInfo}>
@@ -51,6 +42,7 @@ export const About: FC = () => {
                             </section>
                         </Fade>
                     </div>
+
                     <div className={s.lineContent}>
                         <Fade direction={'up'}>
 
@@ -99,6 +91,7 @@ export const About: FC = () => {
 
                         </Fade>
                     </div>
+
                     <div className={s.lineContent}>
                         <Fade direction={'up'}>
 
@@ -122,7 +115,8 @@ export const About: FC = () => {
                                             src="https://ouch-cdn2.icons8.com/eHIHzmHX02221t-bFZtZRHJmb6S4UUBirfHjBFMp_oo/rs:fit:368:368/czM6Ly9pY29uczgu/b3VjaC1wcm9kLmFz/c2V0cy9wbmcvMjQ3/L2NmOThkOWJmLWRl/NTktNDMzYi1hNjQ1/LTUzYjNkMTczMTU4/My5wbmc.png"
                                             alt="LinkedIn_logo"/>
                                     </a>
-                                    <a target={'_blank'} href={'https://drive.google.com/file/d/1zJy4JD0sHg4Sk7tDftg6nbn_OZkE2ZTg/view?usp=sharing'}>
+                                    <a target={'_blank'}
+                                       href={'https://drive.google.com/file/d/1zJy4JD0sHg4Sk7tDftg6nbn_OZkE2ZTg/view?usp=sharing'}>
                                         <img
                                             src="https://img.icons8.com/?size=512&id=c20V6inu0P2Q&format=png"
                                             alt="CV_logo"/>

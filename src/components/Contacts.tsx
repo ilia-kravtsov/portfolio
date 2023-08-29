@@ -44,6 +44,7 @@ export const Contacts: FC = () => {
         <div className={sb.subContainer} id={'contacts'}>
             <div className={s.container}>
                 <Fade direction={'up'}>
+
                     <div className={s.titleContainer}>
                         <div className={s.dotContainer_left}>
                             <div className={s.leftDot}></div>
@@ -52,11 +53,11 @@ export const Contacts: FC = () => {
                         <div className={s.dotContainer_right}>
                             <div className={s.rightDot}></div>
                         </div>
-
                     </div>
-                </Fade>
-                <section className={s.content}>
 
+                </Fade>
+
+                <section className={s.content}>
                     <section className={s.formContainer}>
                         <form action="" className={s.form} ref={form} onSubmit={sendEmail}>
                             <div className={s.inputBox}>

@@ -15,87 +15,36 @@
   box-sizing: border-box;
   font-family: $fontFamily_1;
   font-size: 20px;
-  z-index: 1;
-  @media screen and (max-width: 700px) {
-    width: 100%;
-  }
-  @media screen and (max-width: 1800px) {
-    margin-bottom: 10vh;
-  }
+  border: 1px solid yellow;
 }
 
-.titleSection {
+.titleContainer {
+  @include flex(row, center, center);
   width: 100%;
-  @include flex(column, space-between, center);
-  font-family: inherit;
-  z-index: 1;
-}
-
-.titleAboutPage {
-  animation: titleAppear 0.5s forwards;
-  font-size: 80px;
-  @media screen and (max-width: 2000px) {
-    font-size: 70px;
-    padding-top: 10px;
-  }
-  @media screen and (max-width: 500px) {
-    font-size: 36px;
-    padding-top: 25px;
-  }
-  @keyframes titleAppear {
-    from {
-      margin-top: 100%;
-      transform: rotate(20deg)
-    }
-    to {
-      margin-top: 20px;
-      transform: rotate(0deg)
-    }
-  }
-}
-
-h2 {
-  font-family: inherit;
-  font-size: inherit;
-  .me {
-    color: $accentColor;
-    font-family: inherit;
-  }
-}
-
-.titleBack {
-  position: absolute;
-  font-size: 110px;
-  z-index: 1;
-  opacity: 1;
-  color: $titleDark;
-  font-weight: 900;
-  text-transform: uppercase;
-  @media screen and (max-width: 750px) {
-    display: none;
-  }
-}
-
-.lightMode {
-  color: $titleLight;
-  z-index: -1;
+  border: 1px solid red;
 }
 
 .content {
+  border: 1px solid green;
   @include flex(column, center, space-between);
   width: 100%;
-  min-height: 80%;
+  min-height: 90vh;
   flex-wrap: wrap;
   z-index: 1;
-  @media screen and (max-width: 700px) {
-    width: 96%;
-  }
 }
 
 .lineContent {
   @include flex(row, space-evenly, flex-start);
   width: 100%;
   min-height: 30%;
+  border: 1px solid beige;
+}
+
+.lineContent section {
+  border: 1px solid red;
+  background-color: $bgcSecond;
+  z-index: 1;
+  padding: 10px;
 }
 
 .personalInfo {
@@ -110,29 +59,23 @@ h2 {
   width: 40vw;
 }
 
-.electrification {
-  @media screen and (max-width: 450px) {
-    display: block;
-  }
-}
-
 .relevantLinks {
   @include flex(column, center, space-between);
   min-height: 40%;
   width: 40vw;
-  @media screen and (max-width: 500px) {
-    align-items: center;
-  }
+  border: 1px solid purple;
 }
 
 .icon {
   @include size(30px, 30px);
   margin-right: 10px;
 }
+
 .linksContainer {
   margin-top: 10px;
   @include flex(row, space-evenly, center);
   min-height: 20vh;
+  border: 1px solid red;
 }
 
 .relevantLinks img {
@@ -144,68 +87,19 @@ h2 {
   @include flex(column, normal, flex-start);
   height: 40%;
   width: 40vw;
-  @media screen and (max-width: 500px) {
-    align-items: center;
-  }
-}
-
-.icon {
-  @include size(30px, 30px);
-  margin-right: 10px;
 }
 
 .languages {
-  min-height: 50%;
+  height: 25vh;
   width: 40vw;
-  @media screen and (max-width: 1800px) {
-    margin-bottom: 20px;
-  }
 }
 
 .circleContainer {
+  border: 1px solid red;
   @include flex(row, space-evenly, center);
   position: relative;
   gap: 20px;
-  height: 90%;
-  @media screen and (max-width: 750px) {
-    margin-top: 15px;
-    flex-direction: column;
-  }
-}
-
-.contentRight {
-  @include flex(column, space-between, normal);
-  overflow: hidden;
-  width: 45%;
-  @media screen and (max-width: 2000px) {
-    width: 50%;
-  }
-  @media screen and (max-width: 1800px) {
-    width: 90%;
-  }
-  @media screen and (max-width: 1500px) {
-    width: 100%;
-  }
-}
-
-.languages {
-  @media screen and (min-width: 3000px) {
-    min-height: 50%;
-  }
-  @media screen and (max-width: 1800px) {
-    margin-bottom: 20px;
-  }
-}
-
-.circleContainer {
-  @include flex(row, space-evenly, center);
-  position: relative;
-  gap: 20px;
-  height: 90%;
-  @media screen and (max-width: 750px) {
-    margin-top: 15px;
-    flex-direction: column;
-  }
+  height: 19vh;
 }
 
 .header_3 {
@@ -220,24 +114,13 @@ h2 {
   text-transform: uppercase;
   width: 100%;
   margin-top: 10px;
-  @media screen and (max-width: 2000px) {
-    font-size: 18px;
-  }
-  @media screen and (max-width: 750px) {
-    font-size: 16px;
-  }
-  @media screen and (max-width: 650px) {
-    font-size: 14px;
-  }
 }
-.lightH3 {
-  color: $fontColor;
-}
+
 .circle {
   @include size(10px, 10px);
   border-radius: 50%;
-  background:  $accentColor;
-  box-shadow: 0 0 10px  $accentColor, 0 0 30px  $accentColor;
+  background: $accentColor;
+  box-shadow: 0 0 10px $accentColor, 0 0 30px $accentColor;
   animation: circleAppearance 1s forwards ease-in-out;
   @keyframes circleAppearance {
     0% {
@@ -257,37 +140,91 @@ h2 {
   flex-grow: 1;
   height: 1px;
 }
+
 section p {
   @include flex(row, space-between, normal);
   margin-top: 10px;
   letter-spacing: 2px;
-  font-size: inherit;
-  @media screen and (max-width: 2000px) {
+}
+
+@media screen and (max-width: 2000px) {
+  section p {
     font-size: 18px;
   }
-  @media screen and (max-width: 750px) {
-    font-size: 16px;
+  .header_3 {
+    font-size: 18px;
   }
-  @media screen and (max-width: 650px) {
+}
+
+@media screen and (max-width: 1800px) {
+  .container {
+    width: 100%;
+  }
+  .content {
+    @include flex(column, space-evenly, normal);
+  }
+  .languages {
+    height: 20vh;
+  }
+  .circleContainer {
+    height: 15vh;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .lineContent section {
+    width: 46vw;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  section p {
     font-size: 14px;
   }
-  @media screen and (max-width: 500px) {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  .header_3 {
+    font-size: 14px;
   }
 }
 
-.hobbieIcon {
-  width: 25px;
-  height: 25px;
-  margin-right: 10px;
+@media screen and (max-width: 800px) {
+  .lineContent {
+    @include flex(column, space-evenly, center);
+  }
+  .lineContent section {
+    width: 100vw;
+  }
+  .linksContainer {
+    min-height: 10vh;
+  }
+  .relevantLinks img {
+    width: 60px;
+  }
 }
 
-.accentColor {
-  color: $accentColor;
+@media screen and (max-width: 500px) {
+  section p {
+    @include flex(column, center, center);
+  }
+  .personalStrengths {
+      align-items: center;
+  }
+  .linksContainer {
+    @include flex(column, space-evenly, center);
+  }
+  .circleContainer {
+    margin-top: 20px;
+    @include flex(column, space-evenly, center);
+    height: 30vh;
+  }
+  .languages {
+    height: 37vh;
+  }
 }
-
-@media screen and (min-width: 3001px) {
-
+@media screen and (max-width: 300px) {
+  .circle {
+    display: none;
+  }
+  .headerLine {
+    display: none;
+  }
 }

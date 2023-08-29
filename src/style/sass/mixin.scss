@@ -21,3 +21,19 @@
   background-position: $background_position_X $background_position_Y;
   margin-bottom: 15px;
 }
+
+@mixin dotContainer () {
+  width: 11vw;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  top: 5vh;
+}
+
+@mixin dot () {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: $accentColor;
+  box-shadow: 0 0 10px $accentColor, 0 0 30px $accentColor;
+}

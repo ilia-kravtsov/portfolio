@@ -11,6 +11,7 @@ export const Projects: FC = () => {
         <div className={sb.subContainer} id={'projects'}>
             <div className={s.container}>
                 <Fade direction={'up'}>
+
                     <div className={s.titleContainer}>
                         <div className={s.dotContainer_left}>
                             <div className={s.leftDot}></div>
@@ -20,7 +21,9 @@ export const Projects: FC = () => {
                             <div className={s.rightDot}></div>
                         </div>
                     </div>
+
                 </Fade>
+
                 <div className={s.projectsContainer}>
                     <Fade direction={'up'}>
                         <div className={s.projectContainer}>

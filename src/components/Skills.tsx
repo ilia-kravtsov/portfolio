@@ -3,6 +3,7 @@ import s from '../style/Skills.module.scss'
 import {Circle} from "./Circle";
 import sb from "../style/Skills.module.scss";
 import {Fade} from "react-awesome-reveal";
+import {Title} from "../components/Title";
 
 export const Skills: FC = () => {
 
@@ -10,25 +11,14 @@ export const Skills: FC = () => {
         <div className={sb.subContainer} id={'skills'}>
             <div className={s.container}>
                 <Fade direction={'up'}>
-
-                    <div className={s.titleContainer}>
-                        <div className={s.dotContainer_left}>
-                            <div className={s.leftDot}></div>
-                        </div>
-                        <h1 className={s.title}>
-                            Skill<span className={s.s}>s</span>
-                            <span className={s.titleRight}>set</span>
-                        </h1>
-                        <div className={s.dotContainer_right}>
-                            <div className={s.rightDot}></div>
-                        </div>
-                        <span
-                            className={s.titleBack}>Programming</span>
-                    </div>
-
+                    <Title title={'skill'}
+                           accentTitle={'$'}
+                           titleBack={'Programming'}
+                    />
                 </Fade>
-                    <div className={s.skillsContainer}>
-                        <Fade direction={'up'}>
+
+                <div className={s.skillsContainer}>
+                    <Fade direction={'up'}>
                         <div className={s.skill}>
                             <Circle percents={80} title={'HTML'}/>
                         </div>
@@ -65,8 +55,8 @@ export const Skills: FC = () => {
                         <div className={s.skill}>
                             <Circle percents={70} title={'Axios'}/>
                         </div>
-                        </Fade>
-                    </div>
+                    </Fade>
+                </div>
             </div>
         </div>
     );
