@@ -77,12 +77,9 @@ export const About: FC = () => {
                                 </p>
                                 <p>Key Skills:</p>
                                 <p>
-                                    <span>
-                                        JS, React, Redux, TypeScript, Rest API,
-                                        Axious, Formik, GIT, React-router-dom,
-                                        Unit-test, Storybook, Redux-Toolkit,
-                                        Material UI, HTML & CSS, SASS
-                                    </span>
+                                        JS, React, Redux, Redux-Toolkit, TypeScript,
+                                        Rest API, Axious, Formik, GIT, React-router-dom,
+                                        Unit-test, Storybook, Material UI, HTML & CSS, SASS
                                 </p>
                                 <p>
                                     2010 - 2015 Stavropol State University: <span>engineer</span>

@@ -135,6 +135,10 @@
   z-index: 1;
 }
 
+.accentColor {
+  color: $accentColor;
+}
+
 @media screen and (min-width: 3001px) {
   .photo {
     width: 30vw;

@@ -52,6 +52,7 @@ export const Contacts: FC = () => {
 
                 <section className={s.content}>
                     <form action="" className={s.form} ref={form} onSubmit={sendEmail}>
+                        <h2>Contact Form</h2>
                         <div className={s.inputBox}>
                             <Tilt tiltAngleYInitial={-45} tiltAxis={'y'}>
                                 <input required
@@ -85,7 +86,7 @@ export const Contacts: FC = () => {
                                           className={s.formTextarea}
                                           required>
                                 </textarea>
-                                <span>Enter your comment</span>
+                                <span>Your awesome comment</span>
                             </Tilt>
                         </div>
                         <Tilt tiltAngleYInitial={-45} tiltAxis={'y'}>

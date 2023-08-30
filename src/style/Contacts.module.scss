@@ -44,7 +44,10 @@ input[type="number"]:focus {
       transform: translate(-50%, -75%) rotate(360deg);
     }
   }
+}
 
+.form h2 {
+  transform: rotate(3deg);
 }
 
 .inputBox {

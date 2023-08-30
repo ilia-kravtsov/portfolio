@@ -26,7 +26,7 @@ export const Projects: FC = () => {
                                         utilized older libraries, employed syntax, class components
                                         that are no longer in mainstream use,
                                         implemented RESTful features such as registration, loginization, and pagination,
-                                        and developed components using React and Redux.
+                                        and developed components using <span className={s.accentColor}>React and Redux.</span>
                                     </p>
                                 </Tilt>
                             </div>
@@ -61,9 +61,9 @@ export const Projects: FC = () => {
                             <div className={s.projectDescription}>
                                 <Tilt tiltAngleYInitial={45} tiltAxis={'y'}>
                                     <p>
-                                        Here i used modern syntax like: Redux-Toolkit,
+                                        Here i used modern syntax like: <span className={s.accentColor}>Redux-Toolkit</span>,
                                         Project architectural solutions
-                                        (separation into layers: UI, BLL, DAL, Server)
+                                        (separation into layers: <span className={s.accentColor}>UI, BLL, DAL, Server</span>)
                                         Using BLL state management with Redux, Thunks
                                     </p>
                                 </Tilt>

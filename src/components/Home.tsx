@@ -27,7 +27,7 @@ export const Home: FC = () => {
                             <div className={s.aboutMeText}>
                                 <p>with 1+ year of work experience</p>
                                 <p>in creating Single Page Applications</p>
-                                <p>using React, Redux, Redux-Toolkit, TypeScript</p>
+                                <p>using <span className={s.accentColor}>React, Redux, Redux-Toolkit, TypeScript</span></p>
                             </div>
                             <a href={'https://t.me/kravtsov_ilia'} className={s.getHireLink} target={'_blank'}>
                                 <div className={s.getHireContainer}>
