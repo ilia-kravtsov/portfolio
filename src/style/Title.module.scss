@@ -3,12 +3,10 @@
 
 .titleContainerFirst {
   @include titleContain($bgcFirst);
-  border: 1px solid beige;
 }
 
 .titleContainerSecond {
   @include titleContain($bgcSecond);
-  border: 1px solid beige;
 }
 
 .title {
@@ -18,7 +16,6 @@
   text-align: center;
   font-family: $fontFamily_1;
   font-size: 72px;
-  border: 1px solid blue;
 }
 
 .accentTitle {

@@ -26,12 +26,10 @@ input[type="number"]:focus {
 
 .content {
   @include flex(row, space-between, flex-start);
-  border: 1px solid red;
   min-height: 90vh;
 }
 
 .form {
-  border: 1px solid blue;
   @include flex(column, space-evenly, center);
   width: 50%;
   min-height: 90vh;
@@ -186,7 +184,6 @@ input[type="number"]:focus {
 
 .links {
   @include flex(column, center, center);
-  border: 1px solid purple;
   width: 50%;
   min-height: 90vh;
 }
@@ -212,10 +209,6 @@ input[type="number"]:focus {
 
 .socialLinksContainer img:hover {
   transform: scale(1.25);
-}
-
-@media screen and (min-width: 3001px) {
-
 }
 
 @media screen and (max-width: 3000px) {

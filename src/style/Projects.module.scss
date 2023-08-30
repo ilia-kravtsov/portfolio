@@ -4,11 +4,9 @@
 .ProjectsContainer {
   @include flex(column, center, flex-start);
   width: 100%;
-  border: 1px solid greenyellow;
 }
 
 .container {
-  border: 1px solid blue;
   @include flex(column, space-between, center);
   width: 85%;
   min-height: 100vh;
@@ -18,7 +16,6 @@
 }
 
 .projectsContainer {
-  border: 1px solid beige;
   @include flex(column, space-evenly, center);
   width: 100%;
   min-height: 90vh;
@@ -27,7 +24,6 @@
 
 .projectContainer {
   @include flex(row, space-evenly, center);
-  border: 1px solid white;
   width: 80vw;
   min-height: 43vh;
 }
@@ -39,7 +35,6 @@
   transition: all;
   transition-duration: 1s;
   text-align: center;
-  border: 1px solid red;
 }
 
 .projectHeader {

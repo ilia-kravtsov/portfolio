@@ -10,11 +10,9 @@
   width: 85%;
   min-height: 100vh;
   background-color: $bgcFirst;
-  border: 1px solid red;
 }
 
 .skillsContainer {
-  border: 1px solid purple;
   @include flex(row, space-evenly, center);
   min-height: 90vh;
   width: 100%;
@@ -35,7 +33,6 @@
 }
 
 .skill {
-  border: 1px solid beige;
   @include flex(row, space-evenly, center);
   border-radius: 4px;
   width: 20vw;
