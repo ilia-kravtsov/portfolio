@@ -1,6 +1,5 @@
 import React, {FC} from 'react';
 import s from '../style/Home.module.scss'
-import sb from '../style/Home.module.scss'
 import aboutIcon from "../style/images/boy.png";
 import {Fade} from "react-awesome-reveal";
 import Tilt from 'react-parallax-tilt';
@@ -9,7 +8,7 @@ import ReactTypingEffect from "react-typing-effect";
 export const Home: FC = () => {
 
     return (
-        <div className={sb.subContainer} id={'home'}>
+        <div className={s.HomeContainer} id={'home'}>
             <div className={s.container}>
                 <Fade direction={'down'}>
                     <Tilt tiltAxis={'x'} perspective={3000}>

@@ -1,6 +1,5 @@
 import React, {FC} from 'react';
 import s from '../style/Projects.module.scss'
-import sb from "../style/About.module.scss";
 import {Fade} from "react-awesome-reveal";
 import Tilt from 'react-parallax-tilt';
 import {Title} from "../components/Title";
@@ -8,7 +7,7 @@ import {Title} from "../components/Title";
 export const Projects: FC = () => {
 
     return (
-        <div className={sb.subContainer} id={'projects'}>
+        <div className={s.ProjectsContainer} id={'projects'}>
             <div className={s.container}>
                 <Fade direction={'up'}>
                     <Title title={'project'}

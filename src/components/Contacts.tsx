@@ -1,6 +1,5 @@
 import React, {FC, useState, useRef} from 'react';
 import s from '../style/Contacts.module.scss'
-import sb from "../style/Skills.module.scss";
 import {Fade} from "react-awesome-reveal";
 import emailjs from '@emailjs/browser';
 import {Alert, Snackbar} from "@mui/material";
@@ -42,7 +41,7 @@ export const Contacts: FC = () => {
     const setWaitingClose = () => setWaiting(false);
 
     return (
-        <div className={sb.subContainer} id={'contacts'}>
+        <div className={s.ContactsContainer} id={'contacts'}>
             <div className={s.container}>
                 <Fade direction={'up'}>
                     <Title title={'get in touch'}

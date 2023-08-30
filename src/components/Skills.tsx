@@ -1,14 +1,13 @@
 import React, {FC} from 'react';
 import s from '../style/Skills.module.scss'
 import {Circle} from "./Circle";
-import sb from "../style/Skills.module.scss";
 import {Fade} from "react-awesome-reveal";
 import {Title} from "../components/Title";
 
 export const Skills: FC = () => {
 
     return (
-        <div className={sb.subContainer} id={'skills'}>
+        <div className={s.SkillsContainer} id={'skills'}>
             <div className={s.container}>
                 <Fade direction={'up'}>
                     <Title title={'skill'}

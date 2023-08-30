@@ -1,7 +1,7 @@
 @import 'sass/variables';
 @import 'sass/mixin';
 
-.subContainer {
+.HomeContainer {
   @include flex(column, center, flex-start);
   width: 100%;
   background-color: $bgcFirst;
@@ -13,7 +13,6 @@
   min-height: 100vh;
   box-sizing: border-box;
   width: 85%;
-  border: 1px solid red;
 }
 
 .photoWrapper {

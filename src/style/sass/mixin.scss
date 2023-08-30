@@ -37,3 +37,12 @@
   background-color: $accentColor;
   box-shadow: 0 0 10px $accentColor, 0 0 30px $accentColor;
 }
+
+@mixin titleContain ($color) {
+  @include flex(row, center, center);
+  width: 85vw;
+  min-height: 10vh;
+  border: 1px solid red;
+  box-sizing: border-box;
+  background-color: $color;
+}

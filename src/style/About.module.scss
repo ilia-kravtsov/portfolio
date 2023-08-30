@@ -2,14 +2,13 @@
 @import 'sass/mixin';
 @import '../style/Projects.module';
 
-.subContainer {
+.AboutContainer {
   @include flex(column, center, flex-start);
-  width: 100%;
-  background-color: $bgcSecond;
 }
 
 .container {
   @include flex(column, space-between, center);
+  background-color: $bgcSecond;
   width: 85%;
   min-height: 100vh;
   box-sizing: border-box;
@@ -26,7 +25,7 @@
 
 .content {
   border: 1px solid green;
-  @include flex(column, center, space-between);
+  @include flex(column, space-between, center);
   width: 100%;
   min-height: 90vh;
   flex-wrap: wrap;
@@ -95,7 +94,7 @@
 }
 
 .languages {
-  height: 25vh;
+  min-height: 30vh;
   width: 40vw;
 }
 
@@ -104,7 +103,7 @@
   @include flex(row, space-evenly, center);
   position: relative;
   gap: 20px;
-  height: 19vh;
+  min-height: 19vh;
 }
 
 .header_3 {
@@ -166,13 +165,13 @@ section p {
     width: 100%;
   }
   .content {
-    @include flex(column, space-evenly, normal);
+    @include flex(column, space-between, center);
   }
   .languages {
-    height: 20vh;
+    min-height: 20vh;
   }
   .circleContainer {
-    height: 15vh;
+    min-height: 15vh;
   }
 }
 
@@ -219,10 +218,9 @@ section p {
   .circleContainer {
     margin-top: 20px;
     @include flex(column, space-evenly, center);
-    height: 30vh;
   }
-  .languages {
-    height: 37vh;
+  .circleContainer {
+    min-height: 40vh;
   }
 }
 @media screen and (max-width: 300px) {

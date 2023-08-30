@@ -1,13 +1,14 @@
 @import 'sass/variables';
 @import 'sass/mixin';
 
-.titleContainer {
-  @include flex(row, center, center);
-  width: 85vw;
-  min-height: 10vh;
-  border: 1px solid red;
-  box-sizing: border-box;
-  background-color: $bgcSecond;
+.titleContainerFirst {
+  @include titleContain($bgcFirst);
+  border: 1px solid beige;
+}
+
+.titleContainerSecond {
+  @include titleContain($bgcSecond);
+  border: 1px solid beige;
 }
 
 .title {
@@ -99,7 +100,10 @@
 }
 
 @media screen and (max-width: 1800px) {
-  .titleContainer {
+  .titleContainerFirst {
+    width: 100vw;
+  }
+  .titleContainerSecond {
     width: 100vw;
   }
 }

@@ -9,9 +9,12 @@ type TitleType = {
 }
 
 export const Title: FC<TitleType> = ({title, accentTitle, titleBack}) => {
+
+    let toggleTitle = title === 'skill' || title === 'get in touch' ? s.titleContainerFirst : s.titleContainerSecond
+
     return (
         <Fade direction={'up'}>
-            <section className={s.titleContainer}>
+            <section className={toggleTitle}>
                 <div className={s.dotContainer_left}>
                     <div className={s.leftDot}></div>
                 </div>

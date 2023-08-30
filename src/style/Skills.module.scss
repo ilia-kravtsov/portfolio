@@ -1,10 +1,8 @@
 @import 'sass/variables';
 @import 'sass/mixin';
 
-.subContainer {
+.SkillsContainer {
   @include flex(column, center, flex-start);
-  width: 100%;
-  background-color: $bgcFirst;
 }
 
 .container {

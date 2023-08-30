@@ -7,7 +7,7 @@ import {Title} from "../components/Title";
 export const About: FC = () => {
 
     return (
-        <div className={s.subContainer} id={'about'}>
+        <div className={s.AboutContainer} id={'about'}>
             <div className={s.container}>
                 <Title title={'about'}
                        accentTitle={' me'}

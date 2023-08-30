@@ -13,6 +13,10 @@ input[type="number"]:focus {
   -moz-appearance: textfield;
 }
 
+.ContactsContainer {
+  @include flex(column, center, flex-start);
+}
+
 .container {
   @include flex(column, space-between, normal);
   width: 85%;
@@ -188,7 +192,7 @@ input[type="number"]:focus {
 }
 
 .socialLinksContainer {
-  height: 20vh;
+  min-height: 20vh;
   width: 20vw;
   z-index: 2;
   background-color: $bgcSecond;
@@ -207,7 +211,7 @@ input[type="number"]:focus {
 }
 
 .socialLinksContainer img:hover {
-  transform: scale(1.4);
+  transform: scale(1.25);
 }
 
 @media screen and (min-width: 3001px) {
