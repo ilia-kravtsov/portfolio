@@ -80,7 +80,12 @@
 
 .relevantLinks img {
   width: 70px;
-  z-index: 2;
+  transition-duration: 1s;
+  transition-property: all;
+}
+
+.relevantLinks img:hover {
+  transform: scale(1.2);
 }
 
 .personalStrengths {
