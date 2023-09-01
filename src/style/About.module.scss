@@ -53,10 +53,11 @@
   width: 40vw;
 }
 
-.relevantLinks {
+.usefulLinks {
   @include flex(column, center, space-between);
   min-height: 40%;
   width: 40vw;
+  border: 1px solid red;
 }
 
 .icon {
@@ -68,15 +69,16 @@
   margin-top: 10px;
   @include flex(row, space-evenly, center);
   min-height: 20vh;
+  border: 1px solid blue;
 }
 
-.relevantLinks img {
+.usefulLinks img {
   width: 70px;
   transition-duration: 1s;
   transition-property: all;
 }
 
-.relevantLinks img:hover {
+.usefulLinks img:hover {
   transform: scale(1.2);
 }
 
@@ -192,7 +194,7 @@ section p {
   .linksContainer {
     min-height: 10vh;
   }
-  .relevantLinks img {
+  .usefulLinks img {
     width: 60px;
   }
 }
@@ -204,8 +206,8 @@ section p {
   .personalStrengths {
       align-items: center;
   }
-  .linksContainer {
-    @include flex(column, space-evenly, center);
+  .usefulLinks img {
+    width: 56px;
   }
   .circleContainer {
     margin-top: 20px;
@@ -221,5 +223,8 @@ section p {
   }
   .headerLine {
     display: none;
+  }
+  .linksContainer {
+    @include flex(column, space-evenly, center);
   }
 }

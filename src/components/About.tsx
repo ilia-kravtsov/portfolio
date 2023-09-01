@@ -92,7 +92,7 @@ export const About: FC = () => {
                     <div className={s.lineContent}>
                         <Fade direction={'up'}>
 
-                            <section className={s.relevantLinks}>
+                            <section className={s.usefulLinks}>
                                 <h3 className={s.header_3}>Useful Links:
                                     <div className={s.circle}></div>
                                     <div className={s.headerLine}></div>

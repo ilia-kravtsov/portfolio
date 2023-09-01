@@ -6,7 +6,6 @@ import Tilt from 'react-parallax-tilt';
 import ReactTypingEffect from "react-typing-effect";
 
 export const Home: FC = () => {
-
     return (
         <div className={s.HomeContainer} id={'home'}>
             <div className={s.container}>
