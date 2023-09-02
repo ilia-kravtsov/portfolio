@@ -11,6 +11,7 @@ export const Contacts: FC = () => {
 
     let [success, setSuccess] = useState<boolean>(false)
     let [error, setError] = useState<boolean>(false)
+    let [errorPhoneNumber, setErrorPhoneNumber] = useState<boolean>(false)
     let [waiting, setWaiting] = useState<boolean>(false)
 
     let form = useRef<any>();
@@ -19,6 +20,16 @@ export const Contacts: FC = () => {
         event.preventDefault();
 
         if (reason === 'clickaway') {
+            return;
+        }
+
+        // Phone number validation regex pattern
+        const phoneRegex = /^\+?[78][-\(]?\d{3}\)?-?\d{3}-?\d{2}-?\d{2}$/;
+
+        const phoneNumber = form.current.phone_number.value;
+
+        if (!phoneRegex.test(phoneNumber)) {
+            setErrorPhoneNumber(true)
             return;
         }
 
@@ -39,6 +50,7 @@ export const Contacts: FC = () => {
     const setSuccessClose = () => setSuccess(false);
     const setErrorClose = () => setError(false);
     const setWaitingClose = () => setWaiting(false);
+    const setErrorPhoneNumberClose = () => setErrorPhoneNumber(false);
 
     return (
         <div className={s.ContactsContainer} id={'contacts'}>
@@ -109,6 +121,11 @@ export const Contacts: FC = () => {
                     {<Snackbar open={waiting} autoHideDuration={5000} onClose={setWaitingClose}>
                         <Alert onClose={setWaitingClose} severity="info" sx={{mb: '50px'}}>
                             Just a moment, we're sending your data!
+                        </Alert>
+                    </Snackbar>}
+                    {<Snackbar open={errorPhoneNumber} autoHideDuration={6000} onClose={setErrorPhoneNumberClose}>
+                        <Alert onClose={setErrorPhoneNumberClose} severity="error" sx={{mb: '50px'}}>
+                            Provide your phone number in the format +79990000000 or 89990000000
                         </Alert>
                     </Snackbar>}
                     <section className={s.links}>
