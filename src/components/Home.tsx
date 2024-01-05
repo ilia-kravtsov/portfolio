@@ -6,6 +6,7 @@ import Tilt from 'react-parallax-tilt';
 import ReactTypingEffect from "react-typing-effect";
 
 export const Home: FC = () => {
+
     return (
         <div className={s.HomeContainer} id={'home'}>
             <div className={s.container}>
@@ -21,10 +22,10 @@ export const Home: FC = () => {
                             <span className={s.firstName}>I'M ILIA </span>KRAVTSOV
                         </span>
                             <div className={s.professionConatiner}>
-                                <ReactTypingEffect className={s.profession} text={'FRONT-END DEVELOPER'}/>
+                                <ReactTypingEffect className={s.profession} text={'Web developer'}/>
                             </div>
                             <div className={s.aboutMeText}>
-                                <p>with 1+ year of work experience</p>
+                                <p>with 1+ year of experience</p>
                                 <p>in creating Single Page Applications</p>
                                 <p>using <span className={s.accentColor}>React, Redux, Redux-Toolkit, TypeScript</span></p>
                             </div>

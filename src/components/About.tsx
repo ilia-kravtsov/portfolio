@@ -3,6 +3,8 @@ import s from '../style/About.module.scss'
 import {Circle} from './Circle';
 import {Fade} from "react-awesome-reveal";
 import {Title} from "../components/Title";
+import cvIcon from '../style/images/cv_2.png'
+import codewarsIcon from '../style/images/codewars_2.svg'
 
 export const About: FC = () => {
 
@@ -26,7 +28,7 @@ export const About: FC = () => {
                                 </p>
                                 <p><span>Last name:</span><span>kravtsov</span>
                                 </p>
-                                <p><span>Age:</span> <span>29</span></p>
+                                <p><span>Age:</span> <span>30</span></p>
                                 <p><span>Address:</span>
                                     <span>Stavropol, Russia</span></p>
                             </section>
@@ -36,8 +38,8 @@ export const About: FC = () => {
                                     <div className={s.headerLine}></div>
                                 </h3>
                                 <p>Main Experience:<span>IT INCUBATOR</span></p>
-                                <p>Codewars: <span>4 kyu rank</span></p>
-                                <p>FCC: <span>JS and HTML</span></p>
+                                <p>Codewars: <span>3 kyu rank</span></p>
+                                <p>FreeCodeCamp: <span>JS and HTML</span></p>
                                 <p>Hexlet: <span>Base JS program is done</span></p>
                             </section>
                         </Fade>
@@ -73,7 +75,7 @@ export const About: FC = () => {
                                     <div className={s.headerLine}></div>
                                 </h3>
                                 <p>
-                                    2022 IT-INCUBATOR: <span> Frontend developer</span>
+                                    2022 IT-INCUBATOR: <span> Web developer</span>
                                 </p>
                                 <p>Key Skills:</p>
                                 <p>
@@ -103,9 +105,14 @@ export const About: FC = () => {
                                             src="https://ouch-cdn2.icons8.com/W_FSxOuaSfBv7Ol6sCwJRD3-jYjicOpPgbE1p1Q7HJk/rs:fit:368:368/czM6Ly9pY29uczgu/b3VjaC1wcm9kLmFz/c2V0cy9wbmcvNDEw/LzY2ZThhYzc1LTJh/ZjAtNDk4MC1hNThl/LWMwOWY0NWIyM2Mz/NS5wbmc.png"
                                             alt="GitHub_logo"/>
                                     </a>
-                                    <a target={'_blank'} href={'https://www.codewars.com/users/ilia-kravtsov'}>
+                                    <a target={'_blank'} href={'https://www.codewars.com/users/ilia_kravtsov'}>
                                         <img src="https://img.icons8.com/?size=512&id=gDJDJJ1MCGmG&format=png"
                                              alt="Codewars_logo"/>
+                                    </a>
+                                    <a target={'_blank'}
+                                       href={'https://www.freecodecamp.org/certification/ilia-kravtsov/javascript-algorithms-and-data-structures'}>
+                                        <img src="https://img.icons8.com/color/48/free-code-camp.png"
+                                             alt="freecodecamp_logo"/>
                                     </a>
                                     <a target={'_blank'} href={'https://www.linkedin.com/in/-ilia-kravtsov/'}>
                                         <img
@@ -115,7 +122,7 @@ export const About: FC = () => {
                                     <a target={'_blank'}
                                        href={'https://drive.google.com/file/d/1zJy4JD0sHg4Sk7tDftg6nbn_OZkE2ZTg/view?usp=sharing'}>
                                         <img
-                                            src="https://img.icons8.com/?size=512&id=c20V6inu0P2Q&format=png"
+                                            src={cvIcon}
                                             alt="CV_logo"/>
                                     </a>
                                 </div>

@@ -3,6 +3,7 @@ import s from '../style/Skills.module.scss'
 import {Circle} from "./Circle";
 import {Fade} from "react-awesome-reveal";
 import {Title} from "../components/Title";
+import {SkillsCircle} from "../components/SkillsCircle";
 
 export const Skills: FC = () => {
 
@@ -18,42 +19,18 @@ export const Skills: FC = () => {
 
                 <div className={s.skillsContainer}>
                     <Fade direction={'up'}>
-                        <div className={s.skill}>
-                            <Circle percents={80} title={'HTML'}/>
-                        </div>
-                        <div className={s.skill}>
-                            <Circle percents={80} title={'CSS'}/>
-                        </div>
-                        <div className={s.skill}>
-                            <Circle percents={60} title={'JavaScript'}/>
-                        </div>
-                        <div className={s.skill}>
-                            <Circle percents={60} title={'TypeScript'}/>
-                        </div>
-                        <div className={s.skill}>
-                            <Circle percents={30} title={'Storybook'}/>
-                        </div>
-                        <div className={s.skill}>
-                            <Circle percents={40} title={'Unit Testing'}/>
-                        </div>
-                        <div className={s.skill}>
-                            <Circle percents={70} title={'React'}/>
-                        </div>
-                        <div className={s.skill}>
-                            <Circle percents={70} title={'Redux'}/>
-                        </div>
-                        <div className={s.skill}>
-                            <Circle percents={70} title={'SASS'}/>
-                        </div>
-                        <div className={s.skill}>
-                            <Circle percents={70} title={'Rest API'}/>
-                        </div>
-                        <div className={s.skill}>
-                            <Circle percents={70} title={'MUI'}/>
-                        </div>
-                        <div className={s.skill}>
-                            <Circle percents={70} title={'Axios'}/>
-                        </div>
+                        <SkillsCircle percents={80} title={'HTML'}/>
+                        <SkillsCircle percents={80} title={'CSS'}/>
+                        <SkillsCircle percents={70} title={'JavaScript'}/>
+                        <SkillsCircle percents={60} title={'TypeScript'}/>
+                        <SkillsCircle percents={40} title={'Storybook'}/>
+                        <SkillsCircle percents={50} title={'Git'}/>
+                        <SkillsCircle percents={70} title={'React'}/>
+                        <SkillsCircle percents={70} title={'Redux'}/>
+                        <SkillsCircle percents={70} title={'SASS'}/>
+                        <SkillsCircle percents={70} title={'Rest API'}/>
+                        <SkillsCircle percents={70} title={'MUI'}/>
+                        <SkillsCircle percents={70} title={'Axios'}/>
                     </Fade>
                 </div>
             </div>

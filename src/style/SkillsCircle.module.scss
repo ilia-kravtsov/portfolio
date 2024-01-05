@@ -1,0 +1,41 @@
+@import 'sass/variables';
+@import 'sass/mixin';
+
+.skill {
+  @include flex(row, space-evenly, center);
+  border-radius: 4px;
+  width: 20vw;
+  height: 24vh;
+  transition: all 0.4s ease-in-out;
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+@media screen and (max-width: 1800px) {
+  .skill {
+    width: 15vw;
+    height: 20vh;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .skill {
+    width: 25vw;
+    height: 25vh;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .skill {
+    width: 35vw;
+    height: 25vh;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .skill {
+    width: 50vw;
+    height: 25vh;
+  }
+}

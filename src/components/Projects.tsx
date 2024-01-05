@@ -18,6 +18,7 @@ export const Projects: FC = () => {
 
                 <div className={s.projectsContainer}>
                     <Fade direction={'up'}>
+
                         <div className={s.projectContainer}>
                             <div className={s.projectDescription}>
                                 <Tilt tiltAngleYInitial={-45} tiltAxis={'y'}>
@@ -25,7 +26,7 @@ export const Projects: FC = () => {
                                         In this project, I incorporated some legacy React code,
                                         utilized older libraries, employed syntax, class components
                                         that are no longer in mainstream use,
-                                        implemented RESTful features such as registration, loginization, and pagination,
+                                        implemented REST features such as registration, authentication, and pagination,
                                         and developed components using <span className={s.accentColor}>React and Redux.</span>
                                     </p>
                                 </Tilt>

@@ -3,7 +3,7 @@ import s from "../style/Circle.module.scss";
 import { CSSProperties } from "react";
 import '../style/sass/variables.scss';
 
-type CircleType = {
+export type CircleType = {
     percents: number
     title: string
 }
