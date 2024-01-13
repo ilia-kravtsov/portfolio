@@ -1,9 +1,8 @@
 import React, {FC} from 'react';
-import s from '../style/Skills.module.scss'
-import {Circle} from "./Circle";
 import {Fade} from "react-awesome-reveal";
 import {Title} from "../components/Title";
 import {SkillsCircle} from "../components/SkillsCircle";
+import s from '../style/Skills.module.scss'
 
 export const Skills: FC = () => {
 

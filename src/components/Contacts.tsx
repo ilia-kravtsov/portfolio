@@ -6,13 +6,20 @@ import {Alert, Snackbar} from "@mui/material";
 import Tilt from 'react-parallax-tilt';
 import {Title} from "../components/Title";
 
-
+type Validation = {
+    success: boolean
+    error: boolean
+    errorPhoneNumber: boolean
+    waiting: boolean
+}
 export const Contacts: FC = () => {
 
-    let [success, setSuccess] = useState<boolean>(false)
-    let [error, setError] = useState<boolean>(false)
-    let [errorPhoneNumber, setErrorPhoneNumber] = useState<boolean>(false)
-    let [waiting, setWaiting] = useState<boolean>(false)
+    let [validation, setValidation] = useState<Validation>({
+        success: false,
+        error: false,
+        errorPhoneNumber: false,
+        waiting: false
+    })
 
     let form = useRef<any>();
 
@@ -29,28 +36,29 @@ export const Contacts: FC = () => {
         const phoneNumber = form.current.phone_number.value;
 
         if (!phoneRegex.test(phoneNumber)) {
-            setErrorPhoneNumber(true)
+            setValidation({...validation, errorPhoneNumber: true})
             return;
         }
 
-        setWaiting(true)
+        setValidation({...validation, waiting: true})
         emailjs.sendForm('service_15uif7p', 'template_c9bogp1', form.current, 'C2Zo-ewRkNJtUXqgY')
             .then((result) => {
-                setWaiting(false)
-                setSuccess(true)
+                setValidation({...validation, waiting: false})
+                setValidation({...validation, success: true})
                 console.log(result.text);
                 event.target.reset() // to clean the fields
             }, (error) => {
-                setWaiting(false)
-                setError(true)
+                setValidation({...validation, waiting: false})
+                setValidation({...validation, error: true})
                 console.log(error.text);
             });
     };
 
-    const setSuccessClose = () => setSuccess(false);
-    const setErrorClose = () => setError(false);
-    const setWaitingClose = () => setWaiting(false);
-    const setErrorPhoneNumberClose = () => setErrorPhoneNumber(false);
+    const setSuccessClose = () => setValidation({...validation, success: false});
+    const setErrorClose = () => setValidation({...validation, error: false});
+    const setWaitingClose = () => setValidation({...validation, waiting: false});
+    const setErrorPhoneNumberClose = () => setValidation({...validation, errorPhoneNumber: false});
+
 
     return (
         <div className={s.ContactsContainer} id={'contacts'}>
@@ -98,32 +106,32 @@ export const Contacts: FC = () => {
                                           className={s.formTextarea}
                                           required>
                                 </textarea>
-                                <span>Your awesome comment</span>
+                                <span>Your comment</span>
                             </Tilt>
                         </div>
                         <Tilt tiltAngleYInitial={-45} tiltAxis={'y'}>
-                            <button type={'submit'} disabled={waiting} className={s.formButton}>
+                            <button type={'submit'} disabled={validation.waiting} className={s.formButton}>
                                 <span>Send</span>
                                 <div className={s.liquid}></div>
                             </button>
                         </Tilt>
                     </form>
-                    {<Snackbar open={success} autoHideDuration={6000} onClose={setSuccessClose}>
+                    {<Snackbar open={validation.success} autoHideDuration={6000} onClose={setSuccessClose}>
                         <Alert onClose={setSuccessClose} severity="success">
                             Your data has been successfully sent to my email!
                         </Alert>
                     </Snackbar>}
-                    {<Snackbar open={error} autoHideDuration={6000} onClose={setErrorClose}>
+                    {<Snackbar open={validation.error} autoHideDuration={6000} onClose={setErrorClose}>
                         <Alert onClose={setErrorClose} severity="error">
                             Some error with the internet connection to the server has occurred!
                         </Alert>
                     </Snackbar>}
-                    {<Snackbar open={waiting} autoHideDuration={5000} onClose={setWaitingClose}>
+                    {<Snackbar open={validation.waiting} autoHideDuration={5000} onClose={setWaitingClose}>
                         <Alert onClose={setWaitingClose} severity="info" sx={{mb: '50px'}}>
                             Just a moment, we're sending your data!
                         </Alert>
                     </Snackbar>}
-                    {<Snackbar open={errorPhoneNumber} autoHideDuration={6000} onClose={setErrorPhoneNumberClose}>
+                    {<Snackbar open={validation.errorPhoneNumber} autoHideDuration={6000} onClose={setErrorPhoneNumberClose}>
                         <Alert onClose={setErrorPhoneNumberClose} severity="error" sx={{mb: '50px'}}>
                             Provide your phone number in the format +79990000000 or 89990000000
                         </Alert>

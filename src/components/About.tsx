@@ -4,15 +4,14 @@ import {Circle} from './Circle';
 import {Fade} from "react-awesome-reveal";
 import {Title} from "../components/Title";
 import cvIcon from '../style/images/cv_2.png'
-import codewarsIcon from '../style/images/codewars_2.svg'
 
 export const About: FC = () => {
 
     return (
         <div className={s.AboutContainer} id={'about'}>
-            <div className={s.container}>
+            <div className={s.subContainer}>
                 <Title title={'about'}
-                       accentTitle={' me'}
+                       accentTitle={'me'}
                        titleBack={'information'}
                 />
                 <section className={s.content}>

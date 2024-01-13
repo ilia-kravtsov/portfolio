@@ -1,5 +1,5 @@
 import React, {FC} from 'react';
-import s from "../style/App.module.scss";
+import s from "../style/Navigation.module.scss";
 import homeIcon from "../style/images/home-button.png";
 import skillsIcon from "../style/images/settings.png";
 import projectsIcon from "../style/images/project.png";
@@ -17,15 +17,14 @@ export const Navigation: FC = () => {
                     <Link activeClass={s.active}
                           className={s.navIconContainer}
                           to="home"
-                          spy={true}
-                          smooth={true}
+                          spy
+                          smooth
                           offset={0}
                           duration={600}>
                         <span className={s.linkTitle}>Home</span>
                         <img src={homeIcon}
                              className={s.navIcon}
                              alt={'homeIcon'}/>
-
                     </Link>
                 </div>
 
@@ -33,8 +32,8 @@ export const Navigation: FC = () => {
                     <Link activeClass={s.active}
                           className={s.navIconContainer}
                           to="about"
-                          spy={true}
-                          smooth={true}
+                          spy
+                          smooth
                           offset={0}
                           duration={600}>
                         <div className={s.linkTitle}>
@@ -53,8 +52,8 @@ export const Navigation: FC = () => {
                     <Link activeClass={s.active}
                           className={s.navIconContainer}
                           to="skills"
-                          spy={true}
-                          smooth={true}
+                          spy
+                          smooth
                           offset={0}
                           duration={600}>
                         <span className={s.linkTitle}>Skills</span>
@@ -68,8 +67,8 @@ export const Navigation: FC = () => {
                 <Link activeClass={s.active}
                       className={s.navIconContainer}
                       to="projects"
-                      spy={true}
-                      smooth={true}
+                      spy
+                      smooth
                       offset={0}
                       duration={600}>
                         <span className={s.linkTitle}>Projects</span>
@@ -84,8 +83,8 @@ export const Navigation: FC = () => {
                 <Link activeClass={s.active}
                       className={s.navIconContainer}
                       to="contacts"
-                      spy={true}
-                      smooth={true}
+                      spy
+                      smooth
                       offset={0}
                       duration={600}>
                       <span className={s.linkTitle}>

@@ -1,0 +1,203 @@
+@import 'sass/variables';
+@import 'sass/mixin';
+
+.navContainer {
+  @include flex(row, normal, center);
+  position: fixed;
+  height: 100%;
+  background-color: $bgcSecond;
+  box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.5);
+  width: 15%;
+  z-index: 5;
+  top: 0;
+  right: 0;
+}
+
+.navLinksContainer {
+  @include flex(column, space-between, center);
+  width: 100%;
+  height: 75vh;
+}
+
+.navLink {
+  @include flex(row, space-between, center);
+  width: 80%;
+  color: $fontColor;
+  font-size: 20px;
+  transition-duration: 1s;
+  transition-property: all;
+}
+
+.navLink:hover .navIconContainer {
+  width: 100%;
+  border: 1px solid $accentColor;
+}
+
+.navIconContainer {
+  @include flex(row, space-between, center);
+  border-radius: 4px;
+  width: 90px;
+  transition-duration: 1s;
+  transition-property: all;
+}
+
+.navIconContainer:hover .linkTitle {
+  opacity: 1;
+  margin-left: 20px;
+}
+
+.linkTitle {
+  position: absolute;
+  opacity: 0;
+  color: white;
+  font-size: 24px;
+  width: 120px;
+  margin-right: 50px;
+  transition-duration: 0.5s;
+  transition-property: all;
+  transition-delay: 0.2s;
+}
+
+.inline {
+  display: flex;
+}
+
+.ml {
+  margin-left: 6px;
+}
+
+.navIcon {
+  padding: 10px;
+  border-radius: 5px;
+  margin-left: auto;
+  width: 70px;
+  height: 70px;
+}
+
+.active {
+  background-color: $accentColor;
+}
+
+@media screen and (min-width: 3001px) {
+  .navIcon {
+    width: 80px;
+    height: 80px;
+  }
+  .navIconContainer {
+    width: 80px;
+  }
+}
+
+@media screen and (max-width: 3000px) {
+  .navIconContainer {
+    width: 70px;
+  }
+  .navIcon {
+    width: 70px;
+    height: 70px;
+  }
+  .linkTitle {
+    font-size: 28px;
+  }
+}
+
+@media screen and (max-width: 2500px) {
+  .linkTitle {
+    font-size: 26px;
+  }
+}
+
+@media screen and (max-width: 2000px) {
+  .linkTitle {
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 1800px) {
+  .navContainer {
+    height: 10vh;
+    width: 100vw;
+    top: auto;
+    right: auto;
+    bottom: 0;
+  }
+  .navLink {
+    @include flex(row, center, center);
+  }
+  .navLinksContainer {
+    flex-direction: row-reverse;
+    height: 10vh;
+  }
+  .navLink:hover .navIconContainer {
+    width: 70px;
+    border-radius: 15px;
+  }
+  .linkTitle {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .navLink {
+    justify-content: center;
+  }
+  .navLink:hover .navIconContainer {
+    width: 60px;
+    border-radius: 15px;
+  }
+  .linkTitle {
+    display: none;
+    width: 0;
+  }
+  .navIconContainer:hover .linkTitle {
+    display: none;
+    width: 0;
+  }
+  .navIcon {
+    width: 60px;
+    height: 60px;
+  }
+  .navIconContainer {
+    width: 60px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .navLink:hover .navIconContainer {
+    width: 50px;
+  }
+  .navIconContainer {
+    width: 50px;
+  }
+  .navIcon {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .navLink:hover .navIconContainer {
+    width: 40px;
+  }
+  .navIcon {
+    width: 40px;
+    height: 40px;
+  }
+  .navIconContainer {
+    width: 40px;
+  }
+}
+
+@media screen and (max-width: 230px) {
+  .navLink {
+    width: 40px;
+  }
+  .navLink:hover .navIconContainer {
+    width: 40px;
+    border-radius: 15px;
+  }
+  .navIcon {
+    width: 40px;
+    height: 40px;
+  }
+}

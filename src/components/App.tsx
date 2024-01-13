@@ -5,13 +5,13 @@ import {Contacts} from "./Contacts";
 import {Projects} from "./Projects";
 import {About} from "./About";
 import {Navigation} from "./Navigation";
-import s from "../style/App.module.scss";
 import {Particle} from "./Particle";
+import s from "../style/App.module.scss";
 
 function App() {
 
     return (
-        <div className={s.app}>
+        <div className={s.appContainer}>
             <main className={s.main}>
                 <Particle />
                 <Home/>

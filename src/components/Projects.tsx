@@ -75,21 +75,19 @@ export const Projects: FC = () => {
                             <div className={s.projectDescription}>
                                 <Tilt tiltAngleYInitial={-45} tiltAxis={'y'}>
                                     <p>
-                                        I've made an effort to showcase
-                                        my passion for mobile app development it's
-                                        an area that I also gravitate towards
+                                        This application allows you to exchange messages and small images here I used 'vite' as a build tool and 'firebase' as a backend software
                                     </p>
                                 </Tilt>
                             </div>
                             <Tilt tiltAngleYInitial={15}>
                                 <div className={s.project}>
 
-                                    <a href='https://ilia-kravtsov.github.io/telegram_clone_2' target='_blank'
+                                    <a href='https://ilia-kravtsov.github.io/incognito/' target='_blank'
                                        className={s.projectLink} rel="noreferrer">
                                         <div className={s.telegram}></div>
                                     </a>
 
-                                    <h3 className={s.projectHeader}>Telegram clone</h3>
+                                    <h3 className={s.projectHeader}>Incognito</h3>
                                     <span
                                         className={s.status}>Status: in progress
                                 </span>

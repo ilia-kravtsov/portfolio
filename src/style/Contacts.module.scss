@@ -102,7 +102,7 @@ input[type="number"]:focus {
   width: 100%;
   resize: none;
   padding: 20px;
-  border: none;
+  border: 1px solid rgba(255, 255, 255, 0.25);
 }
 
 .inputBox textarea:valid ~ span,
@@ -205,13 +205,13 @@ input[type="number"]:focus {
 }
 
 .socialLinksContainer img {
-  transition-duration: 1s;
+  transition-duration: 0.3s;
   transition-property: all;
   width: 50px;
 }
 
 .socialLinksContainer img:hover {
-  transform: scale(1.25);
+  transform: scale(1.15);
 }
 
 @media screen and (max-width: 3000px) {

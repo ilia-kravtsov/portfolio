@@ -7,7 +7,7 @@
   background-color: $bgcFirst;
 }
 
-.container {
+.subContainer {
   @include flex(row, space-evenly, center);
   flex-wrap: wrap;
   min-height: 100vh;
@@ -54,10 +54,10 @@
 }
 
 .firstName {
-  font-size: inherit;
   font-weight: bold;
   font-family: $fontFamily_1;
   color: $fontColor;
+  font-size: 52px;
 }
 
 .professionConatiner {
@@ -140,44 +140,16 @@
 }
 
 @media screen and (min-width: 3001px) {
-  .photo {
-    width: 30vw;
-  }
   .aboutMeText {
     font-size: 30px;
-  }
-  .profession {
-    font-size: 52px;
-  }
-  .firstName {
-    font-size: 52px;
-  }
-  .name {
-    font-size: 52px;
   }
 }
 @media screen and (max-width: 3000px) {
-  .photo {
-    background-position: 75% 50%;
-  }
   .aboutMeText {
     font-size: 30px;
   }
-  .profession {
-    font-size: 52px;
-  }
-  .firstName {
-    font-size: 52px;
-  }
-  .name {
-    font-size: 52px;
-  }
-
 }
 @media screen and (max-width: 2500px) {
-  .photo {
-    width: 30vw;
-  }
   .aboutMeText {
     font-size: 26px;
   }
@@ -206,7 +178,7 @@
   }
 }
 @media screen and (max-width: 1800px) {
-  .container {
+  .subContainer {
     width: 100%;
   }
   .photo {
@@ -215,12 +187,8 @@
   }
 }
 @media screen and (max-width: 1500px) {
-  .container {
-    width: 100%;
-  }
   .photo {
     background-position: 73% 50%;
-    width: 40vw;
   }
   .aboutMeText {
     font-size: 22px;
@@ -308,7 +276,7 @@
   }
 }
 @media screen and (max-width: 1000px) {
-  .container {
+  .subContainer {
     @include flex(column, space-evenly, center);
     min-height: 100vh;
     width: 100%;
@@ -434,7 +402,7 @@
 }
 
 @media screen and (max-width: 82px) {
-  .container {
+  .subContainer {
     display: none;
   }
 }
