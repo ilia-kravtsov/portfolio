@@ -21,7 +21,7 @@ export const Home: FC = () => {
                             <span className={s.firstName}>I'M ILIA </span>KRAVTSOV
                         </span>
                             <div className={s.professionConatiner}>
-                                <ReactTypingEffect className={s.profession} text={'Web developer'}/>
+                                <ReactTypingEffect className={s.profession} text={'Web developer'} speed={200} />
                             </div>
                             <div className={s.aboutMeText}>
                                 <p>with 1+ year of experience</p>
