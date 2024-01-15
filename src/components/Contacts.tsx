@@ -21,9 +21,9 @@ export const Contacts: FC = () => {
         waiting: false
     })
 
-    let form = useRef<any>();
+    let form = useRef<HTMLFormElement>(null);
 
-    const sendEmail = (event: any, reason?: string) => {
+    const sendEmail = (event: React.FormEvent<HTMLFormElement>, reason?: string) => {
         event.preventDefault();
 
         if (reason === 'clickaway') {
@@ -33,25 +33,27 @@ export const Contacts: FC = () => {
         // Phone number validation regex pattern
         const phoneRegex = /^\+?[78][-\(]?\d{3}\)?-?\d{3}-?\d{2}-?\d{2}$/;
 
-        const phoneNumber = form.current.phone_number.value;
+        if (form.current) {
+            const phoneNumber = form.current.phone_number.value;
 
-        if (!phoneRegex.test(phoneNumber)) {
-            setValidation({...validation, errorPhoneNumber: true})
-            return;
+            if (!phoneRegex.test(phoneNumber)) {
+                setValidation({...validation, errorPhoneNumber: true})
+                return;
+            }
+
+            setValidation({...validation, waiting: true})
+            emailjs.sendForm('service_15uif7p', 'template_c9bogp1', form.current, 'C2Zo-ewRkNJtUXqgY')
+                .then((result) => {
+                    setValidation({...validation, waiting: false})
+                    setValidation({...validation, success: true})
+                    console.log(result.text);
+                    (event.target as HTMLFormElement).reset(); // to clean the fields
+                }, (error) => {
+                    setValidation({...validation, waiting: false})
+                    setValidation({...validation, error: true})
+                    console.log(error.text);
+                });
         }
-
-        setValidation({...validation, waiting: true})
-        emailjs.sendForm('service_15uif7p', 'template_c9bogp1', form.current, 'C2Zo-ewRkNJtUXqgY')
-            .then((result) => {
-                setValidation({...validation, waiting: false})
-                setValidation({...validation, success: true})
-                console.log(result.text);
-                event.target.reset() // to clean the fields
-            }, (error) => {
-                setValidation({...validation, waiting: false})
-                setValidation({...validation, error: true})
-                console.log(error.text);
-            });
     };
 
     const setSuccessClose = () => setValidation({...validation, success: false});

@@ -1,4 +1,4 @@
-import React, {FC} from 'react';
+import React, { FC, useEffect, useState } from 'react';
 import s from "../style/Circle.module.scss";
 import { CSSProperties } from "react";
 import '../style/sass/variables.scss';
@@ -10,6 +10,18 @@ export type CircleType = {
 
 export const Circle: FC<CircleType> = ({percents, title}) => {
 
+    const [rerenderTrigger, setRerenderTrigger] = useState(false);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setRerenderTrigger(prevTrigger => !prevTrigger);
+        }, 5500);
+
+        return () => {
+            clearInterval(interval);
+        };
+    }, []);
+
     const styles: CSSProperties = {
         '--clr': '#3a5ace',
         '--num': `${percents}`
@@ -17,7 +29,7 @@ export const Circle: FC<CircleType> = ({percents, title}) => {
 
     return (
         <div className={s.skillCircle}>
-            <div className={s.percentCircle} style={styles}>
+            <div className={s.percentCircle} style={styles} key={`circle-${rerenderTrigger}`}>
                 <div className={s.dot}></div>
                 <svg className={s.svg}>
                     <circle cx={'70'} cy={'70'} r={'70'}></circle>
