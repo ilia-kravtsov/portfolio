@@ -85,7 +85,7 @@ export const Contacts: FC = () => {
                         </div>
                         <div className={s.inputBox}>
                             <Tilt tiltAngleYInitial={-45} tiltAxis={'y'}>
-                                <input type="number"
+                                <input type="tel"
                                        required
                                        name="phone_number"
                                        className={s.formInput}/>

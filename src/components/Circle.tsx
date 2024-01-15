@@ -15,7 +15,7 @@ export const Circle: FC<CircleType> = ({percents, title}) => {
     useEffect(() => {
         const interval = setInterval(() => {
             setRerenderTrigger(prevTrigger => !prevTrigger);
-        }, 6000);
+        }, 10000);
 
         return () => {
             clearInterval(interval);
