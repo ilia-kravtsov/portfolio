@@ -145,19 +145,19 @@ export const Contacts: FC = () => {
                                 <div className={s.linksContainer}>
                                     <a target={'_blank'} href={'https://www.linkedin.com/in/-ilia-kravtsov/'}>
                                         <img
-                                            src="https://ouch-cdn2.icons8.com/eHIHzmHX02221t-bFZtZRHJmb6S4UUBirfHjBFMp_oo/rs:fit:368:368/czM6Ly9pY29uczgu/b3VjaC1wcm9kLmFz/c2V0cy9wbmcvMjQ3/L2NmOThkOWJmLWRl/NTktNDMzYi1hNjQ1/LTUzYjNkMTczMTU4/My5wbmc.png"
-                                            alt="LinkedIn_logo"/>
+                                            src="https://img.icons8.com/3d-fluency/94/filled-message.png"
+                                            alt="mail_logo"/>
                                     </a>
                                     <a target={'_blank'}
                                        href={'https://www.facebook.com/profile.php?id=100094314852191'}>
                                         <img
-                                            src="https://img.icons8.com/?size=2x&id=jZ0kw76QEzJU&format=png"
-                                            alt="facebook_logo"/>
+                                            src="https://img.icons8.com/3d-fluency/188/odnoklassniki-squared.png"
+                                            alt="odnoklassniki_logo"/>
                                     </a>
                                     <a target={'_blank'} href={'https://www.instagram.com/kravtsov_ilia_/'}>
                                         <img
-                                            src="https://ouch-cdn2.icons8.com/9LkOctqjfET0aNP8knLWqXpV9SvLetwEQRnNdq0dnLM/rs:fit:368:368/czM6Ly9pY29uczgu/b3VjaC1wcm9kLmFz/c2V0cy9wbmcvOTI0/L2NjYjgwMjlkLWZh/NWMtNDU5Yy05YjBk/LWI0Yzg2MzI3Zjc0/Mi5wbmc.png"
-                                            alt="inst_logo"/>
+                                            src="https://img.icons8.com/3d-fluency/94/vk-com.png"
+                                            alt="vk_logo"/>
                                     </a>
                                 </div>
                             </div>
@@ -191,3 +191,23 @@ export const Contacts: FC = () => {
     );
 };
 
+/*
+<div className={s.linksContainer}>
+    <a target={'_blank'} href={'https://www.linkedin.com/in/-ilia-kravtsov/'}>
+        <img
+            src="https://ouch-cdn2.icons8.com/eHIHzmHX02221t-bFZtZRHJmb6S4UUBirfHjBFMp_oo/rs:fit:368:368/czM6Ly9pY29uczgu/b3VjaC1wcm9kLmFz/c2V0cy9wbmcvMjQ3/L2NmOThkOWJmLWRl/NTktNDMzYi1hNjQ1/LTUzYjNkMTczMTU4/My5wbmc.png"
+            alt="LinkedIn_logo"/>
+    </a>
+    <a target={'_blank'}
+       href={'https://www.facebook.com/profile.php?id=100094314852191'}>
+        <img
+            src="https://img.icons8.com/?size=2x&id=jZ0kw76QEzJU&format=png"
+            alt="facebook_logo"/>
+    </a>
+    <a target={'_blank'} href={'https://www.instagram.com/kravtsov_ilia_/'}>
+        <img
+            src="https://ouch-cdn2.icons8.com/9LkOctqjfET0aNP8knLWqXpV9SvLetwEQRnNdq0dnLM/rs:fit:368:368/czM6Ly9pY29uczgu/b3VjaC1wcm9kLmFz/c2V0cy9wbmcvOTI0/L2NjYjgwMjlkLWZh/NWMtNDU5Yy05YjBk/LWI0Yzg2MzI3Zjc0/Mi5wbmc.png"
+            alt="inst_logo"/>
+    </a>
+</div>
+ */

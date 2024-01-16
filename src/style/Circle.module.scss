@@ -9,7 +9,7 @@
   transition-property: all;
   transform: scale(1.3);
   &:hover {
-    transform: scale(1.25);
+    transform: scale(1.35);
   }
 }
 
@@ -125,18 +125,18 @@
 
 @media screen and (max-width: 2800px) {
   .skillCircle {
-    transform: scale(1.3);
-    .skillCircle:hover {
-      transform: scale(1.4);
+    transform: scale(1.2);
+    &:hover {
+      transform: scale(1.23);
     }
   }
 }
 @media screen and (max-width: 2400px) {
   .skillCircle {
     transform: scale(1.1);
-  }
-  .skillCircle:hover {
-    transform: scale(1.2);
+    &:hover {
+      transform: scale(1.2);
+    }
   }
 }
 
