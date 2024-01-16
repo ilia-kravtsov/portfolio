@@ -197,6 +197,14 @@ input[type="number"]:focus {
   z-index: 2;
   background-color: $bgcSecond;
   @include flex(column, space-evenly, center);
+  flex-wrap: wrap;
+  .formDescription {
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
 }
 
 .linksContainer {
@@ -223,6 +231,10 @@ input[type="number"]:focus {
 @media screen and (max-width: 2500px) {
   .socialLinksContainer {
     width: 24vw;
+
+    .formDescription {
+      font-size: 20px;
+    }
   }
 }
 @media screen and (max-width: 2000px) {
@@ -243,6 +255,9 @@ input[type="number"]:focus {
   }
   .socialLinksContainer {
     width: 28vw;
+    .formDescription {
+      font-size: 18px;
+    }
   }
 }
 
@@ -286,6 +301,9 @@ input[type="number"]:focus {
 @media screen and (max-width: 1000px) {
   .socialLinksContainer {
     width: 46vw;
+    .formDescription {
+      font-size: 16px;
+    }
   }
 }
 

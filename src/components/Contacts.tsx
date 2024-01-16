@@ -140,27 +140,20 @@ export const Contacts: FC = () => {
                     </Snackbar>}
                     <section className={s.links}>
                         <Tilt tiltAngleYInitial={25} tiltAngleXInitial={-5}>
-                            <div className={s.socialLinksContainer}>
-                                <h2>Social links:</h2>
-                                <div className={s.linksContainer}>
-                                    <a target={'_blank'} href={'https://www.linkedin.com/in/-ilia-kravtsov/'}>
-                                        <img
-                                            src="https://img.icons8.com/3d-fluency/94/filled-message.png"
-                                            alt="mail_logo"/>
-                                    </a>
-                                    <a target={'_blank'}
-                                       href={'https://www.facebook.com/profile.php?id=100094314852191'}>
-                                        <img
-                                            src="https://img.icons8.com/3d-fluency/188/odnoklassniki-squared.png"
-                                            alt="odnoklassniki_logo"/>
-                                    </a>
-                                    <a target={'_blank'} href={'https://www.instagram.com/kravtsov_ilia_/'}>
-                                        <img
-                                            src="https://img.icons8.com/3d-fluency/94/vk-com.png"
-                                            alt="vk_logo"/>
-                                    </a>
-                                </div>
-                            </div>
+                            <section className={s.socialLinksContainer}>
+                                <h2>Form description:</h2>
+                                <p className={s.formDescription}>
+                                    <div>
+                                        Your data from this form
+                                    </div>
+                                    <div>
+                                        will be sent
+                                    </div>
+                                    <div>
+                                        directly to my email
+                                    </div>
+                                </p>
+                            </section>
                             <div className={s.socialLinksContainer}>
                                 <h2>Quick connect:</h2>
                                 <div className={s.linksContainer}>
